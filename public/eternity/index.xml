@@ -3,18 +3,18 @@
   <channel>
       <title>Eternities on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/eternity/index.xml/</link>
+    <link>http://totaltrash.org/eternity/index.xml</link>
     <language>en-us</language>
     
     
-    <updated>Tue, 11 Nov 2014 23:03:45 EST</updated>
+    <updated>Tue, 11 Nov 2014 23:03:45 -0500</updated>
     
     <item>
       <title>Eternity Engine - Client/Server Edition</title>
-      <link>http://localhost:1313/eternity/</link>
-      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      <link>http://totaltrash.org/eternity</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 -0500</pubDate>
       
-      <guid>http://localhost:1313/eternity/</guid>
+      <guid>http://totaltrash.org/eternity</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
@@ -67,10 +67,10 @@ team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
     
     <item>
       <title>Building</title>
-      <link>http://localhost:1313/eternity/building/</link>
+      <link>http://totaltrash.org/eternity/building</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://localhost:1313/eternity/building/</guid>
+      <guid>http://totaltrash.org/eternity/building</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
@@ -192,11 +192,71 @@ to install eternity as they see fit.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Frequently Asked Questions</title>
-      <link>http://localhost:1313/eternity/faq/</link>
+      <title>Download</title>
+      <link>http://totaltrash.org/eternity/download</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://localhost:1313/eternity/faq/</guid>
+      <guid>http://totaltrash.org/eternity/download</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
+executable.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
+branch, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout client-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
+users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
+course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
+listed there, please consider downloading the source distribution, using the
+&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
+the repository.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://totaltrash.org/eternity/faq</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/eternity/faq</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Troubleshooting&lt;/h3&gt;
@@ -347,10 +407,10 @@ packet loss.&lt;/p&gt;
     
     <item>
       <title>Features</title>
-      <link>http://localhost:1313/eternity/features/</link>
+      <link>http://totaltrash.org/eternity/features</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://localhost:1313/eternity/features/</guid>
+      <guid>http://totaltrash.org/eternity/features</guid>
       <description>
 
 &lt;p&gt;The Eternity Engine has many often-overlooked features, this is just a short
@@ -437,66 +497,6 @@ list.&lt;/p&gt;
 &lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
 &lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Download</title>
-      <link>http://localhost:1313/eternity/download/</link>
-      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
-      
-      <guid>http://localhost:1313/eternity/download/</guid>
-      <description>
-
-&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you are installing for the first time, you need to download and run the
-installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
-executable.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
-
-&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
-using git and the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
-branch, run:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout client-server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
-users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
-course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
-expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
-several platforms. These pre-built dependencies are located
-&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
-listed there, please consider downloading the source distribution, using the
-&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
-the repository.&lt;/p&gt;
 </description>
     </item>
     
