@@ -1,0 +1,21 @@
+<div id="content" class="col-md-8 col-md-offset-1 tt-panel">
+    <h2>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <small>
+        {{ .Date.Format "Mon Jan 2, 2006" }}
+        {{ with .Params.categories }}
+            in 
+            {{ range $i, $e := . }}{{if $i}}, {{end}}
+                <a href="/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
+        {{ end }}
+        {{ with .Params.tags }}
+            using tags
+            {{ range $i, $e := . }}{{if $i}}, {{end}}
+                <a href="/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}
+        {{ end }}
+    </small>
+    <div id="content-body">
+        {{ .Summary }}
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation"
+     id="main-navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">:: TotalTrash ::</a>
+        </div>
+        <div class="navbar-collapse collapse" id="main-menu">
+            <ul class="nav navbar-nav" id="main-menu-left">
+                {{ if eq .Section "d2k" }}
+                    <li class="dropdown active">
+                {{ else }}
+                    <li class="dropdown">
+                {{ end }}
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        D2K<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" id="d2k-menu">
+                        <li><a href="/d2k">D2K</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/d2k/goals">Goals</a></li>
+                        <li><a href="/d2k/download">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/camgunz/d2k/issues">
+                                Issues
+                            </a>
+                        </li>
+                        <li><a href="/d2k/faq">FAQ</a></li>
+                        <li><a href="/d2k/building">Building</a> </li>
+                    </ul>
+                </li>
+                {{ if eq .Section "ee" }}
+                    <li class="dropdown active">
+                {{ else }}
+                    <li class="dropdown">
+                {{ end}}
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                       href="#">Eternity C/S<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" id="ee-menu">
+                        <li><a href="/eternity">Eternity C/S</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/eternity/features">Features</a></li>
+                        <li><a href="/eternity/download">Downloads</a></li>
+                        <li>
+                            <a href="https://github.com/camgunz/eternity/issues">
+                                Issues
+                            </a>
+                        </li>
+                        <li><a href="/eternity/faq">FAQ</a></li>
+                        <li><a href="/eternity/building">Building</a></li>
+                    </ul>
+                </li>
+                {{ if eq .Section "about" }}
+                    <li class="active">
+                {{ else }}
+                    <li>
+                {{ end }}
+                    <a href="/about">About</a>
+                </li>
+                {{ if eq .Section "wads" }}
+                    <li class="active">
+                {{ else }}
+                    <li>
+                {{ end}}
+                    <a href="{{ .Site.Params.static }}wads">WADs</a>
+                </li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+

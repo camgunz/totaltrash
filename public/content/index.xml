@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Contents on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/content/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sun, 02 Mar 2014 21:09:01 EST</updated>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://localhost:1313/content/post/d2k/</link>
+      <pubDate>Sun, 02 Mar 2014 21:09:01 EST</pubDate>
+      
+      <guid>http://localhost:1313/content/post/d2k/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Doom2K&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ve decided to start working on a new source port called &lt;a href=&#34;/d2k&#34;&gt;Doom2K&lt;/a&gt;.  My
+goal is to build a state-of-the-art multiplayer source port capable of being
+the standard-bearer for multiplayer Doom.  This, in my mind, means a couple of
+things.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

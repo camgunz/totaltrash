@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Eternities on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/eternity/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Tue, 11 Nov 2014 23:03:45 EST</updated>
+    
+    <item>
+      <title>Eternity Engine - Client/Server Edition</title>
+      <link>http://localhost:1313/eternity/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      
+      <guid>http://localhost:1313/eternity/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Welcome to Eternity Engine - Client/Server Edition (EECS) testing.  Based on
+the &lt;a href=&#34;http://www.doomworld.com/eternity&#34;&gt;Eternity Engine&lt;/a&gt;, EECS is an advanced
+client/server Doom port intended to provide high-quality, competitive gameplay.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;download&#34;&gt;Download an EECS client for your platform&lt;/a&gt;, place an IWAD
+in the installation folder (usually something like
+&lt;code&gt;C:\Program Files\Eternity Engine\bin&lt;/code&gt;) and then visit &lt;a href=&#34;http://master.totaltrash.org&#34;&gt;the
+master&lt;/a&gt; to see a list of servers. Clicking on one
+of the links on the left will connect to that server, clicking anywhere else on
+the row will show more information about that server in the sidebar.&lt;/p&gt;
+
+&lt;p&gt;If you get into any trouble at all, please see the &lt;a href=&#34;eternity/faq&#34;&gt;FAQ&lt;/a&gt;.  While
+we&amp;rsquo;re happy to help, you&amp;rsquo;re likely to get a fix for your issue much more
+quickly by visiting the FAQ than by waiting for us.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Reporting Bugs&lt;/h3&gt;
+
+&lt;p&gt;The entire point of this testing is to discover and resolve issues in EECS,
+however it&amp;rsquo;s also a good time to ask for features or report deficiencies.
+Reporting bugs is simple; there is a
+&lt;a href=&#34;http://github.com/camgunz/eternity/issues&#34;&gt;bug tracker&lt;/a&gt;, all you need to do is
+create an account. Here are some guidelines for effective bug/feature posting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give as much information as you possibly can.&lt;/li&gt;
+&lt;li&gt;Use descriptive titles.&lt;/li&gt;
+&lt;li&gt;Be precise and specific.&lt;/li&gt;
+&lt;li&gt;Set label appropriately:
+
+&lt;ul&gt;
+&lt;li&gt;Bug: Incorrect behavior&lt;/li&gt;
+&lt;li&gt;Enhancement: New feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use an email address that you check.&lt;/li&gt;
+&lt;li&gt;If you can run a debugger, please post stack traces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than a couple days goes by and no one&amp;rsquo;s touched your bug or talked to
+you about it, please contact us in &lt;a href=&#34;irc://chat.freenode.net/d2k&#34;&gt;IRC&lt;/a&gt;.  The bug
+tracker is not where bugs and ideas go to die, it&amp;rsquo;s a list of things for the TT
+team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>http://localhost:1313/eternity/building/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/building/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;EECS&amp;rsquo; source code is located at
+&lt;code&gt;http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;. On Windows
+you can use TortoiseSVN; Linux users are encouraged to use their distribution&amp;rsquo;s
+package management to install the Subversion binaries. The command-line to
+checkout the code is:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;svn co http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve successfully checked out the source code from the Subversion
+repository, create an &lt;code&gt;eedeps&lt;/code&gt; folder inside of it.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;EECS has pre-built dependencies for Windows and Linux located
+&lt;a href=&#34;http://static.totaltrash.org/eedeps&#34;&gt;here&lt;/a&gt;. If you are using Code::Blocks on
+Windows you should use the MinGW distribution, but if you are using MSVC on
+Windows you should use the MSVC distribution. 32-bit Linux users should use the
+Linux32 distribution, and 64-bit Linux users should use the Linux64
+distribution. It is also possible to build EECS using packages installed on
+your machine. Here is a list of EECS&amp;rsquo; dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ENet 1.3.x&lt;/li&gt;
+&lt;li&gt;libarchive 2.8.x
+
+&lt;ul&gt;
+&lt;li&gt;bzip2&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;xz&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;curl
+
+&lt;ul&gt;
+&lt;li&gt;c-ares-1.7.4 (Linux only)&lt;/li&gt;
+&lt;li&gt;gnutls-2.8.x&lt;/li&gt;
+&lt;li&gt;libgcrypt-1.5.x&lt;/li&gt;
+&lt;li&gt;libgpg-error-1.10&lt;/li&gt;
+&lt;li&gt;libidn-1.22&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_net&lt;/li&gt;
+&lt;li&gt;SDL_mixer
+
+&lt;ul&gt;
+&lt;li&gt;flac-1.2.x&lt;/li&gt;
+&lt;li&gt;libmad-0.15.1b&lt;/li&gt;
+&lt;li&gt;libmikmod-3.1.11&lt;/li&gt;
+&lt;li&gt;libogg-1.2.x&lt;/li&gt;
+&lt;li&gt;libvorbis-1.3.x&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;OpenSSL&lt;/h4&gt;
+
+&lt;p&gt;Please be aware that while OpenSSL may be substituted for GnuTLS and its myriad
+dependencies, binaries built against OpenSSL may not be distributed because of
+a licensing conflict between its license and EECS&amp;rsquo; license (GPLv2). They are OK
+for personal use however.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;MP3&lt;/h4&gt;
+
+&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the free
+and superior OGG format.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;SMPEG&lt;/h4&gt;
+
+&lt;p&gt;While SMPEG may be substituted for libmad, SMPEG has reported stability issues
+and can be difficult to compile.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Adding Pre-Built Dependencies&lt;/h4&gt;
+
+&lt;p&gt;If you are using a different platform, please consider getting in touch with
+the development team so they can help you build the dependencies for your
+platform and add them to the repository.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_6&#34;&gt;Installing Pre-Built Dependencies&lt;/h4&gt;
+
+&lt;p&gt;Windows users can decompress the archives using &lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt;,
+Linux users will need &lt;a href=&#34;http://tukaani.org/xz&#34;&gt;XZ Utils&lt;/a&gt;, which can likely be
+installed via package management. The dependencies should be placed in the
+&lt;code&gt;eedeps&lt;/code&gt; folder inside the main source distribution. For example, a MinGW user
+who downloaded the source code to &lt;code&gt;C:\Code\eecs&lt;/code&gt; would have the dependencies
+installed at &lt;code&gt;C:\Code\eecs\eedeps\mingw&lt;/code&gt;, and inside the &lt;code&gt;mingw&lt;/code&gt; folder would be
+&lt;code&gt;bin&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;lib&lt;/code&gt;, &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;sbin&lt;/code&gt;, and &lt;code&gt;share&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Building: Code::Blocks &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS Code::Blocks project file is located in the &lt;code&gt;codeblocks&lt;/code&gt; folder. No
+modifications should be necessary; open and build.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Building: MSVC++ &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS MSVC++ project file is located in the &lt;code&gt;vc2008&lt;/code&gt; folder. This build
+platform is still in development, possible issues include problems with the
+Solution/Project file (non-relative paths) and a lack of static linking (lots
+of DLLs required by the main Eternity.exe executable). Please report problems
+with the Solution/Project file; static linking will be added in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_9&#34;&gt;Building: Linux&lt;/h3&gt;
+
+&lt;p&gt;The EECS Linux build system uses CMake. The steps are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmake ../ -G&amp;quot;Unix Makefiles&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This builds a binary &lt;code&gt;eternity.real&lt;/code&gt; inside &lt;code&gt;build/source&lt;/code&gt; (in our example).
+Installation currently does not work; users who build from source are expected
+to install eternity as they see fit.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://localhost:1313/eternity/faq/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/faq/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Troubleshooting&lt;/h3&gt;
+
+&lt;h4 id=&#34;toc_1&#34;&gt;EECS doesn&amp;rsquo;t find the IWAD.&lt;/h4&gt;
+
+&lt;p&gt;Put the IWAD (for example, &lt;code&gt;doom2.wad&lt;/code&gt;) in the &lt;code&gt;user/wads&lt;/code&gt; folder.  By default
+this will be &lt;code&gt;C:\Program Files\Eternity Engine\user\wads&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;Client hangs in the full-screen console before connecting.&lt;/h4&gt;
+
+&lt;p&gt;You might need to enter a password.  Be sure to read the text
+in the console to make sure it&amp;rsquo;s not asking you to input a
+password.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;A weird box pops up in the browser when clicking on server links.&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s asking you if you want to launch Eternity, which you do.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;Clicking on server links doesn&amp;rsquo;t work on Vista.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Uninstall Eternity using the uninstaller&lt;/li&gt;
+&lt;li&gt;Reinstall Eternity to &lt;code&gt;C:\Eternity&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whatever you do, do not ask mikehail about this.  Not even once.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Clicking on server links doesn&amp;rsquo;t work on Linux.&lt;/h4&gt;
+
+&lt;p&gt;The server links use the &lt;code&gt;eternity://&lt;/code&gt; protocol, and there&amp;rsquo;s no 100% sure way
+to set protocol handlers in Linux.  If you&amp;rsquo;re using Firefox or you have Gnome
+libs installed, you can try the instructions
+&lt;a href=&#34;http://kb.mozillazine.org/Register_protocol#Linux&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personally, I launch EECS from the command-line like:
+&lt;code&gt;eternity -csjoin eternity://master.totaltrash.org/servers/totaltrash/ctf&lt;/code&gt;.
+We plan to fix this as well.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_6&#34;&gt;Blood spawned from shots doesn&amp;rsquo;t seem to match up with damage.&lt;/h4&gt;
+
+&lt;p&gt;EECS has a &lt;code&gt;predict_shots&lt;/code&gt; option that predicts shot collision and spawns
+bullet puffs or blood instantly instead of waiting for the server.  While this
+feels more &amp;ldquo;crisp&amp;rdquo;, it can be inaccurate, possibly resulting in the feeling
+that too much blood gushes out of your opponent when you shoot them.  You can
+set &lt;code&gt;predict_shots&lt;/code&gt; to &lt;code&gt;no&lt;/code&gt; to disable this, but while shot results will be
+accurate, they will be lagged.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_7&#34;&gt;After alt-tabbing to a different application, part of the EE screen is frozen.&lt;/h4&gt;
+
+&lt;p&gt;This is likely an SDL bug, and it only shows up in Windows Vista and Windows 7
+with Desktop Video Acceleration disabled.  To work around it, use EE&amp;rsquo;s GL-in-2D
+mode (in &lt;code&gt;system.cfg&lt;/code&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set &lt;code&gt;i_videodriverid&lt;/code&gt; to 1 (SDL GL2D)&lt;/li&gt;
+&lt;li&gt;set &lt;code&gt;d_fastrefresh&lt;/code&gt; to 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;toc_8&#34;&gt;Mouse lag&lt;/h4&gt;
+
+&lt;p&gt;Using VSYNC on some video drivers will cause mouse input to be lagged.  To
+avoid this, disable VSYNC in your video driver&amp;rsquo;s configuration.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_9&#34;&gt;Mouse gets slightly &amp;ldquo;stuck&amp;rdquo;&lt;/h4&gt;
+
+&lt;p&gt;The mouse may be sampled unevenly due to Doom&amp;rsquo;s 35Hz framerate cap, and this
+may result in the mouse feeling like it&amp;rsquo;s &amp;ldquo;stuck&amp;rdquo; turning or moving.  To avoid
+this, enable &lt;code&gt;d_fastrefresh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_10&#34;&gt;Adding fonts&lt;/h4&gt;
+
+&lt;p&gt;EE supports TTF fonts, and adding them is as simple as copying the font file
+(i.e. &lt;code&gt;arial.ttf&lt;/code&gt;) to the &lt;code&gt;user/fonts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_11&#34;&gt;Netcode&lt;/h3&gt;
+
+&lt;p&gt;EECS has both clientside and serverside buffers designed to improve smoothness,
+however, the tradeoff is increased latency.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_12&#34;&gt;Clientside packet buffer&lt;/h4&gt;
+
+&lt;p&gt;The client has an optional packet buffer that buffers messages received from
+the server.  Players can enable the packet buffer using &lt;code&gt;packet_buffer&lt;/code&gt;, and
+they can set the size using &lt;code&gt;packet_buffer_size&lt;/code&gt;  A size of &lt;code&gt;0&lt;/code&gt; causes the
+buffer to adapt to your latency and packet loss.  Other sizes specify how many
+TICs of messages to buffer.  Again, be aware that the larger the buffer, the
+more latency is artifically added to your connection.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_13&#34;&gt;Serverside command buffer&lt;/h4&gt;
+
+&lt;p&gt;The server has an optional command buffer that buffers commands received from
+every client.  This is enabled/disabled using the &lt;code&gt;buffer_client_commands&lt;/code&gt;
+option in the server configuration file.  The buffer is adaptive; size cannot
+be set manually.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_14&#34;&gt;Using Netstats&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;show_netstats&lt;/code&gt; command can help players get an idea of their connection
+quality.  To enable them, type &lt;code&gt;show_netstats yes&lt;/code&gt; into the console.&lt;/p&gt;
+
+&lt;p&gt;The 1st number is the number of TICs it takes for a message to arrive from the
+server to the client.&lt;/p&gt;
+
+&lt;p&gt;The 2nd number is the current number of TICs that are buffered in the
+clientside packet buffer.&lt;/p&gt;
+
+&lt;p&gt;The 3rd number is the number of your commands the server has buffered in the
+serverside command buffer.&lt;/p&gt;
+
+&lt;p&gt;The 4th number is the percentage of packets that successfully arrive at the
+server the first time they&amp;rsquo;re sent.  If this number is less than 100%, it
+doesn&amp;rsquo;t mean information is being lost; packets that are lost are always
+resent.  However, resending adds to your latency.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_15&#34;&gt;Bandwidth&lt;/h3&gt;
+
+&lt;p&gt;One of our design assumptions was &amp;ldquo;bandwidth is cheap&amp;rdquo;.  If you are using a
+modem or your internet download bandwidth is less than 256kbps (that&amp;rsquo;s 256
+kilobits per second, or 32kB/s is the max you see while - for example -
+downloading in your browser) you will almost certainly have serious problems
+playing EECS.&lt;/p&gt;
+
+&lt;p&gt;To be specific, a player&amp;rsquo;s minimum position requires at least 32 bytes.  We
+have to add 16 bytes to that for sequencing and identification (position for
+&lt;strong&gt;which&lt;/strong&gt; player at &lt;strong&gt;which&lt;/strong&gt; TIC), for a grand total of 48 bytes.
+Assuming a 16 player server, you are receiving 15 positions every TIC, so 525
+positions per TIC.  48 * 525 is 25.2kB/s, or 201.6kbps.&lt;/p&gt;
+
+&lt;p&gt;This is a best-case scenario, because we&amp;rsquo;re assuming there are only 15 other
+actors (players, monsters, plasma balls, etc.).  Cooperative games will
+requires more bandwidth, especially WADs with a huge amount of monsters.
+Additionally we are only calculating bandwidth used by position messages.
+While they are certainly the lion&amp;rsquo;s share of messages, there are over 30
+messages overall; in particular moving platforms will send a large amount of
+(small) messages.&lt;/p&gt;
+
+&lt;p&gt;We plan to be more flexible in this area in the future.  Other ports (Odamex
+and ZDaemon that we&amp;rsquo;re aware of) allow you to specify your update rate so you
+have the option of reducing your incoming bandwidth 50%-67%, but you pay a high
+price in accuracy.  Because of our focus on competition, we always err on the
+side of accuracy, however we recognize that not all players are competitive and
+may not mind or even notice the difference.  On the other hand, we also plan to
+optionally use more bandwidth to alleviate some of the negative effects of
+packet loss.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Features</title>
+      <link>http://localhost:1313/eternity/features/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/features/</guid>
+      <description>
+
+&lt;p&gt;The Eternity Engine has many often-overlooked features, this is just a short
+list.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Eternity Engine Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Near-perfect Vanilla Doom compatibility and old-school gameplay.&lt;/li&gt;
+&lt;li&gt;Full Boom, MBF, and SMMU compatibility.&lt;/li&gt;
+&lt;li&gt;Removal of nearly all Vanilla Doom limits.&lt;/li&gt;
+&lt;li&gt;Translucency.&lt;/li&gt;
+&lt;li&gt;Multiple music formats, including (but not limited to) MOD, XM, MIDI, OGG/Vorbis, SPC, FLAC, MP3 and MUS.&lt;/li&gt;
+&lt;li&gt;3D object clipping, so objects (like players and monsters) can exist and move above and below each other.&lt;/li&gt;
+&lt;li&gt;Cameras, for player-less viewpoints.&lt;/li&gt;
+&lt;li&gt;Chasecam (3rd-person viewpoint)&lt;/li&gt;
+&lt;li&gt;Spycam, allowing a player to see what other players are seeing.&lt;/li&gt;
+&lt;li&gt;ENDOOM and textmode startup support.&lt;/li&gt;
+&lt;li&gt;Cross-platform, supporting at least Windows, Linux and BSD.&lt;/li&gt;
+&lt;li&gt;Pre-beta BFG types.&lt;/li&gt;
+&lt;li&gt;Gamepad and joystick support.&lt;/li&gt;
+&lt;li&gt;EDF (Eternity Definition File) system allowing for extreme customization of game resources.&lt;/li&gt;
+&lt;li&gt;ExtraData data specification language replaces the original binary WAD format (this will be superceded by UDMF).&lt;/li&gt;
+&lt;li&gt;Quake-style console.&lt;/li&gt;
+&lt;li&gt;Legacy skin support.&lt;/li&gt;
+&lt;li&gt;Cardboard renderer, which is faster than and resolves fundamental problems with Doom&amp;rsquo;s original renderer by using high-precision floating-point numbers instead of the original fixed-point. It also supports arbitrary, non-standard resolutions.&lt;/li&gt;
+&lt;li&gt;Highly advanced portal implementation, allowing for pseudo-3D or physically impossible architecture.&lt;/li&gt;
+&lt;li&gt;Portal overlays (translucent flats, etc.).&lt;/li&gt;
+&lt;li&gt;Support for the Doom Master Levels.&lt;/li&gt;
+&lt;li&gt;TerrainTypes, such as splashing water.&lt;/li&gt;
+&lt;li&gt;3DMidTex, allowing for limited 3D architecture like bridges.&lt;/li&gt;
+&lt;li&gt;A full assortment of compatibility options.&lt;/li&gt;
+&lt;li&gt;2-way wallrunning.&lt;/li&gt;
+&lt;li&gt;Crosshair.&lt;/li&gt;
+&lt;li&gt;Mouselook.&lt;/li&gt;
+&lt;li&gt;Jumping.&lt;/li&gt;
+&lt;li&gt;Advanced sound engine, supporting sector, polyobject, global, and pitched sounds as well as sound sequences.&lt;/li&gt;
+&lt;li&gt;Sound equalizer.&lt;/li&gt;
+&lt;li&gt;Burn damage (standing on torches or candles, for example).&lt;/li&gt;
+&lt;li&gt;Slopes (rendering only, clipping is not complete).&lt;/li&gt;
+&lt;li&gt;Particle effects.&lt;/li&gt;
+&lt;li&gt;BMP and PNG screenshots.&lt;/li&gt;
+&lt;li&gt;Flats and textures are interchangeable, meaning mappers can use flats on walls and textures on floors and ceilings.&lt;/li&gt;
+&lt;li&gt;Fullscreen graphical HUD translucency.&lt;/li&gt;
+&lt;li&gt;DECORATE state support (not full DECORATE support).&lt;/li&gt;
+&lt;li&gt;GFS (Game File Script) allows loading of multiple files using only one file - useful for drag and drop.&lt;/li&gt;
+&lt;li&gt;ACS (mostly complete).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Eternity Engine - Client/Server Edition Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extremely smooth, high fidelity, configurable netcode. Players can make their own decisions about tradeoffs between accuracy, latency and smoothness.&lt;/li&gt;
+&lt;li&gt;Highly-accurate backwards reconciliation (unlagged) for hitscan weapons, autoaim, and BFG tracers:&lt;/li&gt;
+&lt;li&gt;Handles moving sectors.&lt;/li&gt;
+&lt;li&gt;Handles changing player states like invulnerability.&lt;/li&gt;
+&lt;li&gt;Master server with built-in web launcher (no separate launcher application is necessary).&lt;/li&gt;
+&lt;li&gt;On-the-fly WAD loading.&lt;/li&gt;
+&lt;li&gt;Automatic WAD downloading (uses HTTP, FTP, or other protocols for maximum speed and versatility).&lt;/li&gt;
+&lt;li&gt;Per-map WADs and configuration overrides.&lt;/li&gt;
+&lt;li&gt;Spectators.&lt;/li&gt;
+&lt;li&gt;Up to 32 players and 2 teams.&lt;/li&gt;
+&lt;li&gt;Player queue system.&lt;/li&gt;
+&lt;li&gt;Remote console (RCON).&lt;/li&gt;
+&lt;li&gt;Simple authorization system:&lt;/li&gt;
+&lt;li&gt;Four authorization levels, spectator, player, moderator, and administrator.&lt;/li&gt;
+&lt;li&gt;Clients save valid passwords and authenticate automatically whenever possible.&lt;/li&gt;
+&lt;li&gt;Bridge things (from ZDoom).&lt;/li&gt;
+&lt;li&gt;3D radius attacks, used mainly for rocket jumping.&lt;/li&gt;
+&lt;li&gt;New multiplayer scoreboards.&lt;/li&gt;
+&lt;li&gt;Efficient handling of maps with large amounts of monsters; status and position are only broadcasted if they&amp;rsquo;ve changed.&lt;/li&gt;
+&lt;li&gt;TeamDM and CTF game modes (in addition to staples like Duel, Deathmatch, and Cooperative/Survival).&lt;/li&gt;
+&lt;li&gt;Advanced demos, split by map, and allowing speed up, slow down, pause, and checkpoints. Demos themselves are simple ZIP files that include JSON metadata, so no knowledge of the binary format is necessary to work with them.&lt;/li&gt;
+&lt;li&gt;Powerful keybinds:&lt;/li&gt;
+&lt;li&gt;Bind key down and key up events separately&lt;/li&gt;
+&lt;li&gt;Bind to only event activation or event deactivation&lt;/li&gt;
+&lt;li&gt;Bind a key to multiple events; useful for SR50 binds and more&lt;/li&gt;
+&lt;li&gt;No weapon switch on pickup.&lt;/li&gt;
+&lt;li&gt;Preferred weapon order (can also switch when picking up ammo for a preferred weapon).&lt;/li&gt;
+&lt;li&gt;Enable/Disable movebob.&lt;/li&gt;
+&lt;li&gt;Modifiable damage screen (red screen) intensity.&lt;/li&gt;
+&lt;li&gt;Highly customizable voting (commands, duration and pass threshold).&lt;/li&gt;
+&lt;li&gt;Quake &amp;amp; Unreal Tournament style announcers.&lt;/li&gt;
+&lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
+&lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://localhost:1313/eternity/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
+executable.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
+branch, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout client-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
+users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
+course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
+listed there, please consider downloading the source distribution, using the
+&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
+the repository.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

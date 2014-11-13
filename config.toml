@@ -1,0 +1,7 @@
+baseurl = "http://totaltrash.org"
+languageCode = "en-us"
+title = "TotalTrash"
+
+[params]
+static = ""
+

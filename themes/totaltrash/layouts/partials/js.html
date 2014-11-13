@@ -1,0 +1,15 @@
+<script type="text/javascript"
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+<script>
+    var url = "{{ .Site.Params.static }}/js/jquery-1.11.1.min.js"
+    window.jQuery || document.write(
+        '<script src="' + url + '"<\/script>'
+    )
+</script>
+<script type="text/javascript"
+        src="{{ .Site.Params.static }}/js/bootstrap.min.js">
+</script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ .Site.Params.static }}/js/ie10-viewport-bug-workaround.js">
+</script>

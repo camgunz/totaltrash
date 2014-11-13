@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>:: TotalTrash :: Download</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="/css/bootstrap-slate.min.css">
+    <link rel="stylesheet"
+          href="/css/main.css">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="/img/apple-touch-icon-144-precomposed.png">
+    <script type="text/javascript"
+            src="/js/modernizr-2.6.2-respond-1.1.0.min.js">
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com">Upgrade your browser</a> to
+            improve your experience.
+        </p>
+    <![endif]-->
+    <div class="navbar navbar-default navbar-static-top" role="navigation"
+     id="main-navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">:: TotalTrash ::</a>
+        </div>
+        <div class="navbar-collapse collapse" id="main-menu">
+            <ul class="nav navbar-nav" id="main-menu-left">
+                
+                    <li class="dropdown">
+                
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        D2K<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" id="d2k-menu">
+                        <li><a href="/d2k">D2K</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/d2k/goals">Goals</a></li>
+                        <li><a href="/d2k/download">Downloads</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/camgunz/d2k/issues">
+                                Issues
+                            </a>
+                        </li>
+                        <li><a href="/d2k/faq">FAQ</a></li>
+                        <li><a href="/d2k/building">Building</a> </li>
+                    </ul>
+                </li>
+                
+                    <li class="dropdown">
+                
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                       href="#">Eternity C/S<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" id="ee-menu">
+                        <li><a href="/eternity">Eternity C/S</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/eternity/features">Features</a></li>
+                        <li><a href="/eternity/download">Downloads</a></li>
+                        <li>
+                            <a href="https://github.com/camgunz/eternity/issues">
+                                Issues
+                            </a>
+                        </li>
+                        <li><a href="/eternity/faq">FAQ</a></li>
+                        <li><a href="/eternity/building">Building</a></li>
+                    </ul>
+                </li>
+                
+                    <li>
+                
+                    <a href="/about">About</a>
+                </li>
+                
+                    <li>
+                
+                    <a href="wads">WADs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
+                <img src="/img/ttlogooneline.png"
+                     alt="Total Trash"
+                     class="logo logo-top center-block"
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-xs hidden-sm">
+                <img src="/img/ttlogo.png"
+                     alt="Total Trash"
+                     class="logo logo-side" />
+            </div>
+            <div id="content" class="col-md-8 col-md-offset-1 tt-panel">
+                <h2 class="post-title">Download</h2>
+                
+
+<h3 id="toc_0">Windows</h3>
+
+<ul>
+<li><a href="http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe">Windows Installer</a></li>
+<li><a href="http://static.totaltrash.org/eternity/eternity.zip">Windows ZIP Package</a></li>
+</ul>
+
+<p>If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old <code>eternity.exe</code> with the
+executable.</p>
+
+<h3 id="toc_1">Linux</h3>
+
+<ul>
+<li><a href="http://static.totaltrash.org/eternity/eternity-linux32.tar.xz">Full Distribution</a></li>
+<li><a href="http://static.totaltrash.org/eternity/eternity.xz">Executable Only</a></li>
+</ul>
+
+<h3 id="toc_2">Source</h3>
+
+<p>Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:</p>
+
+<pre><code>git clone https://github.com/camgunz/eternity
+</code></pre>
+
+<p>Client-server work is done on the <code>client-server</code> branch; to switch to this
+branch, run:</p>
+
+<pre><code>git checkout client-server
+</code></pre>
+
+<p>in the main <code>eternity</code> folder.</p>
+
+<p>Linux users can follow the instructions in the <code>README-CMAKE.txt</code> file. Windows
+users can follow the instructions in the <code>README-CODEBLOCKS.txt</code> file. Of
+course these are not the only ways to build EECS, just the easiest.</p>
+
+<h3 id="toc_3">Dependencies</h3>
+
+<p><em>(This section is for those compiling from source only)</em></p>
+
+<p>EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+<a href="http://static.totaltrash.org/eternity/eedeps">here</a>. If your platform is not
+listed there, please consider downloading the source distribution, using the
+<code>build_deps.py</code> script to build them, and sending them to me so I can update
+the repository.</p>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+        &copy; TotalTrash 2014
+    </div>
+</footer>
+
+    <script type="text/javascript"
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+<script>
+    var url = "/js/jquery-1.11.1.min.js"
+    window.jQuery || document.write(
+        '<script src="' + url + '"<\/script>'
+    )
+</script>
+<script type="text/javascript"
+        src="/js/bootstrap.min.js">
+</script>
+
+<script src="/js/ie10-viewport-bug-workaround.js">
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

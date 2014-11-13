@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>D2ks on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/d2k/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Tue, 11 Nov 2014 23:03:45 EST</updated>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://localhost:1313/d2k/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      
+      <guid>http://localhost:1313/d2k/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;D2K is an advanced Doom source port that aims to modernize the game while
+remaining faithful to the original implementation. It is based on
+&lt;a href=&#34;http://prboom-plus.sourceforge.net&#34;&gt;PrBoom+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;Download a D2K version for your platform, place an IWAD in the installation
+folder, and then run &lt;code&gt;doom2k.exe -net &amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.  Connection is currently
+a manual process, but eventually D2K will include a server browser.&lt;/p&gt;
+
+&lt;p&gt;You can also start a server similarly, simply use all the command-line flags
+you normally would, but add &lt;code&gt;-deltaserve&lt;/code&gt; to the arguments.  If you need to
+listen on a specific address, you can use
+&lt;code&gt;doom2k.exe ... -deltaserve &amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you get into any trouble at all, please see the &lt;a href=&#34;d2k/faq&#34;&gt;FAQ&lt;/a&gt;.  While
+we&amp;rsquo;re happy to help, you&amp;rsquo;re likely to get a fix for your issue much more
+quickly by using the information there than by waiting for us.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Reporting Bugs&lt;/h3&gt;
+
+&lt;p&gt;The issue tracker is where we keep track of problems in D2K, but it is also
+useful for feature requests.  Reporting bugs is simple; there is a
+&lt;a href=&#34;http://github.com/camgunz/d2k/issues&#34;&gt;bug tracker&lt;/a&gt;, all you need to do is
+create an account. Here are some guidelines for effective bug/feature posting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give as much information as you possibly can.&lt;/li&gt;
+&lt;li&gt;Use descriptive titles.&lt;/li&gt;
+&lt;li&gt;Be precise and specific.&lt;/li&gt;
+&lt;li&gt;Set label appropriately:
+
+&lt;ul&gt;
+&lt;li&gt;Bug: Incorrect behavior&lt;/li&gt;
+&lt;li&gt;Enhancement: New feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use an email address that you check.&lt;/li&gt;
+&lt;li&gt;If you can run a debugger, please post stack traces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than a couple days goes by and no one&amp;rsquo;s touched your bug or talked to
+you about it, please contact us in &lt;a href=&#34;irc://chat.freenode.net/d2k&#34;&gt;IRC&lt;/a&gt;.  The bug
+tracker is not where bugs and ideas go to die, it&amp;rsquo;s a list of things for the TT
+team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building D2K</title>
+      <link>http://localhost:1313/d2k/building/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/building/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;here&lt;/a&gt;; you can
+clone it with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Afterwards, there is a &lt;code&gt;build.sh&lt;/code&gt; script which will build D2K; the resulting
+executable is built in the &lt;code&gt;cbuild&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;libpng&lt;/li&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;li&gt;gettext&lt;/li&gt;
+&lt;li&gt;pcre&lt;/li&gt;
+&lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;Fontconfig&lt;/li&gt;
+&lt;li&gt;FreeType&lt;/li&gt;
+&lt;li&gt;HarfBuzz&lt;/li&gt;
+&lt;li&gt;Expat&lt;/li&gt;
+&lt;li&gt;Pixman&lt;/li&gt;
+&lt;li&gt;Cairo&lt;/li&gt;
+&lt;li&gt;Pango&lt;/li&gt;
+&lt;li&gt;libXDiff&lt;/li&gt;
+&lt;li&gt;ENet&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_mixer&lt;/li&gt;
+&lt;li&gt;OpenGL&lt;/li&gt;
+&lt;li&gt;Lua&lt;/li&gt;
+&lt;li&gt;LZMA*&lt;/li&gt;
+&lt;li&gt;libjpeg*&lt;/li&gt;
+&lt;li&gt;libtiff*&lt;/li&gt;
+&lt;li&gt;WebP*&lt;/li&gt;
+&lt;li&gt;SDL_image*&lt;/li&gt;
+&lt;li&gt;DUMB*&lt;/li&gt;
+&lt;li&gt;PortMidi*&lt;/li&gt;
+&lt;li&gt;FluidSynth*&lt;/li&gt;
+&lt;li&gt;MikMod*&lt;/li&gt;
+&lt;li&gt;libmad*&lt;/li&gt;
+&lt;li&gt;libvorbis*&lt;/li&gt;
+&lt;li&gt;libogg*&lt;/li&gt;
+&lt;li&gt;libFLAC*&lt;/li&gt;
+&lt;li&gt;gperf*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;* = optional&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We plan to add more, at least Jansson, libcurl, and PolarSSL.&lt;/p&gt;
+
+&lt;p&gt;On Arch Linux, the only dependency not bundled is libXDiff, which can be found
+in the AUR. I&amp;rsquo;m afraid I can&amp;rsquo;t help with other distributions.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Cross-Compiling&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;mingw64-builds&lt;/a&gt; is a project that
+cross-compiles dozens of popular libraries using the Mingw-w64 cross-compiler.
+You can clone it with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/mingw64-builds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default, mingw64-builds builds all the libraries in the &lt;code&gt;build&lt;/code&gt; subfolder.
+When cross-compiling D2K, D2K expects the dependencies to be in its &lt;code&gt;crossdeps&lt;/code&gt;
+folder. You can change both of these options if you need to. D2K contains a
+&lt;code&gt;crossbuild.sh&lt;/code&gt; script which will cross-compile it for Windows. The resulting
+executable is built in the &lt;code&gt;crossbuild&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Building on Windows&lt;/h3&gt;
+
+&lt;p&gt;There is currently no support for building on Windows.  I&amp;rsquo;ll accept patches for
+IDEs or compilers that support C99, but I will not accept patches that modify
+the code in order for it to work with a non-compliant system (MSVC++, for
+example).&lt;/p&gt;
+
+&lt;p&gt;Support for IDEs like Code::Blocks or CDT is planned, but not currently a
+priority.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;MP3&lt;/h3&gt;
+
+&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the free
+and superior OGG format.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://localhost:1313/d2k/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using Git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those cross-compiling for Windows only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;D2K has several dependencies, and rather than add them all to the codebase or
+expect users to find/cross-compile them on their own, I&amp;rsquo;ve &lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;started a
+project&lt;/a&gt; that will build D2K&amp;rsquo;s
+dependencies using Mingw-w64.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goals</title>
+      <link>http://localhost:1313/d2k/goals/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/goals/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Around 2012, I decided to leave the Doom community behind, but &lt;a href=&#34;../faq/#zdoom&#34;&gt;I became
+saddened by the prospect that (G)ZDoom and Zandronum are becoming the de facto
+Doom experience&lt;/a&gt; and instead of whining about it, decided to
+step up and build a Doom source port I think is worthy of being the standard.
+What does this mean?&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;State Of The Art Netcode&lt;/h3&gt;
+
+&lt;p&gt;The netcode model used by the major client/server ports (Odamex, Zandronum and
+ZDaemon) is fundamentally flawed. D2K will implement netcode based on delta
+compression, very similar to the system used by Quake 3.&lt;/p&gt;
+
+&lt;p&gt;In addition, D2K will also employ techniques to improve the experience for
+players on lossy or lagged connections. This includes smoothing opponent
+positions, adding backwards reconciliation (unlagged), and projectile lerping,
+among other things.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Faithful, Modern OpenGL Renderer&lt;/h3&gt;
+
+&lt;p&gt;PrBoom+&amp;rsquo;s OpenGL renderer is outdated, using deprecated APIs and the
+fixed-function pipeline. I will upgrade it to use the programmable pipeline,
+and restore functionality lost to deprecation (paletted textures, for example).
+I will also endeavour to ensure that anything possible with the original
+software renderer will be possible with the new OpenGL renderer as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Employ a Modern Scripting Language&lt;/h3&gt;
+
+&lt;p&gt;Doom&amp;rsquo;s extensive modifiability created an entire generation of game designers,
+but it has failed to keep up. ACS, DECORATE, EDF and ExtraData all attempt to
+improve Doom&amp;rsquo;s extensibility, but all leave much to be desired. ACS is
+particularly horrible.&lt;/p&gt;
+
+&lt;p&gt;D2K will employ &lt;a href=&#34;http://www.lua.org&#34;&gt;Lua&lt;/a&gt;, a language &lt;a href=&#34;http://en.wikipedia.org/wiki/Category:Lua-scripted_video_games&#34;&gt;already widely used for
+scripting&lt;/a&gt;, for
+its assets and behavior.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Add Existing Features&lt;/h3&gt;
+
+&lt;p&gt;Doom source ports have advanced tremendously over the years, but PrBoom+ has
+remained relatively conservative. D2K will add many advanced features, from
+those ports, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ACS scripting&lt;/li&gt;
+&lt;li&gt;DECORATE&lt;/li&gt;
+&lt;li&gt;EDF&lt;/li&gt;
+&lt;li&gt;ExtraData&lt;/li&gt;
+&lt;li&gt;MAPINFO&lt;/li&gt;
+&lt;li&gt;3D floors&lt;/li&gt;
+&lt;li&gt;3D MidTex&lt;/li&gt;
+&lt;li&gt;3D physics&lt;/li&gt;
+&lt;li&gt;Portals&lt;/li&gt;
+&lt;li&gt;Slopes&lt;/li&gt;
+&lt;li&gt;Polyobjects&lt;/li&gt;
+&lt;li&gt;Ambient sounds&lt;/li&gt;
+&lt;li&gt;Support for other ID Tech 1 engines (Heretic, Hexen, etc.)&lt;/li&gt;
+&lt;li&gt;Cameras&lt;/li&gt;
+&lt;li&gt;UDMF&lt;/li&gt;
+&lt;li&gt;ZIP/PK3 resource files&lt;/li&gt;
+&lt;li&gt;Bots&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;and much more. The goal, ultimately, is to be mod-compatible with even
+highly advanced engines like the Eternity Engine and Zandronum.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;Maintain Compatibility&lt;/h3&gt;
+
+&lt;p&gt;Doom has a rich demo history, and it is important to preserve it. D2K will
+continue PrBoom+&amp;rsquo;s commitment to demo compatibility by following Odamex&amp;rsquo; lead
+and building a demo testing framework.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Internationalize&lt;/h3&gt;
+
+&lt;p&gt;The days of ASCII dominance are over. D2K will use UTF-8 internally and support
+environments using non-ASCII encodings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Use Modern Technology&lt;/h3&gt;
+
+&lt;p&gt;D2K will use C99, and will be progressively reformatted to use C99 features.
+Compilers and IDEs with inadequate C99 support (such as MSVC++) are
+unsupported.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Promote Openness&lt;/h3&gt;
+
+&lt;p&gt;John Carmack released the Doom source code for Christmas in &amp;lsquo;97, and the Doom,
+gaming, and developer communities owe him a huge debt of gratitude. None of
+these modifications or advances would be possible without this initial gesture
+of openness.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, it is much harder to work with PrBoom+&amp;rsquo;s source code than it is
+to work with the original Doom source release. PrBoom+&amp;rsquo;s source is notoriously
+impenetrable, full of hacks, and largely written in an unreadable style. This
+has dramatically slowed the pace of contributions, and discourages would-be
+developers from working on PrBoom+.&lt;/p&gt;
+
+&lt;p&gt;Other ports have ported their code to C++, and while some of these efforts are
+examples of how C++ doesn&amp;rsquo;t have to be disgusting and confusing, others prove
+that it is far too easy to create impossibly complex code with the language.&lt;/p&gt;
+
+&lt;p&gt;Competitive Doom players are all too familiar with conservative developers
+refusing to add features they or others personally disagree with. Such
+recalcitrance has had a hugely negative impact on the entire Doom community.&lt;/p&gt;
+
+&lt;p&gt;D2K will continue the spirit of openness, not only through fulfilling its
+obligations under the GPL, but by maintaining an accessible codebase. I will
+diligently reformat code in a consistent, readable style, and I will attempt to
+redesign hacked features in a more robust manner. Further, D2K will remain in C
+to attempt to avoid C++&amp;rsquo;s complexity and lengthy compilation times. Finally,
+D2K will always weigh new feature ideas on the merits, not on politics or
+personal preference. A &amp;ldquo;vanilla&amp;rdquo; game will always be possible, and advanced
+features will always be optional.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://localhost:1313/d2k/faq/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/faq/</guid>
+      <description>
+
+&lt;p&gt;&lt;a class=&#34;anchor&#34; id=&#34;zdoom&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;What do you have against (G)ZDoom?&lt;/h3&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I became a competitive player on ZDaemon 1.08 (which was derived from ZDoom
+1.23b33), and it is insanely fun to play; it might be the most fun I&amp;rsquo;ve ever
+had playing a game. My argument against ZDoom and ZDoom-derived ports is not
+that they aren&amp;rsquo;t fun or that they&amp;rsquo;re bad; I think they&amp;rsquo;re tons of fun and
+pretty amazing. I am dismayed that ZDoom and its derivatives are what people
+think of as &amp;ldquo;Doom&amp;rdquo;, when they are really entirely different engines that just
+happen to load Doom resource files. What follows is heavy-handed, sharp
+criticism of ZDoom, and while it may seem like I have a grudge against its
+developers, in truth I respect and even like them. That said, here we go :) .&lt;/p&gt;
+
+&lt;p&gt;ZDoom is in no way compatible with Doom demos. It hasn&amp;rsquo;t been for years.
+Furthermore, ZDoom breaks compatibility with its own demos haphazardly. One of
+Doom&amp;rsquo;s strengths is its rich history, and ZDoom has no regard for preserving
+it.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s physics and renderer are also drastically different than Doom&amp;rsquo;s, and it
+isn&amp;rsquo;t possible to configure them to revert to original settings, because
+vanilla behavior is not a priority for ZDoom developers. Even the super-shotgun
+spread was changed. Such changes have huge effects on competitive play, but
+this is also not a priority for ZDoom developers.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s licensing is restricted to non-commercial use only, which limits the
+venues where Doom could expand. It also allows closing of the source code,
+which has nearly destroyed the Doom community. There are several parts of the
+codebase which, over the years, have illegaly incorporated code licensed under
+incompatible licenses (Quake, for example). ZDoom&amp;rsquo;s popularity is largely due
+to these incorporations, either illegal or under restrictive licenses, and has
+therefore come at the expense of the Doom community as a whole. Modders were
+left with a choice between proprietary, restricted ZDoom or an open port with
+fewer features, and as a result, the lion&amp;rsquo;s share of Doom mods rely on
+proprietary ZDoom features.&lt;/p&gt;
+
+&lt;p&gt;ZDoom continues to use features and code from non-free libraries and codebases,
+most infamously FMOD and BUILD. However, to their credit, ZDoom developers
+freely release their original code under the 2-clause BSD license, which, even
+though it allows the source to be closed, at least offers other source port
+developers the chance to incorporate those features in open ports.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s scripting language, ACS, is a nightmare. It is a terrible, weak
+scripting language requiring a custom VM. Instead of responsibly using a
+proper, 3rd party scripting language, ZDoom chose to extend ACS (first included
+by Hexen). Because of ZDoom&amp;rsquo;s popularity, the de facto Doom scripting language
+is ACS and the default level of ACS support is whatever ZDoom supports. Coupled
+with the fact that until 2008, ACS could not be included in GPL source ports
+due to its restrictive licensing, ZDoom essentially monopolized Doom scripting
+with a proprietary, substandard language.&lt;/p&gt;
+
+&lt;p&gt;Finally, ZDoom&amp;rsquo;s code style is inconsistent, at times unreadable, and often
+downright dangerous.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;What do you have against C++?&lt;/h3&gt;
+
+&lt;p&gt;C++&amp;rsquo;s templates and better type-safety are clear improvements over C. However,
+C++ incorporates four major misfeatures that, even though they are technically
+optional, you must interact with any 3rd party code. Altogether, these
+misfeatures outweigh C++&amp;rsquo;s advantages over C.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;Object-Oriented Programming&lt;/h4&gt;
+
+&lt;p&gt;OOP is centered around three major ideas: polymorphism, encapsulation, and
+inheritance. Polymorphism is just a different placement of the business logic
+dispatch, encapsulation is just a different (worse) placement of the object
+state, and inheritance is unnecessary and harmful. Even worse, OOP is slow.&lt;/p&gt;
+
+&lt;p&gt;Programmers often conflate powerful type systems with OOP, but there are type
+systems even more powerful than that of C++ and Java in languages that do not
+support OOP.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;Exceptions&lt;/h4&gt;
+
+&lt;p&gt;Exceptions disrupt the entire control flow of your program and are difficult to
+reason about. This can be mitigated with checked exceptions, Java is an example
+of this, but the try/catch syntax is burdensome, and developers consequently
+let them become crashes rather than deal with them.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;Operator Overloading&lt;/h4&gt;
+
+&lt;p&gt;Operator overloading produces code that is impossible to understand, as one
+cannot know what the code actually does. The only case for operator overloading
+is implementing additional numeric types, and support for this should be added
+at a lower level.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;The Standard Template Library&lt;/h4&gt;
+
+&lt;p&gt;While usually well-implemented and very useful, the STL is wildly over-verbose
+and renders any application that uses it too complex to really use. In
+fairness, this is because C++&amp;rsquo;s facilities for implementing generics are
+over-verbose, but this is a criticism of C++, so the point is valid.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;What do you have against Microsoft Visual C++?&lt;/h3&gt;
+
+&lt;p&gt;MSVC++&amp;rsquo;s support for C is substandard, and their response to this charge is
+&amp;ldquo;use C++&amp;rdquo;. That answer doesn&amp;rsquo;t satisfy me, for the aforementioned reasons.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Why did you fork PrBoom+? Don&amp;rsquo;t you like Entryway?&lt;/h3&gt;
+
+&lt;p&gt;I chose PrBoom+ for its OpenGL renderer, uncapped framerate, near-perfect
+compatibility with several historical source ports, GPL license, and its C
+codebase.&lt;/p&gt;
+
+&lt;p&gt;Entryway is obviously way smarter than me, which is why I chose to build upon
+his work (not to mention the dozens of other contributors to PrBoom) work. It
+would have taken me years to solve the problems he&amp;rsquo;s solved, presuming I&amp;rsquo;m
+even skilled enough to do so.  I don&amp;rsquo;t mean this fork as an insult, I mean it
+as a compliment :).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Recent Content on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Wed, 12 Nov 2014 20:27:57 EST</updated>
+    
+    <item>
+      <title>New Site</title>
+      <link>http://localhost:1313/post/newsite/</link>
+      <pubDate>Wed, 12 Nov 2014 20:27:57 EST</pubDate>
+      
+      <guid>http://localhost:1313/post/newsite/</guid>
+      <description>&lt;p&gt;Ever since TotalTrash was converted to a static site, I&amp;rsquo;ve wanted a way to add
+pages without copying and pasting tons of markup and updating the navbar.  I&amp;rsquo;ve
+finally built a new site using &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static site
+generator written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additionally, I plan to feature more news on TT.  I&amp;rsquo;ve wanted a place to post
+&lt;a href=&#34;/d2k&#34;&gt;D2K&lt;/a&gt; updates, and I think TT is where that belongs.&lt;/p&gt;
+
+&lt;p&gt;I may backdate some posts just for content&amp;rsquo;s sake.  We&amp;rsquo;ll see how it goes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://localhost:1313/d2k/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      
+      <guid>http://localhost:1313/d2k/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;D2K is an advanced Doom source port that aims to modernize the game while
+remaining faithful to the original implementation. It is based on
+&lt;a href=&#34;http://prboom-plus.sourceforge.net&#34;&gt;PrBoom+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;Download a D2K version for your platform, place an IWAD in the installation
+folder, and then run &lt;code&gt;doom2k.exe -net &amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.  Connection is currently
+a manual process, but eventually D2K will include a server browser.&lt;/p&gt;
+
+&lt;p&gt;You can also start a server similarly, simply use all the command-line flags
+you normally would, but add &lt;code&gt;-deltaserve&lt;/code&gt; to the arguments.  If you need to
+listen on a specific address, you can use
+&lt;code&gt;doom2k.exe ... -deltaserve &amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you get into any trouble at all, please see the &lt;a href=&#34;d2k/faq&#34;&gt;FAQ&lt;/a&gt;.  While
+we&amp;rsquo;re happy to help, you&amp;rsquo;re likely to get a fix for your issue much more
+quickly by using the information there than by waiting for us.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Reporting Bugs&lt;/h3&gt;
+
+&lt;p&gt;The issue tracker is where we keep track of problems in D2K, but it is also
+useful for feature requests.  Reporting bugs is simple; there is a
+&lt;a href=&#34;http://github.com/camgunz/d2k/issues&#34;&gt;bug tracker&lt;/a&gt;, all you need to do is
+create an account. Here are some guidelines for effective bug/feature posting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give as much information as you possibly can.&lt;/li&gt;
+&lt;li&gt;Use descriptive titles.&lt;/li&gt;
+&lt;li&gt;Be precise and specific.&lt;/li&gt;
+&lt;li&gt;Set label appropriately:
+
+&lt;ul&gt;
+&lt;li&gt;Bug: Incorrect behavior&lt;/li&gt;
+&lt;li&gt;Enhancement: New feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use an email address that you check.&lt;/li&gt;
+&lt;li&gt;If you can run a debugger, please post stack traces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than a couple days goes by and no one&amp;rsquo;s touched your bug or talked to
+you about it, please contact us in &lt;a href=&#34;irc://chat.freenode.net/d2k&#34;&gt;IRC&lt;/a&gt;.  The bug
+tracker is not where bugs and ideas go to die, it&amp;rsquo;s a list of things for the TT
+team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eternity Engine - Client/Server Edition</title>
+      <link>http://localhost:1313/eternity/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      
+      <guid>http://localhost:1313/eternity/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Welcome to Eternity Engine - Client/Server Edition (EECS) testing.  Based on
+the &lt;a href=&#34;http://www.doomworld.com/eternity&#34;&gt;Eternity Engine&lt;/a&gt;, EECS is an advanced
+client/server Doom port intended to provide high-quality, competitive gameplay.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;download&#34;&gt;Download an EECS client for your platform&lt;/a&gt;, place an IWAD
+in the installation folder (usually something like
+&lt;code&gt;C:\Program Files\Eternity Engine\bin&lt;/code&gt;) and then visit &lt;a href=&#34;http://master.totaltrash.org&#34;&gt;the
+master&lt;/a&gt; to see a list of servers. Clicking on one
+of the links on the left will connect to that server, clicking anywhere else on
+the row will show more information about that server in the sidebar.&lt;/p&gt;
+
+&lt;p&gt;If you get into any trouble at all, please see the &lt;a href=&#34;eternity/faq&#34;&gt;FAQ&lt;/a&gt;.  While
+we&amp;rsquo;re happy to help, you&amp;rsquo;re likely to get a fix for your issue much more
+quickly by visiting the FAQ than by waiting for us.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Reporting Bugs&lt;/h3&gt;
+
+&lt;p&gt;The entire point of this testing is to discover and resolve issues in EECS,
+however it&amp;rsquo;s also a good time to ask for features or report deficiencies.
+Reporting bugs is simple; there is a
+&lt;a href=&#34;http://github.com/camgunz/eternity/issues&#34;&gt;bug tracker&lt;/a&gt;, all you need to do is
+create an account. Here are some guidelines for effective bug/feature posting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give as much information as you possibly can.&lt;/li&gt;
+&lt;li&gt;Use descriptive titles.&lt;/li&gt;
+&lt;li&gt;Be precise and specific.&lt;/li&gt;
+&lt;li&gt;Set label appropriately:
+
+&lt;ul&gt;
+&lt;li&gt;Bug: Incorrect behavior&lt;/li&gt;
+&lt;li&gt;Enhancement: New feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use an email address that you check.&lt;/li&gt;
+&lt;li&gt;If you can run a debugger, please post stack traces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than a couple days goes by and no one&amp;rsquo;s touched your bug or talked to
+you about it, please contact us in &lt;a href=&#34;irc://chat.freenode.net/d2k&#34;&gt;IRC&lt;/a&gt;.  The bug
+tracker is not where bugs and ideas go to die, it&amp;rsquo;s a list of things for the TT
+team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TotalTrash</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 EST</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;The Future of Doom&lt;/h3&gt;
+
+&lt;p&gt;TotalTrash (TT) was a ZDaemon server set which hosted
+&lt;a href=&#34;http://cdevastation.com/zddl&#34;&gt;ZDDL&lt;/a&gt;, &lt;a href=&#34;http://intldoomleague.com&#34;&gt;IDL&lt;/a&gt;, Private
+CTF and various public CTF, Duel and Cooperative servers.  TT had the highest
+uptime and highest overall connection quality of any of its contemporaries.&lt;/p&gt;
+
+&lt;p&gt;In 2010, TotalTrash ceased public operations due to conflicts with ZDaemon&amp;rsquo;s
+administration, but it continued to host IDL, ZDDL and Private CTF.  However,
+after a time, TT scaled down its competitive offerings as well.  ZDDL held its
+last season in 2011, and IDL switched to Odamex in the winter of 2012.  At that
+point, TT&amp;rsquo;s role as a host for ZDaemon fully came to an end.&lt;/p&gt;
+
+&lt;p&gt;Now, TotalTrash serves as a host for source port development, and it continues
+to &lt;a href=&#34;http://static.totaltrash.org/wads&#34;&gt;host Doom WADs&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Features</title>
+      <link>http://localhost:1313/eternity/features/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/features/</guid>
+      <description>
+
+&lt;p&gt;The Eternity Engine has many often-overlooked features, this is just a short
+list.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Eternity Engine Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Near-perfect Vanilla Doom compatibility and old-school gameplay.&lt;/li&gt;
+&lt;li&gt;Full Boom, MBF, and SMMU compatibility.&lt;/li&gt;
+&lt;li&gt;Removal of nearly all Vanilla Doom limits.&lt;/li&gt;
+&lt;li&gt;Translucency.&lt;/li&gt;
+&lt;li&gt;Multiple music formats, including (but not limited to) MOD, XM, MIDI, OGG/Vorbis, SPC, FLAC, MP3 and MUS.&lt;/li&gt;
+&lt;li&gt;3D object clipping, so objects (like players and monsters) can exist and move above and below each other.&lt;/li&gt;
+&lt;li&gt;Cameras, for player-less viewpoints.&lt;/li&gt;
+&lt;li&gt;Chasecam (3rd-person viewpoint)&lt;/li&gt;
+&lt;li&gt;Spycam, allowing a player to see what other players are seeing.&lt;/li&gt;
+&lt;li&gt;ENDOOM and textmode startup support.&lt;/li&gt;
+&lt;li&gt;Cross-platform, supporting at least Windows, Linux and BSD.&lt;/li&gt;
+&lt;li&gt;Pre-beta BFG types.&lt;/li&gt;
+&lt;li&gt;Gamepad and joystick support.&lt;/li&gt;
+&lt;li&gt;EDF (Eternity Definition File) system allowing for extreme customization of game resources.&lt;/li&gt;
+&lt;li&gt;ExtraData data specification language replaces the original binary WAD format (this will be superceded by UDMF).&lt;/li&gt;
+&lt;li&gt;Quake-style console.&lt;/li&gt;
+&lt;li&gt;Legacy skin support.&lt;/li&gt;
+&lt;li&gt;Cardboard renderer, which is faster than and resolves fundamental problems with Doom&amp;rsquo;s original renderer by using high-precision floating-point numbers instead of the original fixed-point. It also supports arbitrary, non-standard resolutions.&lt;/li&gt;
+&lt;li&gt;Highly advanced portal implementation, allowing for pseudo-3D or physically impossible architecture.&lt;/li&gt;
+&lt;li&gt;Portal overlays (translucent flats, etc.).&lt;/li&gt;
+&lt;li&gt;Support for the Doom Master Levels.&lt;/li&gt;
+&lt;li&gt;TerrainTypes, such as splashing water.&lt;/li&gt;
+&lt;li&gt;3DMidTex, allowing for limited 3D architecture like bridges.&lt;/li&gt;
+&lt;li&gt;A full assortment of compatibility options.&lt;/li&gt;
+&lt;li&gt;2-way wallrunning.&lt;/li&gt;
+&lt;li&gt;Crosshair.&lt;/li&gt;
+&lt;li&gt;Mouselook.&lt;/li&gt;
+&lt;li&gt;Jumping.&lt;/li&gt;
+&lt;li&gt;Advanced sound engine, supporting sector, polyobject, global, and pitched sounds as well as sound sequences.&lt;/li&gt;
+&lt;li&gt;Sound equalizer.&lt;/li&gt;
+&lt;li&gt;Burn damage (standing on torches or candles, for example).&lt;/li&gt;
+&lt;li&gt;Slopes (rendering only, clipping is not complete).&lt;/li&gt;
+&lt;li&gt;Particle effects.&lt;/li&gt;
+&lt;li&gt;BMP and PNG screenshots.&lt;/li&gt;
+&lt;li&gt;Flats and textures are interchangeable, meaning mappers can use flats on walls and textures on floors and ceilings.&lt;/li&gt;
+&lt;li&gt;Fullscreen graphical HUD translucency.&lt;/li&gt;
+&lt;li&gt;DECORATE state support (not full DECORATE support).&lt;/li&gt;
+&lt;li&gt;GFS (Game File Script) allows loading of multiple files using only one file - useful for drag and drop.&lt;/li&gt;
+&lt;li&gt;ACS (mostly complete).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Eternity Engine - Client/Server Edition Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extremely smooth, high fidelity, configurable netcode. Players can make their own decisions about tradeoffs between accuracy, latency and smoothness.&lt;/li&gt;
+&lt;li&gt;Highly-accurate backwards reconciliation (unlagged) for hitscan weapons, autoaim, and BFG tracers:&lt;/li&gt;
+&lt;li&gt;Handles moving sectors.&lt;/li&gt;
+&lt;li&gt;Handles changing player states like invulnerability.&lt;/li&gt;
+&lt;li&gt;Master server with built-in web launcher (no separate launcher application is necessary).&lt;/li&gt;
+&lt;li&gt;On-the-fly WAD loading.&lt;/li&gt;
+&lt;li&gt;Automatic WAD downloading (uses HTTP, FTP, or other protocols for maximum speed and versatility).&lt;/li&gt;
+&lt;li&gt;Per-map WADs and configuration overrides.&lt;/li&gt;
+&lt;li&gt;Spectators.&lt;/li&gt;
+&lt;li&gt;Up to 32 players and 2 teams.&lt;/li&gt;
+&lt;li&gt;Player queue system.&lt;/li&gt;
+&lt;li&gt;Remote console (RCON).&lt;/li&gt;
+&lt;li&gt;Simple authorization system:&lt;/li&gt;
+&lt;li&gt;Four authorization levels, spectator, player, moderator, and administrator.&lt;/li&gt;
+&lt;li&gt;Clients save valid passwords and authenticate automatically whenever possible.&lt;/li&gt;
+&lt;li&gt;Bridge things (from ZDoom).&lt;/li&gt;
+&lt;li&gt;3D radius attacks, used mainly for rocket jumping.&lt;/li&gt;
+&lt;li&gt;New multiplayer scoreboards.&lt;/li&gt;
+&lt;li&gt;Efficient handling of maps with large amounts of monsters; status and position are only broadcasted if they&amp;rsquo;ve changed.&lt;/li&gt;
+&lt;li&gt;TeamDM and CTF game modes (in addition to staples like Duel, Deathmatch, and Cooperative/Survival).&lt;/li&gt;
+&lt;li&gt;Advanced demos, split by map, and allowing speed up, slow down, pause, and checkpoints. Demos themselves are simple ZIP files that include JSON metadata, so no knowledge of the binary format is necessary to work with them.&lt;/li&gt;
+&lt;li&gt;Powerful keybinds:&lt;/li&gt;
+&lt;li&gt;Bind key down and key up events separately&lt;/li&gt;
+&lt;li&gt;Bind to only event activation or event deactivation&lt;/li&gt;
+&lt;li&gt;Bind a key to multiple events; useful for SR50 binds and more&lt;/li&gt;
+&lt;li&gt;No weapon switch on pickup.&lt;/li&gt;
+&lt;li&gt;Preferred weapon order (can also switch when picking up ammo for a preferred weapon).&lt;/li&gt;
+&lt;li&gt;Enable/Disable movebob.&lt;/li&gt;
+&lt;li&gt;Modifiable damage screen (red screen) intensity.&lt;/li&gt;
+&lt;li&gt;Highly customizable voting (commands, duration and pass threshold).&lt;/li&gt;
+&lt;li&gt;Quake &amp;amp; Unreal Tournament style announcers.&lt;/li&gt;
+&lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
+&lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://localhost:1313/eternity/faq/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/faq/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Troubleshooting&lt;/h3&gt;
+
+&lt;h4 id=&#34;toc_1&#34;&gt;EECS doesn&amp;rsquo;t find the IWAD.&lt;/h4&gt;
+
+&lt;p&gt;Put the IWAD (for example, &lt;code&gt;doom2.wad&lt;/code&gt;) in the &lt;code&gt;user/wads&lt;/code&gt; folder.  By default
+this will be &lt;code&gt;C:\Program Files\Eternity Engine\user\wads&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;Client hangs in the full-screen console before connecting.&lt;/h4&gt;
+
+&lt;p&gt;You might need to enter a password.  Be sure to read the text
+in the console to make sure it&amp;rsquo;s not asking you to input a
+password.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;A weird box pops up in the browser when clicking on server links.&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s asking you if you want to launch Eternity, which you do.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;Clicking on server links doesn&amp;rsquo;t work on Vista.&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Uninstall Eternity using the uninstaller&lt;/li&gt;
+&lt;li&gt;Reinstall Eternity to &lt;code&gt;C:\Eternity&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whatever you do, do not ask mikehail about this.  Not even once.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Clicking on server links doesn&amp;rsquo;t work on Linux.&lt;/h4&gt;
+
+&lt;p&gt;The server links use the &lt;code&gt;eternity://&lt;/code&gt; protocol, and there&amp;rsquo;s no 100% sure way
+to set protocol handlers in Linux.  If you&amp;rsquo;re using Firefox or you have Gnome
+libs installed, you can try the instructions
+&lt;a href=&#34;http://kb.mozillazine.org/Register_protocol#Linux&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Personally, I launch EECS from the command-line like:
+&lt;code&gt;eternity -csjoin eternity://master.totaltrash.org/servers/totaltrash/ctf&lt;/code&gt;.
+We plan to fix this as well.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_6&#34;&gt;Blood spawned from shots doesn&amp;rsquo;t seem to match up with damage.&lt;/h4&gt;
+
+&lt;p&gt;EECS has a &lt;code&gt;predict_shots&lt;/code&gt; option that predicts shot collision and spawns
+bullet puffs or blood instantly instead of waiting for the server.  While this
+feels more &amp;ldquo;crisp&amp;rdquo;, it can be inaccurate, possibly resulting in the feeling
+that too much blood gushes out of your opponent when you shoot them.  You can
+set &lt;code&gt;predict_shots&lt;/code&gt; to &lt;code&gt;no&lt;/code&gt; to disable this, but while shot results will be
+accurate, they will be lagged.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_7&#34;&gt;After alt-tabbing to a different application, part of the EE screen is frozen.&lt;/h4&gt;
+
+&lt;p&gt;This is likely an SDL bug, and it only shows up in Windows Vista and Windows 7
+with Desktop Video Acceleration disabled.  To work around it, use EE&amp;rsquo;s GL-in-2D
+mode (in &lt;code&gt;system.cfg&lt;/code&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set &lt;code&gt;i_videodriverid&lt;/code&gt; to 1 (SDL GL2D)&lt;/li&gt;
+&lt;li&gt;set &lt;code&gt;d_fastrefresh&lt;/code&gt; to 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;toc_8&#34;&gt;Mouse lag&lt;/h4&gt;
+
+&lt;p&gt;Using VSYNC on some video drivers will cause mouse input to be lagged.  To
+avoid this, disable VSYNC in your video driver&amp;rsquo;s configuration.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_9&#34;&gt;Mouse gets slightly &amp;ldquo;stuck&amp;rdquo;&lt;/h4&gt;
+
+&lt;p&gt;The mouse may be sampled unevenly due to Doom&amp;rsquo;s 35Hz framerate cap, and this
+may result in the mouse feeling like it&amp;rsquo;s &amp;ldquo;stuck&amp;rdquo; turning or moving.  To avoid
+this, enable &lt;code&gt;d_fastrefresh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_10&#34;&gt;Adding fonts&lt;/h4&gt;
+
+&lt;p&gt;EE supports TTF fonts, and adding them is as simple as copying the font file
+(i.e. &lt;code&gt;arial.ttf&lt;/code&gt;) to the &lt;code&gt;user/fonts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_11&#34;&gt;Netcode&lt;/h3&gt;
+
+&lt;p&gt;EECS has both clientside and serverside buffers designed to improve smoothness,
+however, the tradeoff is increased latency.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_12&#34;&gt;Clientside packet buffer&lt;/h4&gt;
+
+&lt;p&gt;The client has an optional packet buffer that buffers messages received from
+the server.  Players can enable the packet buffer using &lt;code&gt;packet_buffer&lt;/code&gt;, and
+they can set the size using &lt;code&gt;packet_buffer_size&lt;/code&gt;  A size of &lt;code&gt;0&lt;/code&gt; causes the
+buffer to adapt to your latency and packet loss.  Other sizes specify how many
+TICs of messages to buffer.  Again, be aware that the larger the buffer, the
+more latency is artifically added to your connection.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_13&#34;&gt;Serverside command buffer&lt;/h4&gt;
+
+&lt;p&gt;The server has an optional command buffer that buffers commands received from
+every client.  This is enabled/disabled using the &lt;code&gt;buffer_client_commands&lt;/code&gt;
+option in the server configuration file.  The buffer is adaptive; size cannot
+be set manually.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_14&#34;&gt;Using Netstats&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code&gt;show_netstats&lt;/code&gt; command can help players get an idea of their connection
+quality.  To enable them, type &lt;code&gt;show_netstats yes&lt;/code&gt; into the console.&lt;/p&gt;
+
+&lt;p&gt;The 1st number is the number of TICs it takes for a message to arrive from the
+server to the client.&lt;/p&gt;
+
+&lt;p&gt;The 2nd number is the current number of TICs that are buffered in the
+clientside packet buffer.&lt;/p&gt;
+
+&lt;p&gt;The 3rd number is the number of your commands the server has buffered in the
+serverside command buffer.&lt;/p&gt;
+
+&lt;p&gt;The 4th number is the percentage of packets that successfully arrive at the
+server the first time they&amp;rsquo;re sent.  If this number is less than 100%, it
+doesn&amp;rsquo;t mean information is being lost; packets that are lost are always
+resent.  However, resending adds to your latency.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_15&#34;&gt;Bandwidth&lt;/h3&gt;
+
+&lt;p&gt;One of our design assumptions was &amp;ldquo;bandwidth is cheap&amp;rdquo;.  If you are using a
+modem or your internet download bandwidth is less than 256kbps (that&amp;rsquo;s 256
+kilobits per second, or 32kB/s is the max you see while - for example -
+downloading in your browser) you will almost certainly have serious problems
+playing EECS.&lt;/p&gt;
+
+&lt;p&gt;To be specific, a player&amp;rsquo;s minimum position requires at least 32 bytes.  We
+have to add 16 bytes to that for sequencing and identification (position for
+&lt;strong&gt;which&lt;/strong&gt; player at &lt;strong&gt;which&lt;/strong&gt; TIC), for a grand total of 48 bytes.
+Assuming a 16 player server, you are receiving 15 positions every TIC, so 525
+positions per TIC.  48 * 525 is 25.2kB/s, or 201.6kbps.&lt;/p&gt;
+
+&lt;p&gt;This is a best-case scenario, because we&amp;rsquo;re assuming there are only 15 other
+actors (players, monsters, plasma balls, etc.).  Cooperative games will
+requires more bandwidth, especially WADs with a huge amount of monsters.
+Additionally we are only calculating bandwidth used by position messages.
+While they are certainly the lion&amp;rsquo;s share of messages, there are over 30
+messages overall; in particular moving platforms will send a large amount of
+(small) messages.&lt;/p&gt;
+
+&lt;p&gt;We plan to be more flexible in this area in the future.  Other ports (Odamex
+and ZDaemon that we&amp;rsquo;re aware of) allow you to specify your update rate so you
+have the option of reducing your incoming bandwidth 50%-67%, but you pay a high
+price in accuracy.  Because of our focus on competition, we always err on the
+side of accuracy, however we recognize that not all players are competitive and
+may not mind or even notice the difference.  On the other hand, we also plan to
+optionally use more bandwidth to alleviate some of the negative effects of
+packet loss.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>http://localhost:1313/eternity/building/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/building/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;EECS&amp;rsquo; source code is located at
+&lt;code&gt;http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;. On Windows
+you can use TortoiseSVN; Linux users are encouraged to use their distribution&amp;rsquo;s
+package management to install the Subversion binaries. The command-line to
+checkout the code is:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;svn co http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve successfully checked out the source code from the Subversion
+repository, create an &lt;code&gt;eedeps&lt;/code&gt; folder inside of it.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;EECS has pre-built dependencies for Windows and Linux located
+&lt;a href=&#34;http://static.totaltrash.org/eedeps&#34;&gt;here&lt;/a&gt;. If you are using Code::Blocks on
+Windows you should use the MinGW distribution, but if you are using MSVC on
+Windows you should use the MSVC distribution. 32-bit Linux users should use the
+Linux32 distribution, and 64-bit Linux users should use the Linux64
+distribution. It is also possible to build EECS using packages installed on
+your machine. Here is a list of EECS&amp;rsquo; dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ENet 1.3.x&lt;/li&gt;
+&lt;li&gt;libarchive 2.8.x
+
+&lt;ul&gt;
+&lt;li&gt;bzip2&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;xz&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;curl
+
+&lt;ul&gt;
+&lt;li&gt;c-ares-1.7.4 (Linux only)&lt;/li&gt;
+&lt;li&gt;gnutls-2.8.x&lt;/li&gt;
+&lt;li&gt;libgcrypt-1.5.x&lt;/li&gt;
+&lt;li&gt;libgpg-error-1.10&lt;/li&gt;
+&lt;li&gt;libidn-1.22&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_net&lt;/li&gt;
+&lt;li&gt;SDL_mixer
+
+&lt;ul&gt;
+&lt;li&gt;flac-1.2.x&lt;/li&gt;
+&lt;li&gt;libmad-0.15.1b&lt;/li&gt;
+&lt;li&gt;libmikmod-3.1.11&lt;/li&gt;
+&lt;li&gt;libogg-1.2.x&lt;/li&gt;
+&lt;li&gt;libvorbis-1.3.x&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;OpenSSL&lt;/h4&gt;
+
+&lt;p&gt;Please be aware that while OpenSSL may be substituted for GnuTLS and its myriad
+dependencies, binaries built against OpenSSL may not be distributed because of
+a licensing conflict between its license and EECS&amp;rsquo; license (GPLv2). They are OK
+for personal use however.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;MP3&lt;/h4&gt;
+
+&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the free
+and superior OGG format.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;SMPEG&lt;/h4&gt;
+
+&lt;p&gt;While SMPEG may be substituted for libmad, SMPEG has reported stability issues
+and can be difficult to compile.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Adding Pre-Built Dependencies&lt;/h4&gt;
+
+&lt;p&gt;If you are using a different platform, please consider getting in touch with
+the development team so they can help you build the dependencies for your
+platform and add them to the repository.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_6&#34;&gt;Installing Pre-Built Dependencies&lt;/h4&gt;
+
+&lt;p&gt;Windows users can decompress the archives using &lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt;,
+Linux users will need &lt;a href=&#34;http://tukaani.org/xz&#34;&gt;XZ Utils&lt;/a&gt;, which can likely be
+installed via package management. The dependencies should be placed in the
+&lt;code&gt;eedeps&lt;/code&gt; folder inside the main source distribution. For example, a MinGW user
+who downloaded the source code to &lt;code&gt;C:\Code\eecs&lt;/code&gt; would have the dependencies
+installed at &lt;code&gt;C:\Code\eecs\eedeps\mingw&lt;/code&gt;, and inside the &lt;code&gt;mingw&lt;/code&gt; folder would be
+&lt;code&gt;bin&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;lib&lt;/code&gt;, &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;sbin&lt;/code&gt;, and &lt;code&gt;share&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Building: Code::Blocks &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS Code::Blocks project file is located in the &lt;code&gt;codeblocks&lt;/code&gt; folder. No
+modifications should be necessary; open and build.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Building: MSVC++ &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS MSVC++ project file is located in the &lt;code&gt;vc2008&lt;/code&gt; folder. This build
+platform is still in development, possible issues include problems with the
+Solution/Project file (non-relative paths) and a lack of static linking (lots
+of DLLs required by the main Eternity.exe executable). Please report problems
+with the Solution/Project file; static linking will be added in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_9&#34;&gt;Building: Linux&lt;/h3&gt;
+
+&lt;p&gt;The EECS Linux build system uses CMake. The steps are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmake ../ -G&amp;quot;Unix Makefiles&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This builds a binary &lt;code&gt;eternity.real&lt;/code&gt; inside &lt;code&gt;build/source&lt;/code&gt; (in our example).
+Installation currently does not work; users who build from source are expected
+to install eternity as they see fit.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://localhost:1313/d2k/faq/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/faq/</guid>
+      <description>
+
+&lt;p&gt;&lt;a class=&#34;anchor&#34; id=&#34;zdoom&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;What do you have against (G)ZDoom?&lt;/h3&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I became a competitive player on ZDaemon 1.08 (which was derived from ZDoom
+1.23b33), and it is insanely fun to play; it might be the most fun I&amp;rsquo;ve ever
+had playing a game. My argument against ZDoom and ZDoom-derived ports is not
+that they aren&amp;rsquo;t fun or that they&amp;rsquo;re bad; I think they&amp;rsquo;re tons of fun and
+pretty amazing. I am dismayed that ZDoom and its derivatives are what people
+think of as &amp;ldquo;Doom&amp;rdquo;, when they are really entirely different engines that just
+happen to load Doom resource files. What follows is heavy-handed, sharp
+criticism of ZDoom, and while it may seem like I have a grudge against its
+developers, in truth I respect and even like them. That said, here we go :) .&lt;/p&gt;
+
+&lt;p&gt;ZDoom is in no way compatible with Doom demos. It hasn&amp;rsquo;t been for years.
+Furthermore, ZDoom breaks compatibility with its own demos haphazardly. One of
+Doom&amp;rsquo;s strengths is its rich history, and ZDoom has no regard for preserving
+it.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s physics and renderer are also drastically different than Doom&amp;rsquo;s, and it
+isn&amp;rsquo;t possible to configure them to revert to original settings, because
+vanilla behavior is not a priority for ZDoom developers. Even the super-shotgun
+spread was changed. Such changes have huge effects on competitive play, but
+this is also not a priority for ZDoom developers.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s licensing is restricted to non-commercial use only, which limits the
+venues where Doom could expand. It also allows closing of the source code,
+which has nearly destroyed the Doom community. There are several parts of the
+codebase which, over the years, have illegaly incorporated code licensed under
+incompatible licenses (Quake, for example). ZDoom&amp;rsquo;s popularity is largely due
+to these incorporations, either illegal or under restrictive licenses, and has
+therefore come at the expense of the Doom community as a whole. Modders were
+left with a choice between proprietary, restricted ZDoom or an open port with
+fewer features, and as a result, the lion&amp;rsquo;s share of Doom mods rely on
+proprietary ZDoom features.&lt;/p&gt;
+
+&lt;p&gt;ZDoom continues to use features and code from non-free libraries and codebases,
+most infamously FMOD and BUILD. However, to their credit, ZDoom developers
+freely release their original code under the 2-clause BSD license, which, even
+though it allows the source to be closed, at least offers other source port
+developers the chance to incorporate those features in open ports.&lt;/p&gt;
+
+&lt;p&gt;ZDoom&amp;rsquo;s scripting language, ACS, is a nightmare. It is a terrible, weak
+scripting language requiring a custom VM. Instead of responsibly using a
+proper, 3rd party scripting language, ZDoom chose to extend ACS (first included
+by Hexen). Because of ZDoom&amp;rsquo;s popularity, the de facto Doom scripting language
+is ACS and the default level of ACS support is whatever ZDoom supports. Coupled
+with the fact that until 2008, ACS could not be included in GPL source ports
+due to its restrictive licensing, ZDoom essentially monopolized Doom scripting
+with a proprietary, substandard language.&lt;/p&gt;
+
+&lt;p&gt;Finally, ZDoom&amp;rsquo;s code style is inconsistent, at times unreadable, and often
+downright dangerous.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;What do you have against C++?&lt;/h3&gt;
+
+&lt;p&gt;C++&amp;rsquo;s templates and better type-safety are clear improvements over C. However,
+C++ incorporates four major misfeatures that, even though they are technically
+optional, you must interact with any 3rd party code. Altogether, these
+misfeatures outweigh C++&amp;rsquo;s advantages over C.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;Object-Oriented Programming&lt;/h4&gt;
+
+&lt;p&gt;OOP is centered around three major ideas: polymorphism, encapsulation, and
+inheritance. Polymorphism is just a different placement of the business logic
+dispatch, encapsulation is just a different (worse) placement of the object
+state, and inheritance is unnecessary and harmful. Even worse, OOP is slow.&lt;/p&gt;
+
+&lt;p&gt;Programmers often conflate powerful type systems with OOP, but there are type
+systems even more powerful than that of C++ and Java in languages that do not
+support OOP.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;Exceptions&lt;/h4&gt;
+
+&lt;p&gt;Exceptions disrupt the entire control flow of your program and are difficult to
+reason about. This can be mitigated with checked exceptions, Java is an example
+of this, but the try/catch syntax is burdensome, and developers consequently
+let them become crashes rather than deal with them.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;Operator Overloading&lt;/h4&gt;
+
+&lt;p&gt;Operator overloading produces code that is impossible to understand, as one
+cannot know what the code actually does. The only case for operator overloading
+is implementing additional numeric types, and support for this should be added
+at a lower level.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;The Standard Template Library&lt;/h4&gt;
+
+&lt;p&gt;While usually well-implemented and very useful, the STL is wildly over-verbose
+and renders any application that uses it too complex to really use. In
+fairness, this is because C++&amp;rsquo;s facilities for implementing generics are
+over-verbose, but this is a criticism of C++, so the point is valid.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;What do you have against Microsoft Visual C++?&lt;/h3&gt;
+
+&lt;p&gt;MSVC++&amp;rsquo;s support for C is substandard, and their response to this charge is
+&amp;ldquo;use C++&amp;rdquo;. That answer doesn&amp;rsquo;t satisfy me, for the aforementioned reasons.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Why did you fork PrBoom+? Don&amp;rsquo;t you like Entryway?&lt;/h3&gt;
+
+&lt;p&gt;I chose PrBoom+ for its OpenGL renderer, uncapped framerate, near-perfect
+compatibility with several historical source ports, GPL license, and its C
+codebase.&lt;/p&gt;
+
+&lt;p&gt;Entryway is obviously way smarter than me, which is why I chose to build upon
+his work (not to mention the dozens of other contributors to PrBoom) work. It
+would have taken me years to solve the problems he&amp;rsquo;s solved, presuming I&amp;rsquo;m
+even skilled enough to do so.  I don&amp;rsquo;t mean this fork as an insult, I mean it
+as a compliment :).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goals</title>
+      <link>http://localhost:1313/d2k/goals/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/goals/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Around 2012, I decided to leave the Doom community behind, but &lt;a href=&#34;../faq/#zdoom&#34;&gt;I became
+saddened by the prospect that (G)ZDoom and Zandronum are becoming the de facto
+Doom experience&lt;/a&gt; and instead of whining about it, decided to
+step up and build a Doom source port I think is worthy of being the standard.
+What does this mean?&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;State Of The Art Netcode&lt;/h3&gt;
+
+&lt;p&gt;The netcode model used by the major client/server ports (Odamex, Zandronum and
+ZDaemon) is fundamentally flawed. D2K will implement netcode based on delta
+compression, very similar to the system used by Quake 3.&lt;/p&gt;
+
+&lt;p&gt;In addition, D2K will also employ techniques to improve the experience for
+players on lossy or lagged connections. This includes smoothing opponent
+positions, adding backwards reconciliation (unlagged), and projectile lerping,
+among other things.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Faithful, Modern OpenGL Renderer&lt;/h3&gt;
+
+&lt;p&gt;PrBoom+&amp;rsquo;s OpenGL renderer is outdated, using deprecated APIs and the
+fixed-function pipeline. I will upgrade it to use the programmable pipeline,
+and restore functionality lost to deprecation (paletted textures, for example).
+I will also endeavour to ensure that anything possible with the original
+software renderer will be possible with the new OpenGL renderer as well.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Employ a Modern Scripting Language&lt;/h3&gt;
+
+&lt;p&gt;Doom&amp;rsquo;s extensive modifiability created an entire generation of game designers,
+but it has failed to keep up. ACS, DECORATE, EDF and ExtraData all attempt to
+improve Doom&amp;rsquo;s extensibility, but all leave much to be desired. ACS is
+particularly horrible.&lt;/p&gt;
+
+&lt;p&gt;D2K will employ &lt;a href=&#34;http://www.lua.org&#34;&gt;Lua&lt;/a&gt;, a language &lt;a href=&#34;http://en.wikipedia.org/wiki/Category:Lua-scripted_video_games&#34;&gt;already widely used for
+scripting&lt;/a&gt;, for
+its assets and behavior.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Add Existing Features&lt;/h3&gt;
+
+&lt;p&gt;Doom source ports have advanced tremendously over the years, but PrBoom+ has
+remained relatively conservative. D2K will add many advanced features, from
+those ports, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ACS scripting&lt;/li&gt;
+&lt;li&gt;DECORATE&lt;/li&gt;
+&lt;li&gt;EDF&lt;/li&gt;
+&lt;li&gt;ExtraData&lt;/li&gt;
+&lt;li&gt;MAPINFO&lt;/li&gt;
+&lt;li&gt;3D floors&lt;/li&gt;
+&lt;li&gt;3D MidTex&lt;/li&gt;
+&lt;li&gt;3D physics&lt;/li&gt;
+&lt;li&gt;Portals&lt;/li&gt;
+&lt;li&gt;Slopes&lt;/li&gt;
+&lt;li&gt;Polyobjects&lt;/li&gt;
+&lt;li&gt;Ambient sounds&lt;/li&gt;
+&lt;li&gt;Support for other ID Tech 1 engines (Heretic, Hexen, etc.)&lt;/li&gt;
+&lt;li&gt;Cameras&lt;/li&gt;
+&lt;li&gt;UDMF&lt;/li&gt;
+&lt;li&gt;ZIP/PK3 resource files&lt;/li&gt;
+&lt;li&gt;Bots&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;and much more. The goal, ultimately, is to be mod-compatible with even
+highly advanced engines like the Eternity Engine and Zandronum.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;Maintain Compatibility&lt;/h3&gt;
+
+&lt;p&gt;Doom has a rich demo history, and it is important to preserve it. D2K will
+continue PrBoom+&amp;rsquo;s commitment to demo compatibility by following Odamex&amp;rsquo; lead
+and building a demo testing framework.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Internationalize&lt;/h3&gt;
+
+&lt;p&gt;The days of ASCII dominance are over. D2K will use UTF-8 internally and support
+environments using non-ASCII encodings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Use Modern Technology&lt;/h3&gt;
+
+&lt;p&gt;D2K will use C99, and will be progressively reformatted to use C99 features.
+Compilers and IDEs with inadequate C99 support (such as MSVC++) are
+unsupported.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Promote Openness&lt;/h3&gt;
+
+&lt;p&gt;John Carmack released the Doom source code for Christmas in &amp;lsquo;97, and the Doom,
+gaming, and developer communities owe him a huge debt of gratitude. None of
+these modifications or advances would be possible without this initial gesture
+of openness.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, it is much harder to work with PrBoom+&amp;rsquo;s source code than it is
+to work with the original Doom source release. PrBoom+&amp;rsquo;s source is notoriously
+impenetrable, full of hacks, and largely written in an unreadable style. This
+has dramatically slowed the pace of contributions, and discourages would-be
+developers from working on PrBoom+.&lt;/p&gt;
+
+&lt;p&gt;Other ports have ported their code to C++, and while some of these efforts are
+examples of how C++ doesn&amp;rsquo;t have to be disgusting and confusing, others prove
+that it is far too easy to create impossibly complex code with the language.&lt;/p&gt;
+
+&lt;p&gt;Competitive Doom players are all too familiar with conservative developers
+refusing to add features they or others personally disagree with. Such
+recalcitrance has had a hugely negative impact on the entire Doom community.&lt;/p&gt;
+
+&lt;p&gt;D2K will continue the spirit of openness, not only through fulfilling its
+obligations under the GPL, but by maintaining an accessible codebase. I will
+diligently reformat code in a consistent, readable style, and I will attempt to
+redesign hacked features in a more robust manner. Further, D2K will remain in C
+to attempt to avoid C++&amp;rsquo;s complexity and lengthy compilation times. Finally,
+D2K will always weigh new feature ideas on the merits, not on politics or
+personal preference. A &amp;ldquo;vanilla&amp;rdquo; game will always be possible, and advanced
+features will always be optional.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://localhost:1313/d2k/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using Git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those cross-compiling for Windows only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;D2K has several dependencies, and rather than add them all to the codebase or
+expect users to find/cross-compile them on their own, I&amp;rsquo;ve &lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;started a
+project&lt;/a&gt; that will build D2K&amp;rsquo;s
+dependencies using Mingw-w64.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://localhost:1313/eternity/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/eternity/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
+executable.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
+branch, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout client-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
+users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
+course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
+listed there, please consider downloading the source distribution, using the
+&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
+the repository.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building D2K</title>
+      <link>http://localhost:1313/d2k/building/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://localhost:1313/d2k/building/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;here&lt;/a&gt;; you can
+clone it with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Afterwards, there is a &lt;code&gt;build.sh&lt;/code&gt; script which will build D2K; the resulting
+executable is built in the &lt;code&gt;cbuild&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;libpng&lt;/li&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;li&gt;gettext&lt;/li&gt;
+&lt;li&gt;pcre&lt;/li&gt;
+&lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;Fontconfig&lt;/li&gt;
+&lt;li&gt;FreeType&lt;/li&gt;
+&lt;li&gt;HarfBuzz&lt;/li&gt;
+&lt;li&gt;Expat&lt;/li&gt;
+&lt;li&gt;Pixman&lt;/li&gt;
+&lt;li&gt;Cairo&lt;/li&gt;
+&lt;li&gt;Pango&lt;/li&gt;
+&lt;li&gt;libXDiff&lt;/li&gt;
+&lt;li&gt;ENet&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_mixer&lt;/li&gt;
+&lt;li&gt;OpenGL&lt;/li&gt;
+&lt;li&gt;Lua&lt;/li&gt;
+&lt;li&gt;LZMA*&lt;/li&gt;
+&lt;li&gt;libjpeg*&lt;/li&gt;
+&lt;li&gt;libtiff*&lt;/li&gt;
+&lt;li&gt;WebP*&lt;/li&gt;
+&lt;li&gt;SDL_image*&lt;/li&gt;
+&lt;li&gt;DUMB*&lt;/li&gt;
+&lt;li&gt;PortMidi*&lt;/li&gt;
+&lt;li&gt;FluidSynth*&lt;/li&gt;
+&lt;li&gt;MikMod*&lt;/li&gt;
+&lt;li&gt;libmad*&lt;/li&gt;
+&lt;li&gt;libvorbis*&lt;/li&gt;
+&lt;li&gt;libogg*&lt;/li&gt;
+&lt;li&gt;libFLAC*&lt;/li&gt;
+&lt;li&gt;gperf*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;* = optional&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We plan to add more, at least Jansson, libcurl, and PolarSSL.&lt;/p&gt;
+
+&lt;p&gt;On Arch Linux, the only dependency not bundled is libXDiff, which can be found
+in the AUR. I&amp;rsquo;m afraid I can&amp;rsquo;t help with other distributions.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Cross-Compiling&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;mingw64-builds&lt;/a&gt; is a project that
+cross-compiles dozens of popular libraries using the Mingw-w64 cross-compiler.
+You can clone it with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/mingw64-builds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default, mingw64-builds builds all the libraries in the &lt;code&gt;build&lt;/code&gt; subfolder.
+When cross-compiling D2K, D2K expects the dependencies to be in its &lt;code&gt;crossdeps&lt;/code&gt;
+folder. You can change both of these options if you need to. D2K contains a
+&lt;code&gt;crossbuild.sh&lt;/code&gt; script which will cross-compile it for Windows. The resulting
+executable is built in the &lt;code&gt;crossbuild&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Building on Windows&lt;/h3&gt;
+
+&lt;p&gt;There is currently no support for building on Windows.  I&amp;rsquo;ll accept patches for
+IDEs or compilers that support C99, but I will not accept patches that modify
+the code in order for it to work with a non-compliant system (MSVC++, for
+example).&lt;/p&gt;
+
+&lt;p&gt;Support for IDEs like Code::Blocks or CDT is planned, but not currently a
+priority.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;MP3&lt;/h3&gt;
+
+&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the free
+and superior OGG format.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://localhost:1313/post/d2k/</link>
+      <pubDate>Sun, 02 Mar 2014 21:09:13 EST</pubDate>
+      
+      <guid>http://localhost:1313/post/d2k/</guid>
+      <description>
+
+&lt;p&gt;I&amp;rsquo;ve decided to start working on a new source port called &lt;a href=&#34;/d2k&#34;&gt;Doom2K&lt;/a&gt; or
+&amp;ldquo;D2K&amp;rdquo; for short.  My goal is to build a state-of-the-art multiplayer source
+port capable of being the standard-bearer for multiplayer Doom.  This, in my
+mind, means a couple of things.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Message-Based Netcode Is Broken&lt;/h3&gt;
+
+&lt;p&gt;ZDaemon, Zandronum, and Odamex all use message-based netcode.  For example,
+there is (historically) a function called &lt;code&gt;P_SpawnMobj&lt;/code&gt; which spawns a new
+actor into the game.  Serverside, inside of &lt;code&gt;P_SpawnMobj&lt;/code&gt; is a call to a
+function that broadcasts a &amp;ldquo;mobj spawned&amp;rdquo; message; let&amp;rsquo;s call it
+&lt;code&gt;SV_BroadcastMobjSpawned&lt;/code&gt;.  For illustration&amp;rsquo;s sake, it generally looks
+something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---------
+| ID    |
+---------
+| X     |
+---------
+| Y     |
+---------
+| Z     |
+---------
+| Angle |
+---------
+| Type  |
+---------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This model &amp;ldquo;works&amp;rdquo; for any number of game events.  EECS, for example, has 44
+messages.  Odamex has 112.  The way message-based netcode &amp;ldquo;scales up&amp;rdquo; is
+message proliferation, and there are a number of downsides to this.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_1&#34;&gt;You have to litter your code with network messages&lt;/h4&gt;
+
+&lt;p&gt;Ugly, error-prone, and overly complicates extending the engine (scripting).&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;You have to exempt huge swaths of code from running clientside&lt;/h4&gt;
+
+&lt;p&gt;Same as above.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;Consistency is complicated&lt;/h4&gt;
+
+&lt;p&gt;Unless you package up all your message into a single packet (assuming it will
+all fit), consistency requires sequencing and a &amp;ldquo;tic ended&amp;rdquo; message.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Doom Scripting Is Busted&lt;/h3&gt;
+
+&lt;p&gt;Probably the best scripting out there is Doomsday.  Otherwise, you can use
+EDGE/3DGE and COAL, or you can use ZDoom and ACS.  I think you can use
+FraggleScript in Legacy.&lt;/p&gt;
+
+&lt;p&gt;The situation isn&amp;rsquo;t great though.&lt;/p&gt;
+
+&lt;p&gt;With a powerful scripting language, it would be possible to implement new game
+modes (like CTF), convert most of Doom&amp;rsquo;s physics and original game play, and
+represent assets and configuration in scripting also.  PWO, for example, could
+simply be a user-provided function in a config.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;ASCII Is Out, Unicode Is In&lt;/h3&gt;
+
+&lt;p&gt;Unless Doomsday uses UTF-8, I&amp;rsquo;m unaware of any source ports that are
+Unicode-aware.  This has serious implications for Doom&amp;rsquo;s popularity outside of
+English-speaking countries.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Software Rendering Is Limited And Slow&lt;/h3&gt;
+
+&lt;p&gt;Software rendering is much slower than hardware-accelerated OpenGL rendering.
+In general, people who prefer software rendering do so because it&amp;rsquo;s more
+faithful to Doom&amp;rsquo;s original renderer (which almost no port uses anymore, due to
+its bugs and limitations).  However, with display pixel count rising, software
+rendering is becoming less and less feasible.&lt;/p&gt;
+
+&lt;p&gt;Software renderers also have various limitations: lack of support for portals,
+3D architecture (slopes, room-over-room, etc.), bad math (wobbling flats,
+problems with long walls, inaccurate flat rendering, etc.), and so on.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Goals&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;/d2k/goals&#34;&gt;My major goals are to fix all of this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Instead of network messages, D2K will use delta-compressed game states, which
+avoids all of the problems with message-based netcode (at the expense of
+increased CPU usage and RAM consumption).&lt;/p&gt;
+
+&lt;p&gt;D2K will use Lua for scripting.  Current plans include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Implement console in scripting&lt;/li&gt;
+&lt;li&gt;Implement new game modes in scripting&lt;/li&gt;
+&lt;li&gt;Move Doom physics, game play, and assets to scripting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;D2K will use UTF-8 instead of ASCII.&lt;/p&gt;
+
+&lt;p&gt;Regarding the renderer, I haven&amp;rsquo;t entirely decided to remove the software
+renderer.  My main focus will be on the OpenGL renderer, however, because it&amp;rsquo;s
+easier to add advanced renderer features to it.  Further, I will work on
+implementing a shader for the OpenGL renderer that accurately emulates Doom&amp;rsquo;s
+lighting.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+{{ template "theme/partials/head.html" . }}
+<body>
+    {{ "<!--[if lt IE 8]>" | safeHtml }}
+        <p class="browsehappy">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com">Upgrade your browser</a> to
+            improve your experience.
+        </p>
+    {{ "<![endif]-->" | safeHtml }}
+    {{ template "theme/partials/navbar.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
+                <img src="{{ .Site.Params.static }}/img/ttlogooneline.png"
+                     alt="Total Trash"
+                     class="logo logo-top center-block"
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-xs hidden-sm">
+                <img src="{{ .Site.Params.static }}/img/ttlogo.png"
+                     alt="Total Trash"
+                     class="logo logo-side" />
+            </div>
+            {{ range first 20 (where .Data.Pages.ByDate.Reverse "Section" "post") }}
+                {{ .Render "frontpage-post" }}
+            {{ end }}
+        </div>
+    </div>
+    {{ template "theme/partials/footer.html" . }}
+    {{ template "theme/partials/js.html" . }}
+</body>
+</html>

@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Monkirta Pursuit NC';
+    src: url('/fonts/Monkirta Pursuit NC.ttf') format('truetype'),
+         url('/fonts/Monkirta Pursuit NC.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'White Rabbit';
+    src: url('/fonts/whitrabt.ttf') format('truetype'),
+         url('/fonts/whitrabt.woff') format('woff');
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 30px;
+    color: #A8A8A8;
+    font-size: 15px;
+}
+
+img.logo {
+    margin: 0px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+img.logo-top {
+    width: 480px;
+}
+
+img.logo-side {
+    padding-top: 50px;
+    width: 240px;
+}
+
+.tt-panel {
+    padding: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-top: 12px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #272B30;
+    background-color: #555;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+}
+
+.navbar .nav>li>a {
+    font-weight: normal;
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-size: 15px;
+}
+
+.navbar {
+    font-weight: normal;
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-size: 15px;
+}
+
+.navbar .brand {
+    font-weight: normal;
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+}
+
+#content-body {
+    margin-top: 15px;
+}
+
+#content h2::before {
+    content: ":: ";
+}
+
+#content h2::after {
+    content: " ::";
+}
+
+#content h3 {
+    padding-bottom: 2px;
+    border-bottom: 4px solid #203820;
+}
+
+#content h4::before {
+    content: "| ";
+    font-weight: bold;
+    color: #203820;
+}
+
+#content a {
+    color: #004040;
+}
+
+pre, code {
+    font-family: 'White Rabbit', monospace;
+    font-size: 12px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 4px;
+    margin: 2px;
+    color: #555;
+    background-color: #272B30;
+    border: none;
+}
+
+#content small {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 6px;
+    color: #555;
+    background-color: #272B30;
+}
+
+.carousel-caption {
+    font-size: 48px;
+    color: #C8C8C8;
+}
+
+#content h2 {
+    margin-bottom: 20px;
+}
+
+#content h2 a {
+    color: #272B30;
+}
+
+a.anchor h3 {
+    color: #272B30;
+}
+
+a.anchor:hover {
+    text-decoration: none;
+}
+
+.footer {
+    font-weight: normal;
+    font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #363A3F;
+    background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);
+    background-image: -o-linear-gradient(#484e55, #3a3f44 60%, #313539);
+    background-image: linear-gradient(#484e55, #3a3f44 60%, #313539);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
+    filter: none;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+

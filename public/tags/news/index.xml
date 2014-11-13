@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>News on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/news/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Wed, 12 Nov 2014 20:27:57 EST</updated>
+    
+    <item>
+      <title>New Site</title>
+      <link>http://localhost:1313/post/newsite/</link>
+      <pubDate>Wed, 12 Nov 2014 20:27:57 EST</pubDate>
+      
+      <guid>http://localhost:1313/post/newsite/</guid>
+      <description>&lt;p&gt;Ever since TotalTrash was converted to a static site, I&amp;rsquo;ve wanted a way to add
+pages without copying and pasting tons of markup and updating the navbar.  I&amp;rsquo;ve
+finally built a new site using &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static site
+generator written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additionally, I plan to feature more news on TT.  I&amp;rsquo;ve wanted a place to post
+&lt;a href=&#34;/d2k&#34;&gt;D2K&lt;/a&gt; updates, and I think TT is where that belongs.&lt;/p&gt;
+
+&lt;p&gt;I may backdate some posts just for content&amp;rsquo;s sake.  We&amp;rsquo;ll see how it goes.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

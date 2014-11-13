@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Development on TotalTrash </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/categories/development/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sun, 02 Mar 2014 21:09:13 EST</updated>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://localhost:1313/post/d2k/</link>
+      <pubDate>Sun, 02 Mar 2014 21:09:13 EST</pubDate>
+      
+      <guid>http://localhost:1313/post/d2k/</guid>
+      <description>
+
+&lt;p&gt;I&amp;rsquo;ve decided to start working on a new source port called &lt;a href=&#34;/d2k&#34;&gt;Doom2K&lt;/a&gt; or
+&amp;ldquo;D2K&amp;rdquo; for short.  My goal is to build a state-of-the-art multiplayer source
+port capable of being the standard-bearer for multiplayer Doom.  This, in my
+mind, means a couple of things.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Message-Based Netcode Is Broken&lt;/h3&gt;
+
+&lt;p&gt;ZDaemon, Zandronum, and Odamex all use message-based netcode.  For example,
+there is (historically) a function called &lt;code&gt;P_SpawnMobj&lt;/code&gt; which spawns a new
+actor into the game.  Serverside, inside of &lt;code&gt;P_SpawnMobj&lt;/code&gt; is a call to a
+function that broadcasts a &amp;ldquo;mobj spawned&amp;rdquo; message; let&amp;rsquo;s call it
+&lt;code&gt;SV_BroadcastMobjSpawned&lt;/code&gt;.  For illustration&amp;rsquo;s sake, it generally looks
+something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---------
+| ID    |
+---------
+| X     |
+---------
+| Y     |
+---------
+| Z     |
+---------
+| Angle |
+---------
+| Type  |
+---------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This model &amp;ldquo;works&amp;rdquo; for any number of game events.  EECS, for example, has 44
+messages.  Odamex has 112.  The way message-based netcode &amp;ldquo;scales up&amp;rdquo; is
+message proliferation, and there are a number of downsides to this.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_1&#34;&gt;You have to litter your code with network messages&lt;/h4&gt;
+
+&lt;p&gt;Ugly, error-prone, and overly complicates extending the engine (scripting).&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;You have to exempt huge swaths of code from running clientside&lt;/h4&gt;
+
+&lt;p&gt;Same as above.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;Consistency is complicated&lt;/h4&gt;
+
+&lt;p&gt;Unless you package up all your message into a single packet (assuming it will
+all fit), consistency requires sequencing and a &amp;ldquo;tic ended&amp;rdquo; message.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Doom Scripting Is Busted&lt;/h3&gt;
+
+&lt;p&gt;Probably the best scripting out there is Doomsday.  Otherwise, you can use
+EDGE/3DGE and COAL, or you can use ZDoom and ACS.  I think you can use
+FraggleScript in Legacy.&lt;/p&gt;
+
+&lt;p&gt;The situation isn&amp;rsquo;t great though.&lt;/p&gt;
+
+&lt;p&gt;With a powerful scripting language, it would be possible to implement new game
+modes (like CTF), convert most of Doom&amp;rsquo;s physics and original game play, and
+represent assets and configuration in scripting also.  PWO, for example, could
+simply be a user-provided function in a config.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;ASCII Is Out, Unicode Is In&lt;/h3&gt;
+
+&lt;p&gt;Unless Doomsday uses UTF-8, I&amp;rsquo;m unaware of any source ports that are
+Unicode-aware.  This has serious implications for Doom&amp;rsquo;s popularity outside of
+English-speaking countries.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Software Rendering Is Limited And Slow&lt;/h3&gt;
+
+&lt;p&gt;Software rendering is much slower than hardware-accelerated OpenGL rendering.
+In general, people who prefer software rendering do so because it&amp;rsquo;s more
+faithful to Doom&amp;rsquo;s original renderer (which almost no port uses anymore, due to
+its bugs and limitations).  However, with display pixel count rising, software
+rendering is becoming less and less feasible.&lt;/p&gt;
+
+&lt;p&gt;Software renderers also have various limitations: lack of support for portals,
+3D architecture (slopes, room-over-room, etc.), bad math (wobbling flats,
+problems with long walls, inaccurate flat rendering, etc.), and so on.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Goals&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;/d2k/goals&#34;&gt;My major goals are to fix all of this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Instead of network messages, D2K will use delta-compressed game states, which
+avoids all of the problems with message-based netcode (at the expense of
+increased CPU usage and RAM consumption).&lt;/p&gt;
+
+&lt;p&gt;D2K will use Lua for scripting.  Current plans include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Implement console in scripting&lt;/li&gt;
+&lt;li&gt;Implement new game modes in scripting&lt;/li&gt;
+&lt;li&gt;Move Doom physics, game play, and assets to scripting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;D2K will use UTF-8 instead of ASCII.&lt;/p&gt;
+
+&lt;p&gt;Regarding the renderer, I haven&amp;rsquo;t entirely decided to remove the software
+renderer.  My main focus will be on the OpenGL renderer, however, because it&amp;rsquo;s
+easier to add advanced renderer features to it.  Further, I will work on
+implementing a shader for the OpenGL renderer that accurately emulates Doom&amp;rsquo;s
+lighting.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
