@@ -3,18 +3,106 @@
   <channel>
       <title>Posts on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://totaltrash.org/post/index.xml</link>
+    <link>http://totaltrash.org/post/index.xml/</link>
     <language>en-us</language>
     
     
-    <updated>Wed, 12 Nov 2014 20:27:57 -0500</updated>
+    <updated>Thu, 13 Nov 2014 15:54:38 UTC</updated>
+    
+    <item>
+      <title>D2K Plasma/Bullet Lag</title>
+      <link>http://totaltrash.org/post/d2k_plasma_lag/</link>
+      <pubDate>Thu, 13 Nov 2014 15:54:38 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/post/d2k_plasma_lag/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/camgunz/d2k/commit/42f4ae5f65a630844284c049393db58233225c0a&#34;&gt;Rev. 42f4ae5&lt;/a&gt;
+lessens the amount of data sent for certain types of actors (plasma, spider
+demon plasma, bullet puffs and blood spots) when they spawn.  This was
+necessary because these actors tend to spawn very rapidly, causing lots of new
+information to be sent over the wire (delta compression doesn&amp;rsquo;t help here
+because the actors are new), which would lag (throttle) clients on bad
+connections.  A little more could be done here, and in fact, the solution could
+be seen as a hack.  I think Valve, for example, has fine-tuned controls about
+what entity fields are synchronized between client and server, which can be
+helpful for mods.  In D2K, if you add more rapidly-spawning actors, there&amp;rsquo;s not
+a great way to tell the engine to only send certain data about them, let alone
+specify what that data should be, and how to fill in the blanks clientside.&lt;/p&gt;
+
+&lt;p&gt;D2K struggled with this more than other C/S ports because of its &amp;ldquo;send
+everything&amp;rdquo; philosophy.  Delta compression works because the world usually
+changes very little, but an actor is 312 bytes, and delta compression can&amp;rsquo;t
+leave any of that data out when an actor first spawns.  2-3 new actors over a
+couple of TICs isn&amp;rsquo;t a big deal, but the SSG spawns something like 20 bullet
+puffs; that&amp;rsquo;s over 6K!&lt;/p&gt;
+
+&lt;p&gt;To fix this, we pull the size down from 312 to 48 bytes (44 for puffs &amp;amp;
+blood).  This is still a lot of data for 1 SSG shot (~900 bytes), and we can
+probably pull it down even more if we get smarter (puffs don&amp;rsquo;t need angle,
+pitch or flags, can save 16 bytes, or 320 per SSG shot, there).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>D2K Client Sync</title>
+      <link>http://totaltrash.org/post/d2k_client_sync/</link>
+      <pubDate>Thu, 13 Nov 2014 15:06:50 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/post/d2k_client_sync/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/camgunz/d2k/commit/c6a8550d0f161c970efaca4bc705abe3914c07ae&#34;&gt;Rev. c6a8550&lt;/a&gt;
+is my latest attempt at solidifying clientside sync (along with a couple of
+preceding commits).  After trying dozens of different schemes, I finally
+discovered one that works nearly perfectly.&lt;/p&gt;
+
+&lt;p&gt;First of all, clients need to know what commands a server ran between the
+delta&amp;rsquo;s start state and end state.  This isn&amp;rsquo;t so important for consoleplayer&amp;rsquo;s
+position, but it important in order to get accurate sounds from the other
+players.  The client runs commands from other players (non-consoleplayer
+commands, or &amp;ldquo;NCP&amp;rdquo; commands), during this phase, called &amp;ldquo;synchronization&amp;rdquo;, and
+that&amp;rsquo;s where the it will start sounds such as rockets/plasma firing, lifts
+starting, etc.  It&amp;rsquo;s possible for consoleplayer&amp;rsquo;s commands to affect NCPs&amp;rsquo;
+positions, so they need to run in tandem.  Currently they are run all at once;
+it would be better to have a way to run them the way the server did, or at
+least stretch them out as much as possible.&lt;/p&gt;
+
+&lt;p&gt;Once this is finished, the client loads the new, latest state received from the
+server.  Re-running the commands the server ran between the delta&amp;rsquo;s start &amp;amp;
+end state is an imperfect process, so it can&amp;rsquo;t be relied on to perfectly create
+the state.  After this step, synchronization is complete, and re-prediction
+commences.&lt;/p&gt;
+
+&lt;p&gt;The server won&amp;rsquo;t always run consoleplayer&amp;rsquo;s commands in lock-step.  The client
+may send commands &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;80&lt;/sub&gt;, &lt;sup&gt;101&lt;/sup&gt;&amp;frasl;&lt;sub&gt;81&lt;/sub&gt;, and &lt;sup&gt;102&lt;/sup&gt;&amp;frasl;&lt;sub&gt;82&lt;/sub&gt; (TIC/Index), but the server may
+run them all on TIC 101.  Let&amp;rsquo;s stipulate that command 81 triggered a lift at
+TIC 101.&lt;/p&gt;
+
+&lt;p&gt;The client will then (possibly, but let&amp;rsquo;s say it does for the sake of our
+example) receive a delta &amp;ldquo;server received commands &amp;lt;= 82 at TIC 101&amp;rdquo;.  So it
+synchronizes all commands &amp;lt;= 82, and spawns the lift at 101.&lt;/p&gt;
+
+&lt;p&gt;When the client first ran command 82, the lift had already been activated, so
+this TIC (102) would be the 2nd time the lift had been moved.  However, after
+synchronization, the TICs will still align, but the commands won&amp;rsquo;t.  Let&amp;rsquo;s say
+that the client has 3 commands left (&lt;sup&gt;103&lt;/sup&gt;&amp;frasl;&lt;sub&gt;83&lt;/sub&gt;, &lt;sup&gt;104&lt;/sup&gt;&amp;frasl;&lt;sub&gt;84&lt;/sub&gt;, &lt;sup&gt;105&lt;/sup&gt;&amp;frasl;&lt;sub&gt;85&lt;/sub&gt;) that the server
+has yet to acknowledge receipt of.  It will now run each of these commands
+separately, and move the lift 3 more times.  However, initially, by the
+time the client ran command 85, the lift had already been moved 5 times.  So
+when the client initially predicted the world out to &lt;sup&gt;105&lt;/sup&gt;&amp;frasl;&lt;sub&gt;85&lt;/sub&gt;, the lift had moved
+5 times, but now after re-prediction, the lift has only moved 4 times.  This
+will cause the lift to snap back 1 TIC&amp;rsquo;s worth of movement.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll also notice that the client is about to run TIC 102, but will then run
+command &lt;sup&gt;103&lt;/sup&gt;&amp;frasl;&lt;sub&gt;83&lt;/sub&gt;.  This disparity allows the client to know that it&amp;rsquo;s fallen
+behind.  When the client notices this, it runs an extra TIC, without a command.
+This runs the world simulation, but doesn&amp;rsquo;t move consoleplayer.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>New Site</title>
-      <link>http://totaltrash.org/post/newsite</link>
+      <link>http://totaltrash.org/post/newsite/</link>
       <pubDate>Wed, 12 Nov 2014 20:27:57 -0500</pubDate>
       
-      <guid>http://totaltrash.org/post/newsite</guid>
+      <guid>http://totaltrash.org/post/newsite/</guid>
       <description>&lt;p&gt;Ever since TotalTrash was converted to a static site, I&amp;rsquo;ve wanted a way to add
 pages without copying and pasting tons of markup and updating the navbar.  I&amp;rsquo;ve
 finally built a new site using &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static site
@@ -29,10 +117,10 @@ generator written in &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;.&lt;
     
     <item>
       <title>D2K</title>
-      <link>http://totaltrash.org/post/d2k</link>
+      <link>http://totaltrash.org/post/d2k/</link>
       <pubDate>Sun, 02 Mar 2014 21:09:13 -0500</pubDate>
       
-      <guid>http://totaltrash.org/post/d2k</guid>
+      <guid>http://totaltrash.org/post/d2k/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve decided to start working on a new source port called &lt;a href=&#34;/d2k&#34;&gt;Doom2K&lt;/a&gt; or

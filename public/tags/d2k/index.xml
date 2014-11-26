@@ -3,7 +3,7 @@
   <channel>
       <title>D2k on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://totaltrash.org/tags/d2k/index.xml</link>
+    <link>http://totaltrash.org/tags/d2k/index.xml/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>D2K</title>
-      <link>http://totaltrash.org/post/d2k</link>
+      <link>http://totaltrash.org/post/d2k/</link>
       <pubDate>Sun, 02 Mar 2014 21:09:13 -0500</pubDate>
       
-      <guid>http://totaltrash.org/post/d2k</guid>
+      <guid>http://totaltrash.org/post/d2k/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve decided to start working on a new source port called &lt;a href=&#34;/d2k&#34;&gt;Doom2K&lt;/a&gt; or

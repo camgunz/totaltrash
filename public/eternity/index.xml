@@ -3,7 +3,7 @@
   <channel>
       <title>Eternities on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://totaltrash.org/eternity/index.xml</link>
+    <link>http://totaltrash.org/eternity/index.xml/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Eternity Engine - Client/Server Edition</title>
-      <link>http://totaltrash.org/eternity</link>
+      <link>http://totaltrash.org/eternity/</link>
       <pubDate>Tue, 11 Nov 2014 23:03:45 -0500</pubDate>
       
-      <guid>http://totaltrash.org/eternity</guid>
+      <guid>http://totaltrash.org/eternity/</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
@@ -67,10 +67,10 @@ team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
     
     <item>
       <title>Building</title>
-      <link>http://totaltrash.org/eternity/building</link>
+      <link>http://totaltrash.org/eternity/building/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/eternity/building</guid>
+      <guid>http://totaltrash.org/eternity/building/</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
@@ -192,71 +192,106 @@ to install eternity as they see fit.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Download</title>
-      <link>http://totaltrash.org/eternity/download</link>
+      <title>Features</title>
+      <link>http://totaltrash.org/eternity/features/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/eternity/download</guid>
+      <guid>http://totaltrash.org/eternity/features/</guid>
       <description>
 
-&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;The Eternity Engine has many often-overlooked features, this is just a short
+list.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Eternity Engine Features&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Near-perfect Vanilla Doom compatibility and old-school gameplay.&lt;/li&gt;
+&lt;li&gt;Full Boom, MBF, and SMMU compatibility.&lt;/li&gt;
+&lt;li&gt;Removal of nearly all Vanilla Doom limits.&lt;/li&gt;
+&lt;li&gt;Translucency.&lt;/li&gt;
+&lt;li&gt;Multiple music formats, including (but not limited to) MOD, XM, MIDI, OGG/Vorbis, SPC, FLAC, MP3 and MUS.&lt;/li&gt;
+&lt;li&gt;3D object clipping, so objects (like players and monsters) can exist and move above and below each other.&lt;/li&gt;
+&lt;li&gt;Cameras, for player-less viewpoints.&lt;/li&gt;
+&lt;li&gt;Chasecam (3rd-person viewpoint)&lt;/li&gt;
+&lt;li&gt;Spycam, allowing a player to see what other players are seeing.&lt;/li&gt;
+&lt;li&gt;ENDOOM and textmode startup support.&lt;/li&gt;
+&lt;li&gt;Cross-platform, supporting at least Windows, Linux and BSD.&lt;/li&gt;
+&lt;li&gt;Pre-beta BFG types.&lt;/li&gt;
+&lt;li&gt;Gamepad and joystick support.&lt;/li&gt;
+&lt;li&gt;EDF (Eternity Definition File) system allowing for extreme customization of game resources.&lt;/li&gt;
+&lt;li&gt;ExtraData data specification language replaces the original binary WAD format (this will be superceded by UDMF).&lt;/li&gt;
+&lt;li&gt;Quake-style console.&lt;/li&gt;
+&lt;li&gt;Legacy skin support.&lt;/li&gt;
+&lt;li&gt;Cardboard renderer, which is faster than and resolves fundamental problems with Doom&amp;rsquo;s original renderer by using high-precision floating-point numbers instead of the original fixed-point. It also supports arbitrary, non-standard resolutions.&lt;/li&gt;
+&lt;li&gt;Highly advanced portal implementation, allowing for pseudo-3D or physically impossible architecture.&lt;/li&gt;
+&lt;li&gt;Portal overlays (translucent flats, etc.).&lt;/li&gt;
+&lt;li&gt;Support for the Doom Master Levels.&lt;/li&gt;
+&lt;li&gt;TerrainTypes, such as splashing water.&lt;/li&gt;
+&lt;li&gt;3DMidTex, allowing for limited 3D architecture like bridges.&lt;/li&gt;
+&lt;li&gt;A full assortment of compatibility options.&lt;/li&gt;
+&lt;li&gt;2-way wallrunning.&lt;/li&gt;
+&lt;li&gt;Crosshair.&lt;/li&gt;
+&lt;li&gt;Mouselook.&lt;/li&gt;
+&lt;li&gt;Jumping.&lt;/li&gt;
+&lt;li&gt;Advanced sound engine, supporting sector, polyobject, global, and pitched sounds as well as sound sequences.&lt;/li&gt;
+&lt;li&gt;Sound equalizer.&lt;/li&gt;
+&lt;li&gt;Burn damage (standing on torches or candles, for example).&lt;/li&gt;
+&lt;li&gt;Slopes (rendering only, clipping is not complete).&lt;/li&gt;
+&lt;li&gt;Particle effects.&lt;/li&gt;
+&lt;li&gt;BMP and PNG screenshots.&lt;/li&gt;
+&lt;li&gt;Flats and textures are interchangeable, meaning mappers can use flats on walls and textures on floors and ceilings.&lt;/li&gt;
+&lt;li&gt;Fullscreen graphical HUD translucency.&lt;/li&gt;
+&lt;li&gt;DECORATE state support (not full DECORATE support).&lt;/li&gt;
+&lt;li&gt;GFS (Game File Script) allows loading of multiple files using only one file - useful for drag and drop.&lt;/li&gt;
+&lt;li&gt;ACS (mostly complete).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you are installing for the first time, you need to download and run the
-installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
-executable.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+&lt;h3 id=&#34;toc_1&#34;&gt;Eternity Engine - Client/Server Edition Features&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extremely smooth, high fidelity, configurable netcode. Players can make their own decisions about tradeoffs between accuracy, latency and smoothness.&lt;/li&gt;
+&lt;li&gt;Highly-accurate backwards reconciliation (unlagged) for hitscan weapons, autoaim, and BFG tracers:&lt;/li&gt;
+&lt;li&gt;Handles moving sectors.&lt;/li&gt;
+&lt;li&gt;Handles changing player states like invulnerability.&lt;/li&gt;
+&lt;li&gt;Master server with built-in web launcher (no separate launcher application is necessary).&lt;/li&gt;
+&lt;li&gt;On-the-fly WAD loading.&lt;/li&gt;
+&lt;li&gt;Automatic WAD downloading (uses HTTP, FTP, or other protocols for maximum speed and versatility).&lt;/li&gt;
+&lt;li&gt;Per-map WADs and configuration overrides.&lt;/li&gt;
+&lt;li&gt;Spectators.&lt;/li&gt;
+&lt;li&gt;Up to 32 players and 2 teams.&lt;/li&gt;
+&lt;li&gt;Player queue system.&lt;/li&gt;
+&lt;li&gt;Remote console (RCON).&lt;/li&gt;
+&lt;li&gt;Simple authorization system:&lt;/li&gt;
+&lt;li&gt;Four authorization levels, spectator, player, moderator, and administrator.&lt;/li&gt;
+&lt;li&gt;Clients save valid passwords and authenticate automatically whenever possible.&lt;/li&gt;
+&lt;li&gt;Bridge things (from ZDoom).&lt;/li&gt;
+&lt;li&gt;3D radius attacks, used mainly for rocket jumping.&lt;/li&gt;
+&lt;li&gt;New multiplayer scoreboards.&lt;/li&gt;
+&lt;li&gt;Efficient handling of maps with large amounts of monsters; status and position are only broadcasted if they&amp;rsquo;ve changed.&lt;/li&gt;
+&lt;li&gt;TeamDM and CTF game modes (in addition to staples like Duel, Deathmatch, and Cooperative/Survival).&lt;/li&gt;
+&lt;li&gt;Advanced demos, split by map, and allowing speed up, slow down, pause, and checkpoints. Demos themselves are simple ZIP files that include JSON metadata, so no knowledge of the binary format is necessary to work with them.&lt;/li&gt;
+&lt;li&gt;Powerful keybinds:&lt;/li&gt;
+&lt;li&gt;Bind key down and key up events separately&lt;/li&gt;
+&lt;li&gt;Bind to only event activation or event deactivation&lt;/li&gt;
+&lt;li&gt;Bind a key to multiple events; useful for SR50 binds and more&lt;/li&gt;
+&lt;li&gt;No weapon switch on pickup.&lt;/li&gt;
+&lt;li&gt;Preferred weapon order (can also switch when picking up ammo for a preferred weapon).&lt;/li&gt;
+&lt;li&gt;Enable/Disable movebob.&lt;/li&gt;
+&lt;li&gt;Modifiable damage screen (red screen) intensity.&lt;/li&gt;
+&lt;li&gt;Highly customizable voting (commands, duration and pass threshold).&lt;/li&gt;
+&lt;li&gt;Quake &amp;amp; Unreal Tournament style announcers.&lt;/li&gt;
+&lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
+&lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
-
-&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
-using git and the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
-branch, run:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git checkout client-server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
-users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
-course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
-expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
-several platforms. These pre-built dependencies are located
-&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
-listed there, please consider downloading the source distribution, using the
-&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
-the repository.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Frequently Asked Questions</title>
-      <link>http://totaltrash.org/eternity/faq</link>
+      <link>http://totaltrash.org/eternity/faq/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/eternity/faq</guid>
+      <guid>http://totaltrash.org/eternity/faq/</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Troubleshooting&lt;/h3&gt;
@@ -406,97 +441,62 @@ packet loss.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Features</title>
-      <link>http://totaltrash.org/eternity/features</link>
+      <title>Download</title>
+      <link>http://totaltrash.org/eternity/download/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/eternity/features</guid>
+      <guid>http://totaltrash.org/eternity/download/</guid>
       <description>
 
-&lt;p&gt;The Eternity Engine has many often-overlooked features, this is just a short
-list.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_0&#34;&gt;Eternity Engine Features&lt;/h3&gt;
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Near-perfect Vanilla Doom compatibility and old-school gameplay.&lt;/li&gt;
-&lt;li&gt;Full Boom, MBF, and SMMU compatibility.&lt;/li&gt;
-&lt;li&gt;Removal of nearly all Vanilla Doom limits.&lt;/li&gt;
-&lt;li&gt;Translucency.&lt;/li&gt;
-&lt;li&gt;Multiple music formats, including (but not limited to) MOD, XM, MIDI, OGG/Vorbis, SPC, FLAC, MP3 and MUS.&lt;/li&gt;
-&lt;li&gt;3D object clipping, so objects (like players and monsters) can exist and move above and below each other.&lt;/li&gt;
-&lt;li&gt;Cameras, for player-less viewpoints.&lt;/li&gt;
-&lt;li&gt;Chasecam (3rd-person viewpoint)&lt;/li&gt;
-&lt;li&gt;Spycam, allowing a player to see what other players are seeing.&lt;/li&gt;
-&lt;li&gt;ENDOOM and textmode startup support.&lt;/li&gt;
-&lt;li&gt;Cross-platform, supporting at least Windows, Linux and BSD.&lt;/li&gt;
-&lt;li&gt;Pre-beta BFG types.&lt;/li&gt;
-&lt;li&gt;Gamepad and joystick support.&lt;/li&gt;
-&lt;li&gt;EDF (Eternity Definition File) system allowing for extreme customization of game resources.&lt;/li&gt;
-&lt;li&gt;ExtraData data specification language replaces the original binary WAD format (this will be superceded by UDMF).&lt;/li&gt;
-&lt;li&gt;Quake-style console.&lt;/li&gt;
-&lt;li&gt;Legacy skin support.&lt;/li&gt;
-&lt;li&gt;Cardboard renderer, which is faster than and resolves fundamental problems with Doom&amp;rsquo;s original renderer by using high-precision floating-point numbers instead of the original fixed-point. It also supports arbitrary, non-standard resolutions.&lt;/li&gt;
-&lt;li&gt;Highly advanced portal implementation, allowing for pseudo-3D or physically impossible architecture.&lt;/li&gt;
-&lt;li&gt;Portal overlays (translucent flats, etc.).&lt;/li&gt;
-&lt;li&gt;Support for the Doom Master Levels.&lt;/li&gt;
-&lt;li&gt;TerrainTypes, such as splashing water.&lt;/li&gt;
-&lt;li&gt;3DMidTex, allowing for limited 3D architecture like bridges.&lt;/li&gt;
-&lt;li&gt;A full assortment of compatibility options.&lt;/li&gt;
-&lt;li&gt;2-way wallrunning.&lt;/li&gt;
-&lt;li&gt;Crosshair.&lt;/li&gt;
-&lt;li&gt;Mouselook.&lt;/li&gt;
-&lt;li&gt;Jumping.&lt;/li&gt;
-&lt;li&gt;Advanced sound engine, supporting sector, polyobject, global, and pitched sounds as well as sound sequences.&lt;/li&gt;
-&lt;li&gt;Sound equalizer.&lt;/li&gt;
-&lt;li&gt;Burn damage (standing on torches or candles, for example).&lt;/li&gt;
-&lt;li&gt;Slopes (rendering only, clipping is not complete).&lt;/li&gt;
-&lt;li&gt;Particle effects.&lt;/li&gt;
-&lt;li&gt;BMP and PNG screenshots.&lt;/li&gt;
-&lt;li&gt;Flats and textures are interchangeable, meaning mappers can use flats on walls and textures on floors and ceilings.&lt;/li&gt;
-&lt;li&gt;Fullscreen graphical HUD translucency.&lt;/li&gt;
-&lt;li&gt;DECORATE state support (not full DECORATE support).&lt;/li&gt;
-&lt;li&gt;GFS (Game File Script) allows loading of multiple files using only one file - useful for drag and drop.&lt;/li&gt;
-&lt;li&gt;ACS (mostly complete).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;Eternity Engine - Client/Server Edition Features&lt;/h3&gt;
+&lt;p&gt;If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
+executable.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Extremely smooth, high fidelity, configurable netcode. Players can make their own decisions about tradeoffs between accuracy, latency and smoothness.&lt;/li&gt;
-&lt;li&gt;Highly-accurate backwards reconciliation (unlagged) for hitscan weapons, autoaim, and BFG tracers:&lt;/li&gt;
-&lt;li&gt;Handles moving sectors.&lt;/li&gt;
-&lt;li&gt;Handles changing player states like invulnerability.&lt;/li&gt;
-&lt;li&gt;Master server with built-in web launcher (no separate launcher application is necessary).&lt;/li&gt;
-&lt;li&gt;On-the-fly WAD loading.&lt;/li&gt;
-&lt;li&gt;Automatic WAD downloading (uses HTTP, FTP, or other protocols for maximum speed and versatility).&lt;/li&gt;
-&lt;li&gt;Per-map WADs and configuration overrides.&lt;/li&gt;
-&lt;li&gt;Spectators.&lt;/li&gt;
-&lt;li&gt;Up to 32 players and 2 teams.&lt;/li&gt;
-&lt;li&gt;Player queue system.&lt;/li&gt;
-&lt;li&gt;Remote console (RCON).&lt;/li&gt;
-&lt;li&gt;Simple authorization system:&lt;/li&gt;
-&lt;li&gt;Four authorization levels, spectator, player, moderator, and administrator.&lt;/li&gt;
-&lt;li&gt;Clients save valid passwords and authenticate automatically whenever possible.&lt;/li&gt;
-&lt;li&gt;Bridge things (from ZDoom).&lt;/li&gt;
-&lt;li&gt;3D radius attacks, used mainly for rocket jumping.&lt;/li&gt;
-&lt;li&gt;New multiplayer scoreboards.&lt;/li&gt;
-&lt;li&gt;Efficient handling of maps with large amounts of monsters; status and position are only broadcasted if they&amp;rsquo;ve changed.&lt;/li&gt;
-&lt;li&gt;TeamDM and CTF game modes (in addition to staples like Duel, Deathmatch, and Cooperative/Survival).&lt;/li&gt;
-&lt;li&gt;Advanced demos, split by map, and allowing speed up, slow down, pause, and checkpoints. Demos themselves are simple ZIP files that include JSON metadata, so no knowledge of the binary format is necessary to work with them.&lt;/li&gt;
-&lt;li&gt;Powerful keybinds:&lt;/li&gt;
-&lt;li&gt;Bind key down and key up events separately&lt;/li&gt;
-&lt;li&gt;Bind to only event activation or event deactivation&lt;/li&gt;
-&lt;li&gt;Bind a key to multiple events; useful for SR50 binds and more&lt;/li&gt;
-&lt;li&gt;No weapon switch on pickup.&lt;/li&gt;
-&lt;li&gt;Preferred weapon order (can also switch when picking up ammo for a preferred weapon).&lt;/li&gt;
-&lt;li&gt;Enable/Disable movebob.&lt;/li&gt;
-&lt;li&gt;Modifiable damage screen (red screen) intensity.&lt;/li&gt;
-&lt;li&gt;Highly customizable voting (commands, duration and pass threshold).&lt;/li&gt;
-&lt;li&gt;Quake &amp;amp; Unreal Tournament style announcers.&lt;/li&gt;
-&lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
-&lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
+branch, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout client-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
+users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
+course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
+listed there, please consider downloading the source distribution, using the
+&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
+the repository.&lt;/p&gt;
 </description>
     </item>
     

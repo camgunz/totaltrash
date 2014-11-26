@@ -3,18 +3,76 @@
   <channel>
       <title>D2ks on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://totaltrash.org/d2k/index.xml</link>
+    <link>http://totaltrash.org/d2k/index.xml/</link>
     <language>en-us</language>
     
     
-    <updated>Tue, 11 Nov 2014 17:06:01 UTC</updated>
+    <updated>Tue, 11 Nov 2014 23:03:45 -0500</updated>
+    
+    <item>
+      <title>D2K</title>
+      <link>http://totaltrash.org/d2k/</link>
+      <pubDate>Tue, 11 Nov 2014 23:03:45 -0500</pubDate>
+      
+      <guid>http://totaltrash.org/d2k/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;D2K is an advanced Doom source port that &lt;a href=&#34;goals&#34;&gt;aims to modernize the game while
+remaining faithful to the original implementation&lt;/a&gt;. It is based on
+&lt;a href=&#34;http://prboom-plus.sourceforge.net&#34;&gt;PrBoom+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;download&#34;&gt;Download&lt;/a&gt; or &lt;a href=&#34;building&#34;&gt;build&lt;/a&gt; a D2K version for your platform,
+place an IWAD in the installation folder, and then run &lt;code&gt;doom2k.exe -net
+&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.  Connection is currently a manual process, but eventually D2K
+will include a server browser.&lt;/p&gt;
+
+&lt;p&gt;You can also start a server similarly, simply use all the command-line flags
+you normally would, but add &lt;code&gt;-deltaserve&lt;/code&gt; to the arguments.  If you need to
+listen on a specific address, you can use
+&lt;code&gt;doom2k.exe ... -deltaserve &amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you get into any trouble at all, please see the &lt;a href=&#34;faq&#34;&gt;FAQ&lt;/a&gt;.  While we&amp;rsquo;re
+happy to help, you&amp;rsquo;re likely to get a fix for your issue much more quickly by
+using the information there than by waiting for us.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Reporting Bugs&lt;/h3&gt;
+
+&lt;p&gt;The issue tracker is where we keep track of problems in D2K, but it is also
+useful for feature requests.  Reporting bugs is simple; there is a
+&lt;a href=&#34;https://github.com/camgunz/d2k/issues&#34;&gt;bug tracker&lt;/a&gt;, all you need to do is
+create an account. Here are some guidelines for effective bug/feature posting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give as much information as you possibly can.&lt;/li&gt;
+&lt;li&gt;Use descriptive titles.&lt;/li&gt;
+&lt;li&gt;Be precise and specific.&lt;/li&gt;
+&lt;li&gt;Set label appropriately:
+
+&lt;ul&gt;
+&lt;li&gt;Bug: Incorrect behavior&lt;/li&gt;
+&lt;li&gt;Enhancement: New feature&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Use an email address that you check.&lt;/li&gt;
+&lt;li&gt;If you can run a debugger, please post stack traces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than a couple days goes by and no one&amp;rsquo;s touched your bug or talked to
+you about it, please contact us in &lt;a href=&#34;irc://chat.freenode.net/d2k&#34;&gt;IRC&lt;/a&gt;.  The bug
+tracker is not where bugs and ideas go to die, it&amp;rsquo;s a list of things for the TT
+team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Frequently Asked Questions</title>
-      <link>http://totaltrash.org/d2k/faq</link>
+      <link>http://totaltrash.org/d2k/faq/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/d2k/faq</guid>
+      <guid>http://totaltrash.org/d2k/faq/</guid>
       <description>
 
 &lt;p&gt;&lt;a class=&#34;anchor&#34; id=&#34;zdoom&#34;&gt;&lt;/p&gt;
@@ -132,11 +190,191 @@ as a compliment :).&lt;/p&gt;
     </item>
     
     <item>
-      <title>Goals</title>
-      <link>http://totaltrash.org/d2k/goals</link>
+      <title>Building D2K</title>
+      <link>http://totaltrash.org/d2k/building/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/d2k/goals</guid>
+      <guid>http://totaltrash.org/d2k/building/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;on GitHub&lt;/a&gt; and
+can be cloned (downloaded) with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;libpng&lt;/li&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;li&gt;gettext&lt;/li&gt;
+&lt;li&gt;pcre&lt;/li&gt;
+&lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;Fontconfig&lt;/li&gt;
+&lt;li&gt;FreeType&lt;/li&gt;
+&lt;li&gt;HarfBuzz&lt;/li&gt;
+&lt;li&gt;Expat&lt;/li&gt;
+&lt;li&gt;Pixman&lt;/li&gt;
+&lt;li&gt;Cairo&lt;/li&gt;
+&lt;li&gt;Pango&lt;/li&gt;
+&lt;li&gt;libXDiff&lt;/li&gt;
+&lt;li&gt;ENet&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_mixer&lt;/li&gt;
+&lt;li&gt;OpenGL&lt;/li&gt;
+&lt;li&gt;LZMA*&lt;/li&gt;
+&lt;li&gt;libjpeg*&lt;/li&gt;
+&lt;li&gt;libtiff*&lt;/li&gt;
+&lt;li&gt;WebP*&lt;/li&gt;
+&lt;li&gt;SDL_image*&lt;/li&gt;
+&lt;li&gt;DUMB*&lt;/li&gt;
+&lt;li&gt;PortMidi*&lt;/li&gt;
+&lt;li&gt;FluidSynth*&lt;/li&gt;
+&lt;li&gt;MikMod*&lt;/li&gt;
+&lt;li&gt;libmad*&lt;/li&gt;
+&lt;li&gt;libvorbis*&lt;/li&gt;
+&lt;li&gt;libogg*&lt;/li&gt;
+&lt;li&gt;libFLAC*&lt;/li&gt;
+&lt;li&gt;gperf*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;* = optional&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We plan to add more, at least Jansson, libcurl, and PolarSSL.&lt;/p&gt;
+
+&lt;p&gt;On Arch Linux, the only dependency not bundled is libXDiff, which can be found
+in the AUR. I&amp;rsquo;m afraid I can&amp;rsquo;t help with other distributions.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Building on Linux&lt;/h3&gt;
+
+&lt;p&gt;Dependencies should be installed according to your distribution
+(Debian/Ubuntu/Mint will use &lt;code&gt;apt-get&lt;/code&gt;, RedHat/Fedora will use &lt;code&gt;yum&lt;/code&gt;, Arch
+Linux will use &lt;code&gt;pacman&lt;/code&gt;, etc.).  Afterwards, &lt;code&gt;build.sh&lt;/code&gt; will build &lt;code&gt;doom2k&lt;/code&gt; in
+the &lt;code&gt;cbuild&lt;/code&gt; subfolder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Building on Mac OS X&lt;/h3&gt;
+
+&lt;p&gt;Dependencies may be installed using the &lt;a href=&#34;http://brew.sh&#34;&gt;Homebrew&lt;/a&gt; project and
+the &lt;code&gt;install_macosx_packages.sh&lt;/code&gt; script found in the D2K source repository.
+Afterwards, &lt;code&gt;build-mac.sh&lt;/code&gt; will build the &lt;code&gt;doom2k&lt;/code&gt; in the &lt;code&gt;cbuild&lt;/code&gt;
+subfolder.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Building on Windows&lt;/h3&gt;
+
+&lt;p&gt;Dependencies may be installed using the
+&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;MinGW64-Builds&lt;/a&gt; project.  Pre-built
+binaries are located
+&lt;a href=&#34;http://static.totaltrash.org/mingw64-builds.tar.xz&#34;&gt;here&lt;/a&gt;, and you will need
+&lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt; (or something that handles &lt;code&gt;.tar.xz&lt;/code&gt; files) to
+decompress the archive.&lt;/p&gt;
+
+&lt;p&gt;D2K can be built on Windows using
+&lt;a href=&#34;http://www.codeblocks.org/downloads/26#windows&#34;&gt;Code::Blocks&lt;/a&gt;.  Building using
+MSVC++ is not supported due to a lack of support for C99.  Assuming you cloned
+D2K to &lt;code&gt;C:\d2k&lt;/code&gt;, the Code::Blocks project file expects dependencies at
+&lt;code&gt;C:\d2k\deps&lt;/code&gt;, so that &lt;code&gt;curl.exe&lt;/code&gt; resides at &lt;code&gt;C:\d2k\deps\bin\curl.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Dependencies&lt;/h4&gt;
+
+&lt;p&gt;Running an executable built this way on your local machine will work, because
+the required DLL files are in your path.  However, distributing the executable
+will require dozens of DLL files:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;libcairo-2.dll&lt;/li&gt;
+&lt;li&gt;libexpat-1.dll&lt;/li&gt;
+&lt;li&gt;libffi-6.dll&lt;/li&gt;
+&lt;li&gt;libFLAC-8.dll&lt;/li&gt;
+&lt;li&gt;libfluidsynth.dll&lt;/li&gt;
+&lt;li&gt;libfontconfig-1.dll&lt;/li&gt;
+&lt;li&gt;libfreetype-6.dll&lt;/li&gt;
+&lt;li&gt;libgcc_s_sjlj-1.dll&lt;/li&gt;
+&lt;li&gt;libgio-2.0-0.dll&lt;/li&gt;
+&lt;li&gt;libglib-2.0-0.dll&lt;/li&gt;
+&lt;li&gt;libgmodule-2.0-0.dll&lt;/li&gt;
+&lt;li&gt;libgthread-2.0-0.dll&lt;/li&gt;
+&lt;li&gt;libharfbuzz-0.dll&lt;/li&gt;
+&lt;li&gt;libiconv-2.dll&lt;/li&gt;
+&lt;li&gt;libintl-8.dll&lt;/li&gt;
+&lt;li&gt;libjpeg-9.dll&lt;/li&gt;
+&lt;li&gt;liblzma-5.dll&lt;/li&gt;
+&lt;li&gt;libmikmod-3.dll&lt;/li&gt;
+&lt;li&gt;libogg-0.dll&lt;/li&gt;
+&lt;li&gt;libpango-1.0-0.dll&lt;/li&gt;
+&lt;li&gt;libpangocairo-1.0-0.dll&lt;/li&gt;
+&lt;li&gt;libpangoft2-1.0-0.dll&lt;/li&gt;
+&lt;li&gt;libpangowin32-1.0-0.dll&lt;/li&gt;
+&lt;li&gt;libpcre-1.dll&lt;/li&gt;
+&lt;li&gt;libpcreposix-0.dll&lt;/li&gt;
+&lt;li&gt;libpixman-1-0.dll&lt;/li&gt;
+&lt;li&gt;libpng15-15.dll&lt;/li&gt;
+&lt;li&gt;libportmidi.dll&lt;/li&gt;
+&lt;li&gt;libssp-0.dll&lt;/li&gt;
+&lt;li&gt;libtiff-5.dll&lt;/li&gt;
+&lt;li&gt;libvorbis-0.dll&lt;/li&gt;
+&lt;li&gt;libvorbisfile-3.dll&lt;/li&gt;
+&lt;li&gt;libwebp-5.dll&lt;/li&gt;
+&lt;li&gt;libwinpthread-1.dll&lt;/li&gt;
+&lt;li&gt;SDL.dll&lt;/li&gt;
+&lt;li&gt;SDL_image.dll&lt;/li&gt;
+&lt;li&gt;SDL_mixer.dll&lt;/li&gt;
+&lt;li&gt;zlib1.dll&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We recommend using the &lt;a href=&#34;http://static.totaltrash.org/d2k.zip&#34;&gt;official Windows D2K
+distribution&lt;/a&gt; and simply replacing the
+executable.  Otherwise you will need to provide these yourself, as well as the
+&lt;code&gt;doom2k.wad&lt;/code&gt; resource WAD and the fonts.  Should you decide against this, DLL
+files may be found in the &lt;code&gt;deps&lt;/code&gt; folder, &lt;code&gt;doom2k.wad&lt;/code&gt; can be built using
+&lt;a href=&#34;https://github.com/chungy/deutex&#34;&gt;deutex&lt;/a&gt;, and the fonts can be found on the
+web.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Cross-Compiling&lt;/h3&gt;
+
+&lt;p&gt;D2K can be cross-compiled on Linux for Windows; in fact, this is how Windows
+binaries are built.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_7&#34;&gt;Instructions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clone D2K
+
+&lt;ul&gt;
+&lt;li&gt;Assuming install folder of &lt;code&gt;~/d2k&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Clone and build MinGW64-Builds
+
+&lt;ul&gt;
+&lt;li&gt;Assuming install folder of &lt;code&gt;~/mingw64-builds&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Assuming build folder of &lt;code&gt;~/mingw64-builds/build&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Copy &lt;code&gt;~/mingw64-builds/build&lt;/code&gt; to &lt;code&gt;~/d2k/crossdeps&lt;/code&gt; so that &lt;code&gt;curl.exe&lt;/code&gt; is
+at &lt;code&gt;~/d2k/crossdeps/bin/curl.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;crossbuild.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Executable will be &lt;code&gt;~/d2k/crossbuild/doom2k.exe&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;MP3&lt;/h3&gt;
+
+&lt;p&gt;MP3 support is on tenuous legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the
+superior and free OGG format.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Goals</title>
+      <link>http://totaltrash.org/d2k/goals/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/d2k/goals/</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Overview&lt;/h3&gt;
@@ -256,135 +494,28 @@ features will always be optional.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Building D2K</title>
-      <link>http://totaltrash.org/d2k/building</link>
-      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
-      
-      <guid>http://totaltrash.org/d2k/building</guid>
-      <description>
-
-&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
-
-&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;here&lt;/a&gt;; you can
-clone it with Git like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Afterwards, there is a &lt;code&gt;build.sh&lt;/code&gt; script which will build D2K; the resulting
-executable is built in the &lt;code&gt;cbuild&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
-
-&lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
-&lt;li&gt;zlib&lt;/li&gt;
-&lt;li&gt;libpng&lt;/li&gt;
-&lt;li&gt;libffi&lt;/li&gt;
-&lt;li&gt;gettext&lt;/li&gt;
-&lt;li&gt;pcre&lt;/li&gt;
-&lt;li&gt;GLib&lt;/li&gt;
-&lt;li&gt;Fontconfig&lt;/li&gt;
-&lt;li&gt;FreeType&lt;/li&gt;
-&lt;li&gt;HarfBuzz&lt;/li&gt;
-&lt;li&gt;Expat&lt;/li&gt;
-&lt;li&gt;Pixman&lt;/li&gt;
-&lt;li&gt;Cairo&lt;/li&gt;
-&lt;li&gt;Pango&lt;/li&gt;
-&lt;li&gt;libXDiff&lt;/li&gt;
-&lt;li&gt;ENet&lt;/li&gt;
-&lt;li&gt;SDL&lt;/li&gt;
-&lt;li&gt;SDL_mixer&lt;/li&gt;
-&lt;li&gt;OpenGL&lt;/li&gt;
-&lt;li&gt;Lua&lt;/li&gt;
-&lt;li&gt;LZMA*&lt;/li&gt;
-&lt;li&gt;libjpeg*&lt;/li&gt;
-&lt;li&gt;libtiff*&lt;/li&gt;
-&lt;li&gt;WebP*&lt;/li&gt;
-&lt;li&gt;SDL_image*&lt;/li&gt;
-&lt;li&gt;DUMB*&lt;/li&gt;
-&lt;li&gt;PortMidi*&lt;/li&gt;
-&lt;li&gt;FluidSynth*&lt;/li&gt;
-&lt;li&gt;MikMod*&lt;/li&gt;
-&lt;li&gt;libmad*&lt;/li&gt;
-&lt;li&gt;libvorbis*&lt;/li&gt;
-&lt;li&gt;libogg*&lt;/li&gt;
-&lt;li&gt;libFLAC*&lt;/li&gt;
-&lt;li&gt;gperf*&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;* = optional&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;We plan to add more, at least Jansson, libcurl, and PolarSSL.&lt;/p&gt;
-
-&lt;p&gt;On Arch Linux, the only dependency not bundled is libXDiff, which can be found
-in the AUR. I&amp;rsquo;m afraid I can&amp;rsquo;t help with other distributions.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;Cross-Compiling&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;mingw64-builds&lt;/a&gt; is a project that
-cross-compiles dozens of popular libraries using the Mingw-w64 cross-compiler.
-You can clone it with Git like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/mingw64-builds
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;By default, mingw64-builds builds all the libraries in the &lt;code&gt;build&lt;/code&gt; subfolder.
-When cross-compiling D2K, D2K expects the dependencies to be in its &lt;code&gt;crossdeps&lt;/code&gt;
-folder. You can change both of these options if you need to. D2K contains a
-&lt;code&gt;crossbuild.sh&lt;/code&gt; script which will cross-compile it for Windows. The resulting
-executable is built in the &lt;code&gt;crossbuild&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Building on Windows&lt;/h3&gt;
-
-&lt;p&gt;There is currently no support for building on Windows.  I&amp;rsquo;ll accept patches for
-IDEs or compilers that support C99, but I will not accept patches that modify
-the code in order for it to work with a non-compliant system (MSVC++, for
-example).&lt;/p&gt;
-
-&lt;p&gt;Support for IDEs like Code::Blocks or CDT is planned, but not currently a
-priority.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;MP3&lt;/h3&gt;
-
-&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
-Use at your own risk. We strongly encourage mappers and modders to use the free
-and superior OGG format.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Download</title>
-      <link>http://totaltrash.org/d2k/download</link>
+      <link>http://totaltrash.org/d2k/download/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/d2k/download</guid>
+      <guid>http://totaltrash.org/d2k/download/</guid>
       <description>
 
 &lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;toc_1&#34;&gt;Source&lt;/h3&gt;
 
-&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
-using Git and the following command:&lt;/p&gt;
+&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;on GitHub&lt;/a&gt; and
+can be cloned (downloaded) with Git like so:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;toc_2&#34;&gt;Dependencies&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;(This section is for those cross-compiling for Windows only)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;D2K has several dependencies, and rather than add them all to the codebase or
-expect users to find/cross-compile them on their own, I&amp;rsquo;ve &lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;started a
-project&lt;/a&gt; that will build D2K&amp;rsquo;s
-dependencies using Mingw-w64.&lt;/p&gt;
+&lt;p&gt;Users are encouraged to &lt;a href=&#34;../building&#34;&gt;build their own binaries&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

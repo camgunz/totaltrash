@@ -3,7 +3,7 @@
   <channel>
       <title>Infrastructure on TotalTrash </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://totaltrash.org/tags/infrastructure/index.xml</link>
+    <link>http://totaltrash.org/tags/infrastructure/index.xml/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>New Site</title>
-      <link>http://totaltrash.org/post/newsite</link>
+      <link>http://totaltrash.org/post/newsite/</link>
       <pubDate>Wed, 12 Nov 2014 20:27:57 -0500</pubDate>
       
-      <guid>http://totaltrash.org/post/newsite</guid>
+      <guid>http://totaltrash.org/post/newsite/</guid>
       <description>&lt;p&gt;Ever since TotalTrash was converted to a static site, I&amp;rsquo;ve wanted a way to add
 pages without copying and pasting tons of markup and updating the navbar.  I&amp;rsquo;ve
 finally built a new site using &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static site
