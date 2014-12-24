@@ -1,14 +1,4 @@
-@font-face {
-    font-family: 'Monkirta Pursuit NC';
-    src: url('/fonts/Monkirta Pursuit NC.ttf') format('truetype'),
-         url('/fonts/Monkirta Pursuit NC.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'White Rabbit';
-    src: url('/fonts/whitrabt.ttf') format('truetype'),
-         url('/fonts/whitrabt.woff') format('woff');
-}
+@import url(http://fonts.googleapis.com/css?family=Aldrich|Share+Tech+Mono|Inconsolata&subset=latin,latin-ext);
 
 html {
     position: relative;
@@ -18,7 +8,7 @@ html {
 body {
     margin-bottom: 30px;
     color: #A8A8A8;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 img.logo {
@@ -52,29 +42,34 @@ img.logo-side {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-family: 'Aldrich', sans-serif;
 }
 
 .navbar .nav>li>a {
-    font-weight: normal;
     font-family: 'Monkirta Pursuit NC', sans-serif;
-    font-size: 15px;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 14px;
 }
 
 .navbar {
-    font-weight: normal;
     font-family: 'Monkirta Pursuit NC', sans-serif;
-    font-size: 15px;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 14px;
 }
 
 .navbar .brand {
-    font-weight: normal;
     font-family: 'Monkirta Pursuit NC', sans-serif;
-    font-size: 15px;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-family: 'Aldrich', sans-serif;
 }
 
 #content-body {
@@ -106,15 +101,34 @@ h1, h2, h3, h4, h5, h6 {
 
 pre, code {
     font-family: 'White Rabbit', monospace;
-    font-size: 12px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    /*
     padding: 4px;
     margin: 2px;
+    */
+    /*
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #276B30;
+    background-color: #444;
     color: #555;
     background-color: #272B30;
-    border: none;
+    padding: 3px;
+    margin: 3px;
+    */
+    background-color: #555;
+    color: #272B30;
+}
+
+pre {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 8px solid #272B30;
+    color: #555;
+    background-color: #272B30;
 }
 
 #content small {
@@ -150,6 +164,7 @@ a.anchor:hover {
 .footer {
     font-weight: normal;
     font-family: 'Monkirta Pursuit NC', sans-serif;
+    font-family: 'Aldrich', sans-serif;
     font-size: 12px;
     position: absolute;
     bottom: 0px;;

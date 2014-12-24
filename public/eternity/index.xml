@@ -66,132 +66,6 @@ team to fix so we don&amp;rsquo;t forget them.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Building</title>
-      <link>http://totaltrash.org/eternity/building/</link>
-      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
-      
-      <guid>http://totaltrash.org/eternity/building/</guid>
-      <description>
-
-&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
-
-&lt;p&gt;EECS&amp;rsquo; source code is located at
-&lt;code&gt;http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;. On Windows
-you can use TortoiseSVN; Linux users are encouraged to use their distribution&amp;rsquo;s
-package management to install the Subversion binaries. The command-line to
-checkout the code is:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;svn co http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you&amp;rsquo;ve successfully checked out the source code from the Subversion
-repository, create an &lt;code&gt;eedeps&lt;/code&gt; folder inside of it.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
-
-&lt;p&gt;EECS has pre-built dependencies for Windows and Linux located
-&lt;a href=&#34;http://static.totaltrash.org/eedeps&#34;&gt;here&lt;/a&gt;. If you are using Code::Blocks on
-Windows you should use the MinGW distribution, but if you are using MSVC on
-Windows you should use the MSVC distribution. 32-bit Linux users should use the
-Linux32 distribution, and 64-bit Linux users should use the Linux64
-distribution. It is also possible to build EECS using packages installed on
-your machine. Here is a list of EECS&amp;rsquo; dependencies:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ENet 1.3.x&lt;/li&gt;
-&lt;li&gt;libarchive 2.8.x
-
-&lt;ul&gt;
-&lt;li&gt;bzip2&lt;/li&gt;
-&lt;li&gt;zlib&lt;/li&gt;
-&lt;li&gt;xz&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;curl
-
-&lt;ul&gt;
-&lt;li&gt;c-ares-1.7.4 (Linux only)&lt;/li&gt;
-&lt;li&gt;gnutls-2.8.x&lt;/li&gt;
-&lt;li&gt;libgcrypt-1.5.x&lt;/li&gt;
-&lt;li&gt;libgpg-error-1.10&lt;/li&gt;
-&lt;li&gt;libidn-1.22&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;SDL&lt;/li&gt;
-&lt;li&gt;SDL_net&lt;/li&gt;
-&lt;li&gt;SDL_mixer
-
-&lt;ul&gt;
-&lt;li&gt;flac-1.2.x&lt;/li&gt;
-&lt;li&gt;libmad-0.15.1b&lt;/li&gt;
-&lt;li&gt;libmikmod-3.1.11&lt;/li&gt;
-&lt;li&gt;libogg-1.2.x&lt;/li&gt;
-&lt;li&gt;libvorbis-1.3.x&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;toc_2&#34;&gt;OpenSSL&lt;/h4&gt;
-
-&lt;p&gt;Please be aware that while OpenSSL may be substituted for GnuTLS and its myriad
-dependencies, binaries built against OpenSSL may not be distributed because of
-a licensing conflict between its license and EECS&amp;rsquo; license (GPLv2). They are OK
-for personal use however.&lt;/p&gt;
-
-&lt;h4 id=&#34;toc_3&#34;&gt;MP3&lt;/h4&gt;
-
-&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
-Use at your own risk. We strongly encourage mappers and modders to use the free
-and superior OGG format.&lt;/p&gt;
-
-&lt;h4 id=&#34;toc_4&#34;&gt;SMPEG&lt;/h4&gt;
-
-&lt;p&gt;While SMPEG may be substituted for libmad, SMPEG has reported stability issues
-and can be difficult to compile.&lt;/p&gt;
-
-&lt;h4 id=&#34;toc_5&#34;&gt;Adding Pre-Built Dependencies&lt;/h4&gt;
-
-&lt;p&gt;If you are using a different platform, please consider getting in touch with
-the development team so they can help you build the dependencies for your
-platform and add them to the repository.&lt;/p&gt;
-
-&lt;h4 id=&#34;toc_6&#34;&gt;Installing Pre-Built Dependencies&lt;/h4&gt;
-
-&lt;p&gt;Windows users can decompress the archives using &lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt;,
-Linux users will need &lt;a href=&#34;http://tukaani.org/xz&#34;&gt;XZ Utils&lt;/a&gt;, which can likely be
-installed via package management. The dependencies should be placed in the
-&lt;code&gt;eedeps&lt;/code&gt; folder inside the main source distribution. For example, a MinGW user
-who downloaded the source code to &lt;code&gt;C:\Code\eecs&lt;/code&gt; would have the dependencies
-installed at &lt;code&gt;C:\Code\eecs\eedeps\mingw&lt;/code&gt;, and inside the &lt;code&gt;mingw&lt;/code&gt; folder would be
-&lt;code&gt;bin&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;lib&lt;/code&gt;, &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;sbin&lt;/code&gt;, and &lt;code&gt;share&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;Building: Code::Blocks &amp;amp; Windows&lt;/h3&gt;
-
-&lt;p&gt;The EECS Code::Blocks project file is located in the &lt;code&gt;codeblocks&lt;/code&gt; folder. No
-modifications should be necessary; open and build.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_8&#34;&gt;Building: MSVC++ &amp;amp; Windows&lt;/h3&gt;
-
-&lt;p&gt;The EECS MSVC++ project file is located in the &lt;code&gt;vc2008&lt;/code&gt; folder. This build
-platform is still in development, possible issues include problems with the
-Solution/Project file (non-relative paths) and a lack of static linking (lots
-of DLLs required by the main Eternity.exe executable). Please report problems
-with the Solution/Project file; static linking will be added in the future.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_9&#34;&gt;Building: Linux&lt;/h3&gt;
-
-&lt;p&gt;The EECS Linux build system uses CMake. The steps are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mkdir build&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cmake ../ -G&amp;quot;Unix Makefiles&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This builds a binary &lt;code&gt;eternity.real&lt;/code&gt; inside &lt;code&gt;build/source&lt;/code&gt; (in our example).
-Installation currently does not work; users who build from source are expected
-to install eternity as they see fit.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Features</title>
       <link>http://totaltrash.org/eternity/features/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
@@ -283,6 +157,66 @@ list.&lt;/p&gt;
 &lt;li&gt;Killing Sprees and Multi Kills&lt;/li&gt;
 &lt;li&gt;Fine-grained access controls, bans, temporary bans and whitelists.&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://totaltrash.org/eternity/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/eternity/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are installing for the first time, you need to download and run the
+installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
+executable.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
+using git and the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
+branch, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout client-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
+users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
+course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
+expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
+several platforms. These pre-built dependencies are located
+&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
+listed there, please consider downloading the source distribution, using the
+&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
+the repository.&lt;/p&gt;
 </description>
     </item>
     
@@ -441,62 +375,128 @@ packet loss.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Download</title>
-      <link>http://totaltrash.org/eternity/download/</link>
+      <title>Building</title>
+      <link>http://totaltrash.org/eternity/building/</link>
       <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
       
-      <guid>http://totaltrash.org/eternity/download/</guid>
+      <guid>http://totaltrash.org/eternity/building/</guid>
       <description>
 
-&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+&lt;h3 id=&#34;toc_0&#34;&gt;Source Code&lt;/h3&gt;
+
+&lt;p&gt;EECS&amp;rsquo; source code is located at
+&lt;code&gt;http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;. On Windows
+you can use TortoiseSVN; Linux users are encouraged to use their distribution&amp;rsquo;s
+package management to install the Subversion binaries. The command-line to
+checkout the code is:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;svn co http://mancubus.net/svn/hosted/eternity/branches/client-server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve successfully checked out the source code from the Subversion
+repository, create an &lt;code&gt;eedeps&lt;/code&gt; folder inside of it.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;EECS has pre-built dependencies for Windows and Linux located
+&lt;a href=&#34;http://static.totaltrash.org/eedeps&#34;&gt;here&lt;/a&gt;. If you are using Code::Blocks on
+Windows you should use the MinGW distribution, but if you are using MSVC on
+Windows you should use the MSVC distribution. 32-bit Linux users should use the
+Linux32 distribution, and 64-bit Linux users should use the Linux64
+distribution. It is also possible to build EECS using packages installed on
+your machine. Here is a list of EECS&amp;rsquo; dependencies:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-engine-3.40.22_windows-x86.exe&#34;&gt;Windows Installer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.zip&#34;&gt;Windows ZIP Package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you are installing for the first time, you need to download and run the
-installer. Otherwise you can simply overwrite your old &lt;code&gt;eternity.exe&lt;/code&gt; with the
-executable.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Linux&lt;/h3&gt;
+&lt;li&gt;ENet 1.3.x&lt;/li&gt;
+&lt;li&gt;libarchive 2.8.x
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity-linux32.tar.xz&#34;&gt;Full Distribution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/eternity/eternity.xz&#34;&gt;Executable Only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bzip2&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;xz&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;curl
+
+&lt;ul&gt;
+&lt;li&gt;c-ares-1.7.4 (Linux only)&lt;/li&gt;
+&lt;li&gt;gnutls-2.8.x&lt;/li&gt;
+&lt;li&gt;libgcrypt-1.5.x&lt;/li&gt;
+&lt;li&gt;libgpg-error-1.10&lt;/li&gt;
+&lt;li&gt;libidn-1.22&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_net&lt;/li&gt;
+&lt;li&gt;SDL_mixer
+
+&lt;ul&gt;
+&lt;li&gt;flac-1.2.x&lt;/li&gt;
+&lt;li&gt;libmad-0.15.1b&lt;/li&gt;
+&lt;li&gt;libmikmod-3.1.11&lt;/li&gt;
+&lt;li&gt;libogg-1.2.x&lt;/li&gt;
+&lt;li&gt;libvorbis-1.3.x&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;toc_2&#34;&gt;Source&lt;/h3&gt;
+&lt;h4 id=&#34;toc_2&#34;&gt;OpenSSL&lt;/h4&gt;
 
-&lt;p&gt;Users are encouraged to build their own binaries. The source can be checked out
-using git and the following command:&lt;/p&gt;
+&lt;p&gt;Please be aware that while OpenSSL may be substituted for GnuTLS and its myriad
+dependencies, binaries built against OpenSSL may not be distributed because of
+a licensing conflict between its license and EECS&amp;rsquo; license (GPLv2). They are OK
+for personal use however.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/eternity
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;toc_3&#34;&gt;MP3&lt;/h4&gt;
 
-&lt;p&gt;Client-server work is done on the &lt;code&gt;client-server&lt;/code&gt; branch; to switch to this
-branch, run:&lt;/p&gt;
+&lt;p&gt;MP3 support is on sketchy legal ground due to patents covering MP3 technology.
+Use at your own risk. We strongly encourage mappers and modders to use the free
+and superior OGG format.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git checkout client-server
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;toc_4&#34;&gt;SMPEG&lt;/h4&gt;
 
-&lt;p&gt;in the main &lt;code&gt;eternity&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;While SMPEG may be substituted for libmad, SMPEG has reported stability issues
+and can be difficult to compile.&lt;/p&gt;
 
-&lt;p&gt;Linux users can follow the instructions in the &lt;code&gt;README-CMAKE.txt&lt;/code&gt; file. Windows
-users can follow the instructions in the &lt;code&gt;README-CODEBLOCKS.txt&lt;/code&gt; file. Of
-course these are not the only ways to build EECS, just the easiest.&lt;/p&gt;
+&lt;h4 id=&#34;toc_5&#34;&gt;Adding Pre-Built Dependencies&lt;/h4&gt;
 
-&lt;h3 id=&#34;toc_3&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;p&gt;If you are using a different platform, please consider getting in touch with
+the development team so they can help you build the dependencies for your
+platform and add them to the repository.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;(This section is for those compiling from source only)&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;toc_6&#34;&gt;Installing Pre-Built Dependencies&lt;/h4&gt;
 
-&lt;p&gt;EECS has several dependencies, and rather than add them all to the codebase or
-expect users to find/compile them on their own, we&amp;rsquo;ve pre-built them for
-several platforms. These pre-built dependencies are located
-&lt;a href=&#34;http://static.totaltrash.org/eternity/eedeps&#34;&gt;here&lt;/a&gt;. If your platform is not
-listed there, please consider downloading the source distribution, using the
-&lt;code&gt;build_deps.py&lt;/code&gt; script to build them, and sending them to me so I can update
-the repository.&lt;/p&gt;
+&lt;p&gt;Windows users can decompress the archives using &lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt;,
+Linux users will need &lt;a href=&#34;http://tukaani.org/xz&#34;&gt;XZ Utils&lt;/a&gt;, which can likely be
+installed via package management. The dependencies should be placed in the
+&lt;code&gt;eedeps&lt;/code&gt; folder inside the main source distribution. For example, a MinGW user
+who downloaded the source code to &lt;code&gt;C:\Code\eecs&lt;/code&gt; would have the dependencies
+installed at &lt;code&gt;C:\Code\eecs\eedeps\mingw&lt;/code&gt;, and inside the &lt;code&gt;mingw&lt;/code&gt; folder would be
+&lt;code&gt;bin&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt;, &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;lib&lt;/code&gt;, &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;sbin&lt;/code&gt;, and &lt;code&gt;share&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Building: Code::Blocks &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS Code::Blocks project file is located in the &lt;code&gt;codeblocks&lt;/code&gt; folder. No
+modifications should be necessary; open and build.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Building: MSVC++ &amp;amp; Windows&lt;/h3&gt;
+
+&lt;p&gt;The EECS MSVC++ project file is located in the &lt;code&gt;vc2008&lt;/code&gt; folder. This build
+platform is still in development, possible issues include problems with the
+Solution/Project file (non-relative paths) and a lack of static linking (lots
+of DLLs required by the main Eternity.exe executable). Please report problems
+with the Solution/Project file; static linking will be added in the future.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_9&#34;&gt;Building: Linux&lt;/h3&gt;
+
+&lt;p&gt;The EECS Linux build system uses CMake. The steps are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkdir build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmake ../ -G&amp;quot;Unix Makefiles&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This builds a binary &lt;code&gt;eternity.real&lt;/code&gt; inside &lt;code&gt;build/source&lt;/code&gt; (in our example).
+Installation currently does not work; users who build from source are expected
+to install eternity as they see fit.&lt;/p&gt;
 </description>
     </item>
     

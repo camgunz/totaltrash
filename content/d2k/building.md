@@ -16,43 +16,47 @@ can be cloned (downloaded) with Git like so:
 
 D2K has quite a few dependencies:
 
-  * libiconv (part of glibc)
-  * zlib
-  * libpng
-  * libffi
-  * gettext
-  * pcre
   * GLib
+  * libiconv (part of glibc)
+  * gettext
+  * libxml2
+  * libpng
+  * zlib
+  * Cairo
+  * Pixman
+  * Pango
   * Fontconfig
+  * Expat
   * FreeType
   * HarfBuzz
-  * Expat
-  * Pixman
-  * Cairo
-  * Pango
-  * libXDiff
-  * ENet
   * SDL
-  * SDL\_mixer
-  * OpenGL
-  * LZMA\*
+  * SDL\_image\*
   * libjpeg\*
   * libtiff\*
   * WebP\*
-  * SDL\_image\*
-  * DUMB\*
-  * PortMidi\*
-  * FluidSynth\*
+  * SDL\_mixer
   * MikMod\*
   * libmad\*
   * libvorbis\*
   * libogg\*
   * libFLAC\*
+  * libffi
+  * LZMA (xz)
+  * pcre
+  * OpenGL
+  * libXDiff
+  * ENet
+  * DUMB\*
+  * PortMidi\*
+  * FluidSynth\*
+  * Lua
+  * GObject Introspection
+  * Lua GObject Introspection
   * gperf\*
 
 _* = optional_
 
-We plan to add more, at least Jansson, libcurl, and PolarSSL.
+We plan to add more, at least json-c, libcurl, and PolarSSL.
 
 On Arch Linux, the only dependency not bundled is libXDiff, which can be found
 in the AUR. I'm afraid I can't help with other distributions.
@@ -73,86 +77,34 @@ subfolder.
 
 ### Building on Windows
 
-Dependencies may be installed using the
-[MinGW64-Builds](https://github.com/camgunz/mingw64-builds) project.  Pre-built
-binaries are located
-[here](http://static.totaltrash.org/mingw64-builds.tar.xz), and you will need
-[7-Zip](http://www.7-zip.org) (or something that handles `.tar.xz` files) to
-decompress the archive.
-
 D2K can be built on Windows using
 [Code::Blocks](http://www.codeblocks.org/downloads/26#windows).  Building using
 MSVC++ is not supported due to a lack of support for C99.  Assuming you cloned
 D2K to `C:\d2k`, the Code::Blocks project file expects dependencies at
-`C:\d2k\deps`, so that `curl.exe` resides at `C:\d2k\deps\bin\curl.exe`.
+`C:\d2k\deps`, so that `flac.exe` resides at `C:\d2k\deps\bin\flac.exe`.
 
-#### Dependencies
+Because satisfying D2K's dependencies on Windows is difficult, I have either
+located or built them and put them
+[here](http://static.totaltrash.org/mingw64-builds.tar.xz).  You will need
+[7-Zip](http://www.7-zip.org) (or something that handles `.tar.xz` files) to
+decompress the archive.
 
-Running an executable built this way on your local machine will work, because
-the required DLL files are in your path.  However, distributing the executable
-will require dozens of DLL files:
+The dependencies are built using the MinGW-w64 compiler toolchain on Linux.
+Should you wish to build them yourself, I recommend looking at [the
+Arch Linux AUR](http://aur.archlinux.org) (search for
+"mingw-w64-&lt;package\_name&gt;") and the
+[MinGW64-Builds](https://github.com/camgunz/mingw64-builds) project.  
 
-  - libcairo-2.dll
-  - libexpat-1.dll
-  - libffi-6.dll
-  - libFLAC-8.dll
-  - libfluidsynth.dll
-  - libfontconfig-1.dll
-  - libfreetype-6.dll
-  - libgcc\_s\_sjlj-1.dll
-  - libgio-2.0-0.dll
-  - libglib-2.0-0.dll
-  - libgmodule-2.0-0.dll
-  - libgthread-2.0-0.dll
-  - libharfbuzz-0.dll
-  - libiconv-2.dll
-  - libintl-8.dll
-  - libjpeg-9.dll
-  - liblzma-5.dll
-  - libmikmod-3.dll
-  - libogg-0.dll
-  - libpango-1.0-0.dll
-  - libpangocairo-1.0-0.dll
-  - libpangoft2-1.0-0.dll
-  - libpangowin32-1.0-0.dll
-  - libpcre-1.dll
-  - libpcreposix-0.dll
-  - libpixman-1-0.dll
-  - libpng15-15.dll
-  - libportmidi.dll
-  - libssp-0.dll
-  - libtiff-5.dll
-  - libvorbis-0.dll
-  - libvorbisfile-3.dll
-  - libwebp-5.dll
-  - libwinpthread-1.dll
-  - SDL.dll
-  - SDL\_image.dll
-  - SDL\_mixer.dll
-  - zlib1.dll
-
-We recommend using the [official Windows D2K
-distribution](http://static.totaltrash.org/d2k.zip) and simply replacing the
-executable.  Otherwise you will need to provide these yourself, as well as the
-`doom2k.wad` resource WAD and the fonts.  Should you decide against this, DLL
-files may be found in the `deps` folder, `doom2k.wad` can be built using
-[deutex](https://github.com/chungy/deutex), and the fonts can be found on the
-web.
-
-### Cross-Compiling
+#### Cross-Compiling
 
 D2K can be cross-compiled on Linux for Windows; in fact, this is how Windows
-binaries are built.
-
-#### Instructions
+binaries are built.  To do so:
 
   - Clone D2K
     - Assuming install folder of `~/d2k`
-  - Clone and build MinGW64-Builds
-    - Assuming install folder of `~/mingw64-builds`
-    - Assuming build folder of `~/mingw64-builds/build`
-  - Copy `~/mingw64-builds/build` to `~/d2k/crossdeps` so that `curl.exe` is
-    at `~/d2k/crossdeps/bin/curl.exe`
+  - Unpack
+    [the dependencies](http://static.totaltrash.org/mingw64-builds.tar.xz) to
+    `~/d2k/crossdeps`, so that `flac.exe` is at `~/d2k/crossdeps/bin/flac.exe`
   - Run `crossbuild.sh`
   - Executable will be `~/d2k/crossbuild/doom2k.exe`
 

@@ -7,7 +7,73 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 13 Nov 2014 15:54:38 UTC</updated>
+    <updated>Mon, 08 Dec 2014 20:46:22 UTC</updated>
+    
+    <item>
+      <title>gobject_introspection</title>
+      <link>http://totaltrash.org/post/gobject_introspection/</link>
+      <pubDate>Mon, 08 Dec 2014 20:46:22 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/post/gobject_introspection/</guid>
+      <description>&lt;p&gt;I had originally planned to use &lt;a href=&#34;http://www.lua.org&#34;&gt;Lua&lt;/a&gt; to re-implement D2K&amp;rsquo;s
+console, but using &lt;a href=&#34;http://wiki.gnome.org/GObjectIntrospection&#34;&gt;GObject
+Introspection&lt;/a&gt; via &lt;a href=&#34;http://github.com/pavouk/lgi&#34;&gt;Lua GObject
+Introspection&lt;/a&gt; was just too hard, because GObject
+Introspection depends on Python, which requires dozens of patches to
+cross-compile using MinGW-w64.  You can find these patches scattered
+everywhere, from random GitHub or Bitbucket accounts to the MinGW-Builds
+tarballs, and what&amp;rsquo;s clear from the number of patches is that none of it is
+guaranteed to work at all, let alone work correctly.&lt;/p&gt;
+
+&lt;p&gt;So now my plan is to essentially build my own bindings.  I can only imagine
+what&amp;rsquo;s really involved with this, so it may be that I abandon this as well.&lt;/p&gt;
+
+&lt;p&gt;Designing as I write this, I envision something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;=======================================================================
+|                                                                     |
+|                       xf.Console (in Lua)                           |
+|                           ||                                        |
+|                           \/                                        |
+|                     Widget Library (in Lua)                         |
+|                           ||                                        |
+|                           \/                                        |
+|                       PangoCairo                                    |
+|                         /    \                                      |
+|                     Pango    Cairo                                  |
+|                                                                     |
+=======================================================================
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is, unfortunately, lots of work.  I&amp;rsquo;m currently planning on not providing
+full bindings to Pango, Cairo or PangoCairo, although I don&amp;rsquo;t know how hard it
+would be to do so.  If it ends up that it&amp;rsquo;s as simple as generating (or
+C-N-P&amp;rsquo;ing) the rest of the code, then I&amp;rsquo;ll go the whole way.  I certainly won&amp;rsquo;t
+hold up D2K development for 100% coverage here.&lt;/p&gt;
+
+&lt;p&gt;I would feel remiss if I left this post without noting my dismay at Python&amp;rsquo;s
+lack of MinGW support, which is starting to snowball into a general dislike of
+Python.  Its abject slowness, inability to use more than 1 CPU core, wild
+memory consumption, total mishandling of Unicode, lack of support for MinGW,
+and insane Python3 redesign (for essentially no good reason, because the
+Unicode redesign is broken) rule it out for almost anything I will ever do.
+I&amp;rsquo;d rather build a GUI in C++ with wxWidgets or QT, or C and GTK than I would
+with Python and respective bindings.  I&amp;rsquo;d sooner build a website in Go or Java
+than I would with Python and its frameworks.  It&amp;rsquo;s CPU and RAM usage rule it
+out for systems programming, where C/C++/Go/Java shine.&lt;/p&gt;
+
+&lt;p&gt;These days, all I use Python for are when I need better scripting than what
+Bash will provide, and to be honest, I&amp;rsquo;m thinking about improving my Bash
+knowledge so I won&amp;rsquo;t have to do that either.  It&amp;rsquo;s crazy because I have a lot
+of deep Python knowledge, but it&amp;rsquo;s just not useful anymore.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I think this delays scripting and the console for a while.  I was
+hoping for a quick translation between the existing C code and the (to be
+rewritten more performantly) new Lua implementation, but it looks like there&amp;rsquo;s
+some plumbing I have to add first.  That&amp;rsquo;s a shame because I was excited about
+this, but now it just looks like 90% grunt work.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>D2K Plasma/Bullet Lag</title>

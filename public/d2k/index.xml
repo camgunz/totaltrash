@@ -210,44 +210,48 @@ can be cloned (downloaded) with Git like so:&lt;/p&gt;
 &lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
-&lt;li&gt;zlib&lt;/li&gt;
-&lt;li&gt;libpng&lt;/li&gt;
-&lt;li&gt;libffi&lt;/li&gt;
-&lt;li&gt;gettext&lt;/li&gt;
-&lt;li&gt;pcre&lt;/li&gt;
 &lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
+&lt;li&gt;gettext&lt;/li&gt;
+&lt;li&gt;libxml2&lt;/li&gt;
+&lt;li&gt;libpng&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;li&gt;Cairo&lt;/li&gt;
+&lt;li&gt;Pixman&lt;/li&gt;
+&lt;li&gt;Pango&lt;/li&gt;
 &lt;li&gt;Fontconfig&lt;/li&gt;
+&lt;li&gt;Expat&lt;/li&gt;
 &lt;li&gt;FreeType&lt;/li&gt;
 &lt;li&gt;HarfBuzz&lt;/li&gt;
-&lt;li&gt;Expat&lt;/li&gt;
-&lt;li&gt;Pixman&lt;/li&gt;
-&lt;li&gt;Cairo&lt;/li&gt;
-&lt;li&gt;Pango&lt;/li&gt;
-&lt;li&gt;libXDiff&lt;/li&gt;
-&lt;li&gt;ENet&lt;/li&gt;
 &lt;li&gt;SDL&lt;/li&gt;
-&lt;li&gt;SDL_mixer&lt;/li&gt;
-&lt;li&gt;OpenGL&lt;/li&gt;
-&lt;li&gt;LZMA*&lt;/li&gt;
+&lt;li&gt;SDL_image*&lt;/li&gt;
 &lt;li&gt;libjpeg*&lt;/li&gt;
 &lt;li&gt;libtiff*&lt;/li&gt;
 &lt;li&gt;WebP*&lt;/li&gt;
-&lt;li&gt;SDL_image*&lt;/li&gt;
-&lt;li&gt;DUMB*&lt;/li&gt;
-&lt;li&gt;PortMidi*&lt;/li&gt;
-&lt;li&gt;FluidSynth*&lt;/li&gt;
+&lt;li&gt;SDL_mixer&lt;/li&gt;
 &lt;li&gt;MikMod*&lt;/li&gt;
 &lt;li&gt;libmad*&lt;/li&gt;
 &lt;li&gt;libvorbis*&lt;/li&gt;
 &lt;li&gt;libogg*&lt;/li&gt;
 &lt;li&gt;libFLAC*&lt;/li&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;li&gt;LZMA (xz)&lt;/li&gt;
+&lt;li&gt;pcre&lt;/li&gt;
+&lt;li&gt;OpenGL&lt;/li&gt;
+&lt;li&gt;libXDiff&lt;/li&gt;
+&lt;li&gt;ENet&lt;/li&gt;
+&lt;li&gt;DUMB*&lt;/li&gt;
+&lt;li&gt;PortMidi*&lt;/li&gt;
+&lt;li&gt;FluidSynth*&lt;/li&gt;
+&lt;li&gt;Lua&lt;/li&gt;
+&lt;li&gt;GObject Introspection&lt;/li&gt;
+&lt;li&gt;Lua GObject Introspection&lt;/li&gt;
 &lt;li&gt;gperf*&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;* = optional&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;We plan to add more, at least Jansson, libcurl, and PolarSSL.&lt;/p&gt;
+&lt;p&gt;We plan to add more, at least json-c, libcurl, and PolarSSL.&lt;/p&gt;
 
 &lt;p&gt;On Arch Linux, the only dependency not bundled is libXDiff, which can be found
 in the AUR. I&amp;rsquo;m afraid I can&amp;rsquo;t help with other distributions.&lt;/p&gt;
@@ -268,80 +272,28 @@ subfolder.&lt;/p&gt;
 
 &lt;h3 id=&#34;toc_4&#34;&gt;Building on Windows&lt;/h3&gt;
 
-&lt;p&gt;Dependencies may be installed using the
-&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;MinGW64-Builds&lt;/a&gt; project.  Pre-built
-binaries are located
-&lt;a href=&#34;http://static.totaltrash.org/mingw64-builds.tar.xz&#34;&gt;here&lt;/a&gt;, and you will need
-&lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt; (or something that handles &lt;code&gt;.tar.xz&lt;/code&gt; files) to
-decompress the archive.&lt;/p&gt;
-
 &lt;p&gt;D2K can be built on Windows using
 &lt;a href=&#34;http://www.codeblocks.org/downloads/26#windows&#34;&gt;Code::Blocks&lt;/a&gt;.  Building using
 MSVC++ is not supported due to a lack of support for C99.  Assuming you cloned
 D2K to &lt;code&gt;C:\d2k&lt;/code&gt;, the Code::Blocks project file expects dependencies at
-&lt;code&gt;C:\d2k\deps&lt;/code&gt;, so that &lt;code&gt;curl.exe&lt;/code&gt; resides at &lt;code&gt;C:\d2k\deps\bin\curl.exe&lt;/code&gt;.&lt;/p&gt;
+&lt;code&gt;C:\d2k\deps&lt;/code&gt;, so that &lt;code&gt;flac.exe&lt;/code&gt; resides at &lt;code&gt;C:\d2k\deps\bin\flac.exe&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;toc_5&#34;&gt;Dependencies&lt;/h4&gt;
+&lt;p&gt;Because satisfying D2K&amp;rsquo;s dependencies on Windows is difficult, I have either
+located or built them and put them
+&lt;a href=&#34;http://static.totaltrash.org/mingw64-builds.tar.xz&#34;&gt;here&lt;/a&gt;.  You will need
+&lt;a href=&#34;http://www.7-zip.org&#34;&gt;7-Zip&lt;/a&gt; (or something that handles &lt;code&gt;.tar.xz&lt;/code&gt; files) to
+decompress the archive.&lt;/p&gt;
 
-&lt;p&gt;Running an executable built this way on your local machine will work, because
-the required DLL files are in your path.  However, distributing the executable
-will require dozens of DLL files:&lt;/p&gt;
+&lt;p&gt;The dependencies are built using the MinGW-w64 compiler toolchain on Linux.
+Should you wish to build them yourself, I recommend looking at &lt;a href=&#34;http://aur.archlinux.org&#34;&gt;the
+Arch Linux AUR&lt;/a&gt; (search for
+&amp;ldquo;mingw-w64-&amp;lt;package_name&amp;gt;&amp;rdquo;) and the
+&lt;a href=&#34;https://github.com/camgunz/mingw64-builds&#34;&gt;MinGW64-Builds&lt;/a&gt; project.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;libcairo-2.dll&lt;/li&gt;
-&lt;li&gt;libexpat-1.dll&lt;/li&gt;
-&lt;li&gt;libffi-6.dll&lt;/li&gt;
-&lt;li&gt;libFLAC-8.dll&lt;/li&gt;
-&lt;li&gt;libfluidsynth.dll&lt;/li&gt;
-&lt;li&gt;libfontconfig-1.dll&lt;/li&gt;
-&lt;li&gt;libfreetype-6.dll&lt;/li&gt;
-&lt;li&gt;libgcc_s_sjlj-1.dll&lt;/li&gt;
-&lt;li&gt;libgio-2.0-0.dll&lt;/li&gt;
-&lt;li&gt;libglib-2.0-0.dll&lt;/li&gt;
-&lt;li&gt;libgmodule-2.0-0.dll&lt;/li&gt;
-&lt;li&gt;libgthread-2.0-0.dll&lt;/li&gt;
-&lt;li&gt;libharfbuzz-0.dll&lt;/li&gt;
-&lt;li&gt;libiconv-2.dll&lt;/li&gt;
-&lt;li&gt;libintl-8.dll&lt;/li&gt;
-&lt;li&gt;libjpeg-9.dll&lt;/li&gt;
-&lt;li&gt;liblzma-5.dll&lt;/li&gt;
-&lt;li&gt;libmikmod-3.dll&lt;/li&gt;
-&lt;li&gt;libogg-0.dll&lt;/li&gt;
-&lt;li&gt;libpango-1.0-0.dll&lt;/li&gt;
-&lt;li&gt;libpangocairo-1.0-0.dll&lt;/li&gt;
-&lt;li&gt;libpangoft2-1.0-0.dll&lt;/li&gt;
-&lt;li&gt;libpangowin32-1.0-0.dll&lt;/li&gt;
-&lt;li&gt;libpcre-1.dll&lt;/li&gt;
-&lt;li&gt;libpcreposix-0.dll&lt;/li&gt;
-&lt;li&gt;libpixman-1-0.dll&lt;/li&gt;
-&lt;li&gt;libpng15-15.dll&lt;/li&gt;
-&lt;li&gt;libportmidi.dll&lt;/li&gt;
-&lt;li&gt;libssp-0.dll&lt;/li&gt;
-&lt;li&gt;libtiff-5.dll&lt;/li&gt;
-&lt;li&gt;libvorbis-0.dll&lt;/li&gt;
-&lt;li&gt;libvorbisfile-3.dll&lt;/li&gt;
-&lt;li&gt;libwebp-5.dll&lt;/li&gt;
-&lt;li&gt;libwinpthread-1.dll&lt;/li&gt;
-&lt;li&gt;SDL.dll&lt;/li&gt;
-&lt;li&gt;SDL_image.dll&lt;/li&gt;
-&lt;li&gt;SDL_mixer.dll&lt;/li&gt;
-&lt;li&gt;zlib1.dll&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We recommend using the &lt;a href=&#34;http://static.totaltrash.org/d2k.zip&#34;&gt;official Windows D2K
-distribution&lt;/a&gt; and simply replacing the
-executable.  Otherwise you will need to provide these yourself, as well as the
-&lt;code&gt;doom2k.wad&lt;/code&gt; resource WAD and the fonts.  Should you decide against this, DLL
-files may be found in the &lt;code&gt;deps&lt;/code&gt; folder, &lt;code&gt;doom2k.wad&lt;/code&gt; can be built using
-&lt;a href=&#34;https://github.com/chungy/deutex&#34;&gt;deutex&lt;/a&gt;, and the fonts can be found on the
-web.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;Cross-Compiling&lt;/h3&gt;
+&lt;h4 id=&#34;toc_5&#34;&gt;Cross-Compiling&lt;/h4&gt;
 
 &lt;p&gt;D2K can be cross-compiled on Linux for Windows; in fact, this is how Windows
-binaries are built.&lt;/p&gt;
-
-&lt;h4 id=&#34;toc_7&#34;&gt;Instructions&lt;/h4&gt;
+binaries are built.  To do so:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Clone D2K
@@ -349,19 +301,14 @@ binaries are built.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Assuming install folder of &lt;code&gt;~/d2k&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Clone and build MinGW64-Builds
-
-&lt;ul&gt;
-&lt;li&gt;Assuming install folder of &lt;code&gt;~/mingw64-builds&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Assuming build folder of &lt;code&gt;~/mingw64-builds/build&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Copy &lt;code&gt;~/mingw64-builds/build&lt;/code&gt; to &lt;code&gt;~/d2k/crossdeps&lt;/code&gt; so that &lt;code&gt;curl.exe&lt;/code&gt; is
-at &lt;code&gt;~/d2k/crossdeps/bin/curl.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Unpack
+&lt;a href=&#34;http://static.totaltrash.org/mingw64-builds.tar.xz&#34;&gt;the dependencies&lt;/a&gt; to
+&lt;code&gt;~/d2k/crossdeps&lt;/code&gt;, so that &lt;code&gt;flac.exe&lt;/code&gt; is at &lt;code&gt;~/d2k/crossdeps/bin/flac.exe&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Run &lt;code&gt;crossbuild.sh&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Executable will be &lt;code&gt;~/d2k/crossbuild/doom2k.exe&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;toc_8&#34;&gt;MP3&lt;/h3&gt;
+&lt;h3 id=&#34;toc_6&#34;&gt;MP3&lt;/h3&gt;
 
 &lt;p&gt;MP3 support is on tenuous legal ground due to patents covering MP3 technology.
 Use at your own risk. We strongly encourage mappers and modders to use the
