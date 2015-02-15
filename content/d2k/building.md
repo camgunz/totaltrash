@@ -14,44 +14,56 @@ can be cloned (downloaded) with Git like so:
 
 ### Dependencies
 
-D2K has quite a few dependencies:
+D2K has quite a few dependencies.
 
   * GLib
-  * libiconv (part of glibc)
-  * gettext
-  * libxml2
-  * libpng
-  * zlib
-  * Cairo
-  * Pixman
+    * libffi
+    * pcre
+      * bzip2
+      * zlib
+    * libiconv (part of glibc)
+    * libxslt
+      * libxml2
+        * xz
+        * zlib
+    * gettext
+  * cairo
+    * GLib
+    * libpng
+    * Pixman
+    * gtk-doc
+      * libxslt
   * Pango
-  * Fontconfig
-  * Expat
-  * FreeType
-  * HarfBuzz
-  * SDL
-  * SDL\_image\*
-  * libjpeg\*
-  * libtiff\*
-  * WebP\*
-  * SDL\_mixer
-  * MikMod\*
-  * libmad\*
-  * libvorbis\*
-  * libogg\*
-  * libFLAC\*
-  * libffi
-  * LZMA (xz)
+    * GLib
+    * cairo
+    * HarfBuzz
+    * Fontconfig
+      * Expat
+      * FreeType2
+  * GObject Introspection
+    * GLib
+    * cairo
   * pcre
+  * Lua
+  * Lua GObject Introspection
+    * libffi
   * OpenGL
   * libXDiff
   * ENet
-  * DUMB\*
+  * SDL
+  * SDL\_image
+    * libpng\*
+    * libjpeg\*
+    * libtiff\*
+    * WebP\*
+  * SDL\_mixer
+    * MikMod\*
+    * libmad\*
+    * libogg\*
+    * libvorbis\*
+    * libFLAC\*
   * PortMidi\*
   * FluidSynth\*
-  * Lua
-  * GObject Introspection
-  * Lua GObject Introspection
   * gperf\*
 
 _* = optional_

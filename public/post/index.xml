@@ -7,7 +7,218 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 08 Dec 2014 20:46:22 UTC</updated>
+    <updated>Sat, 07 Feb 2015 00:25:14 UTC</updated>
+    
+    <item>
+      <title>d2k_scripting</title>
+      <link>http://totaltrash.org/post/d2k_scripting/</link>
+      <pubDate>Sat, 07 Feb 2015 00:25:14 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/post/d2k_scripting/</guid>
+      <description>&lt;p&gt;Scripting in D2K has come a long way.  The interface is coming along nicely,
+largely because Lua makes it so easy to write bindings.  For example, this is
+the function used to match key events to key presses:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static int XI_InputEventIsKeyPress(lua_State *L) {
+  event_t *ev = (event_t *)luaL_checkudata(L, 1, &amp;quot;InputEvent&amp;quot;);
+  int key = luaL_checkint(L, 2);
+
+  if (ev-&amp;gt;type == ev_key &amp;amp;&amp;amp; ev-&amp;gt;pressed &amp;amp;&amp;amp; ev-&amp;gt;key == key)
+    lua_pushboolean(L, true);
+  else
+    lua_pushboolean(L, false);
+
+  return 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;XI_InputEventIsKeyPress&lt;/code&gt; is a method inside the InputEvent class, which is
+registered like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;X_RegisterType(&amp;quot;InputEvent&amp;quot;, 21, 
+  &amp;quot;new&amp;quot;,                  XI_InputEventNew,
+  &amp;quot;reset&amp;quot;,                XI_InputEventReset,
+  &amp;quot;__tostring&amp;quot;,           XI_InputEventToString,
+  &amp;quot;is_key&amp;quot;,               XI_InputEventIsKey,
+  &amp;quot;is_mouse&amp;quot;,             XI_InputEventIsMouse,
+  &amp;quot;is_joystick&amp;quot;,          XI_InputEventIsJoystick,
+  &amp;quot;is_mouse_movement&amp;quot;,    XI_InputEventIsMouseMovement,
+  &amp;quot;is_joystick_movement&amp;quot;, XI_InputEventIsJoystickMovement,
+  &amp;quot;is_joystick_axis&amp;quot;,     XI_InputEventIsJoystickAxis,
+  &amp;quot;is_joystick_ball&amp;quot;,     XI_InputEventIsJoystickBall,
+  &amp;quot;is_joystick_hat&amp;quot;,      XI_InputEventIsJoystickHat,
+  &amp;quot;is_movement&amp;quot;,          XI_InputEventIsMovement,
+  &amp;quot;is_press&amp;quot;,             XI_InputEventIsPress,
+  &amp;quot;is_release&amp;quot;,           XI_InputEventIsRelease,
+  &amp;quot;get_key&amp;quot;,              XI_InputEventGetKey,
+  &amp;quot;get_key_name&amp;quot;,         XI_InputEventGetKeyName,
+  &amp;quot;get_value&amp;quot;,            XI_InputEventGetValue,
+  &amp;quot;get_xmove&amp;quot;,            XI_InputEventGetXMove,
+  &amp;quot;get_ymove&amp;quot;,            XI_InputEventGetYMove,
+  &amp;quot;get_char&amp;quot;,             XI_InputEventGetChar,
+  &amp;quot;is_key_press&amp;quot;,         XI_InputEventIsKeyPress
+);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The implementation of &lt;code&gt;X_RegisterObjects&lt;/code&gt; is a little long, but it&amp;rsquo;s not
+terribly complex.&lt;/p&gt;
+
+&lt;p&gt;All this scaffolding enables a simple, but powerful scripting interface.  For
+example, here&amp;rsquo;s the console&amp;rsquo;s event handler:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function Console:handle_event(event)
+  if event:is_key_press(d2k.Key.BACKQUOTE) then
+    self:toggle_scroll()
+  end
+
+  if self.scroll_rate &amp;lt; 0 or self.height == 0 then
+    return
+  end
+
+  if d2k.KeyStates.shift_is_down() then
+    if event:is_key_press(d2k.Key.UP) then
+      self.output:scroll_up(Console.HORIZONTAL_SCROLL_AMOUNT)
+      return true
+    elseif event:is_key_press(d2k.Key.PAGE_UP) then
+      self.output:scroll_up(Console.HORIZONTAL_SCROLL_AMOUNT * 10)
+      return true
+    elseif event:is_key_press(d2k.Key.DOWN) then
+      self.output:scroll_down(Console.HORIZONTAL_SCROLL_AMOUNT)
+      return true
+    elseif event:is_key_press(d2k.Key.PAGE_DOWN) then
+      self.output:scroll_down(Console.HORIZONTAL_SCROLL_AMOUNT * 10)
+      return true
+    end
+  elseif event:is_key_press(d2k.Key.UP) then
+    self.input:show_previous_command()
+  elseif event:is_key_press(d2k.Key.DOWN) then
+    self.input:show_next_command()
+  elseif event:is_key_press(d2k.Key.LEFT) then
+    self.input:move_cursor_left()
+  elseif event:is_key_press(d2k.Key.RIGHT) then
+    self.input:move_cursor_right()
+  elseif event:is_key() and event:is_press() then
+    self.input:insert_text(event:get_char())
+  end
+
+  return false
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Never mind the temporary placeholder constants
+(&lt;code&gt;Console.HORIZONTAL_SCROLL_AMOUNT&lt;/code&gt;, etc.) ;).  The point is that it was very
+easy to build an entirely new object-oriented event handling interface.&lt;/p&gt;
+
+&lt;p&gt;I &lt;strong&gt;did&lt;/strong&gt; have to refactor nearly all the SDL event stuff in C, but it was in
+need anyway.  As a result, after events are pulled from SDL in C, event
+dispatch and handling happens in Lua now.  This means I can slowly start to
+move things like the menu and screen drawing (&lt;strong&gt;NOT&lt;/strong&gt; the renderer) into Lua,
+and delete reams of junk code in the process (man, I dream of the day the C
+menu code dies).&lt;/p&gt;
+
+&lt;p&gt;Now that event handling happens in Lua, interfaces can be implemented using
+only scripting.  The console is my test case; as I develop it, I&amp;rsquo;m learning to
+use Lua GObject Introspection and fixing the scripting interface I&amp;rsquo;ve built so
+far.  It&amp;rsquo;s not a perfect test (there&amp;rsquo;s not a &lt;strong&gt;ton&lt;/strong&gt; of interaction with
+D2K-proper), but it&amp;rsquo;s pretty good for a first test.&lt;/p&gt;
+
+&lt;p&gt;Speaking of Lua GObject Introspection, I&amp;rsquo;m making progress building D2K&amp;rsquo;s
+dependencies on Windows.  Mingw-builds provides a native, MinGW-w64-built
+Python which can be used for GObject Introspection, so I&amp;rsquo;ve been going through
+the process of writing a bunch of scripts to automatically build everything D2K
+needs on Windows.  This has been a huge roadblock.  My secret dream is that
+peopel can use my work as a kind of cross-platform shim for C/C++ projects, but
+given the relative unpopularity of similar projects (win-builds, MSYS2, MXE),
+I&amp;rsquo;m not optimistic, haha.&lt;/p&gt;
+
+&lt;p&gt;Having developed a fair amount of code in Lua, I feel qualified &amp;ndash; nay,
+compelled &amp;ndash; to give an opinion!&lt;/p&gt;
+
+&lt;p&gt;Lua as an API is fantastic.  I wish the documentation were slightly better, but
+honestly it&amp;rsquo;s pretty good.  The Lua site itself is hideous; I remember better
+pages from 1998.  It sounds like I&amp;rsquo;m kidding, but I am not.  I wish there were
+better errors in Lua; while they technically make sense, you only realize
+&lt;strong&gt;why&lt;/strong&gt; they make sense once you guess correctly as to what the problem is.
+Lua the language is overall a fairly positive experience.  The &amp;ldquo;different just
+to be different&amp;rdquo; stuff like &lt;code&gt;~=&lt;/code&gt; meaning &amp;lsquo;not equal to&amp;rsquo;, &lt;code&gt;elseif&lt;/code&gt; instead of
+literally anything else (&lt;code&gt;else if&lt;/code&gt;, &lt;code&gt;elif&lt;/code&gt;), and arrays starting at 1 are all
+extremely bothersome.  Especially the array index thing, my God what an
+abomination.  For loop syntax is a little free-form to me; I really don&amp;rsquo;t
+understand why&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for i=0,10,2 do
+  print(string.format(&#39;i is %d&#39;, i))
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;is better than:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt;= 10, i += 2) {
+  printf(&amp;quot;i is %d\n&amp;quot;, i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I &lt;strong&gt;do&lt;/strong&gt; understand why it&amp;rsquo;s worse though: it&amp;rsquo;s less explicit.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;local&lt;/code&gt; is a big mistake too.  Lua argues that &amp;ldquo;Local by default is wrong.
+Maybe global by default is also wrong, [but] the solution is not local by
+default&amp;rdquo;, but come on:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I am typing &lt;code&gt;local&lt;/code&gt; everywhere&lt;/li&gt;
+&lt;li&gt;In Python, I type &lt;code&gt;global&lt;/code&gt; only when I have to, and it serves as
+documentation&lt;/li&gt;
+&lt;li&gt;If you forget to type &lt;code&gt;local&lt;/code&gt;, you can destroy your program in a very
+hard-to-discover way&lt;/li&gt;
+&lt;li&gt;If you forget to type &lt;code&gt;global&lt;/code&gt;, the damage is limited to that function and
+whatever depends on it.  Which, admittedly, is still pretty bad, but what
+is better, more damage that&amp;rsquo;s hard to reason about, or less damage that&amp;rsquo;s
+easier to reason about?&lt;/li&gt;
+&lt;li&gt;If you meant &amp;ldquo;declarations should look like declarations&amp;rdquo;, &lt;code&gt;var&lt;/code&gt; would have
+sufficed, and wouldn&amp;rsquo;t get conflated with the scoping issue.&lt;/li&gt;
+&lt;li&gt;If you meant &amp;ldquo;scope should be explicit&amp;rdquo;, how much more explicit than &amp;ldquo;I
+defined this variable in this scope, therefore that&amp;rsquo;s where it lives&amp;rdquo; can
+you get?  Do you want to define variables for other scopes?  &lt;strong&gt;MADNESS&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The other annoying thing in Lua is that while syntactic sugar abounds for
+things that really aren&amp;rsquo;t that big a deal (using &lt;code&gt;:&lt;/code&gt; instead of &lt;code&gt;.&lt;/code&gt; to pass the
+implicit &lt;code&gt;self&lt;/code&gt; to object method calls, omitting parentheses when only passing
+a single string/table argument, etc.), there is no syntactic sugar for
+implementing a class or building a module.  You have to wade into this morass
+of metatables and the implicit workings of &lt;code&gt;require&lt;/code&gt; in order to access basic
+functionality.  You can&amp;rsquo;t argue that Lua isn&amp;rsquo;t object-oriented because it has
+&lt;code&gt;:&lt;/code&gt; and has a whole section on &amp;ldquo;Object-Oriented Programming&amp;rdquo; in the book
+(complete with helpful APIs for defining userdata types).  By the way,
+&amp;ldquo;userdata&amp;rdquo; is really poorly named.  Regular userdata is a blob managed by Lua,
+light userdata is a blob &amp;ndash; tracked by a pointer &amp;ndash; managed in native code.
+Boom, that&amp;rsquo;s it.  Anyway, there ought to be an easier way to define classes and
+modules without understanding the deep workings of &lt;code&gt;require&lt;/code&gt; and Lua&amp;rsquo;s method
+dispatch.&lt;/p&gt;
+
+&lt;p&gt;Lua is also a little too flexible.  Leaving off parentheses is just a huge
+problem for readability, and in a language that makes you type so much
+(&amp;ldquo;function&amp;rdquo;, &amp;ldquo;then&amp;rdquo;, &amp;ldquo;end&amp;rdquo;, &amp;ldquo;do&amp;rdquo;, &amp;ldquo;repeat&amp;rdquo;, &amp;ldquo;until&amp;rdquo;) it doesn&amp;rsquo;t make a lot of
+sense.  I guess maybe they were worried about weird symbols confusing users,
+but how much does dropping the parentheses really buy you when 99% of the time
+what follows is a &amp;ldquo;{&amp;rdquo; ?  Plus, while I pretty much chose Lua over Python
+because it isn&amp;rsquo;t whitespace-sensitive, there are times I really wish it were.
+If I read another piece of code with all the if blocks on the same line, I&amp;rsquo;m
+gonna burn Github to the ground.  Whew!&lt;/p&gt;
+
+&lt;p&gt;In fact, those three annoyances pretty much sum up the Lua experience on the
+script side.  Lua is everything you want in a scripting language: fast, simple,
+flexible and powerful.  But then you find a bunch of code written in a totally
+unreadable style and you get pissed, or you find yourself mucking about with
+Lua&amp;rsquo;s internals because there&amp;rsquo;s no syntactic sugar for this very simple thing
+you want to do, or your code doesn&amp;rsquo;t work because Lua does something different
+for absolutely no reason.&lt;/p&gt;
+
+&lt;p&gt;All that said, if you can live with 1-based indexing, Lua is an excellent
+language.  None of the other annoyances are problematic enough to justify not
+choosing it.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>gobject_introspection</title>
@@ -59,8 +270,8 @@ and insane Python3 redesign (for essentially no good reason, because the
 Unicode redesign is broken) rule it out for almost anything I will ever do.
 I&amp;rsquo;d rather build a GUI in C++ with wxWidgets or QT, or C and GTK than I would
 with Python and respective bindings.  I&amp;rsquo;d sooner build a website in Go or Java
-than I would with Python and its frameworks.  It&amp;rsquo;s CPU and RAM usage rule it
-out for systems programming, where C/C++/Go/Java shine.&lt;/p&gt;
+than I would with Python and its frameworks.  Its CPU and RAM usage rule it out
+for systems programming, where C/C++/Go/Java shine.&lt;/p&gt;
 
 &lt;p&gt;These days, all I use Python for are when I need better scripting than what
 Bash will provide, and to be honest, I&amp;rsquo;m thinking about improving my Bash

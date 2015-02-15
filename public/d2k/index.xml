@@ -207,45 +207,90 @@ can be cloned (downloaded) with Git like so:&lt;/p&gt;
 
 &lt;h3 id=&#34;toc_1&#34;&gt;Dependencies&lt;/h3&gt;
 
-&lt;p&gt;D2K has quite a few dependencies:&lt;/p&gt;
+&lt;p&gt;D2K has quite a few dependencies.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GLib
+
+&lt;ul&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;li&gt;pcre
+
+&lt;ul&gt;
+&lt;li&gt;bzip2&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
+&lt;li&gt;libxslt
+
+&lt;ul&gt;
+&lt;li&gt;libxml2&lt;/li&gt;
+&lt;li&gt;xz&lt;/li&gt;
+&lt;li&gt;zlib&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;gettext&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;cairo
 
 &lt;ul&gt;
 &lt;li&gt;GLib&lt;/li&gt;
-&lt;li&gt;libiconv (part of glibc)&lt;/li&gt;
-&lt;li&gt;gettext&lt;/li&gt;
-&lt;li&gt;libxml2&lt;/li&gt;
 &lt;li&gt;libpng&lt;/li&gt;
-&lt;li&gt;zlib&lt;/li&gt;
-&lt;li&gt;Cairo&lt;/li&gt;
 &lt;li&gt;Pixman&lt;/li&gt;
-&lt;li&gt;Pango&lt;/li&gt;
-&lt;li&gt;Fontconfig&lt;/li&gt;
-&lt;li&gt;Expat&lt;/li&gt;
-&lt;li&gt;FreeType&lt;/li&gt;
+&lt;li&gt;gtk-doc
+
+&lt;ul&gt;
+&lt;li&gt;libxslt&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Pango
+
+&lt;ul&gt;
+&lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;cairo&lt;/li&gt;
 &lt;li&gt;HarfBuzz&lt;/li&gt;
-&lt;li&gt;SDL&lt;/li&gt;
-&lt;li&gt;SDL_image*&lt;/li&gt;
-&lt;li&gt;libjpeg*&lt;/li&gt;
-&lt;li&gt;libtiff*&lt;/li&gt;
-&lt;li&gt;WebP*&lt;/li&gt;
-&lt;li&gt;SDL_mixer&lt;/li&gt;
-&lt;li&gt;MikMod*&lt;/li&gt;
-&lt;li&gt;libmad*&lt;/li&gt;
-&lt;li&gt;libvorbis*&lt;/li&gt;
-&lt;li&gt;libogg*&lt;/li&gt;
-&lt;li&gt;libFLAC*&lt;/li&gt;
-&lt;li&gt;libffi&lt;/li&gt;
-&lt;li&gt;LZMA (xz)&lt;/li&gt;
+&lt;li&gt;Fontconfig
+
+&lt;ul&gt;
+&lt;li&gt;Expat&lt;/li&gt;
+&lt;li&gt;FreeType2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GObject Introspection
+
+&lt;ul&gt;
+&lt;li&gt;GLib&lt;/li&gt;
+&lt;li&gt;cairo&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;pcre&lt;/li&gt;
+&lt;li&gt;Lua&lt;/li&gt;
+&lt;li&gt;Lua GObject Introspection
+
+&lt;ul&gt;
+&lt;li&gt;libffi&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;OpenGL&lt;/li&gt;
 &lt;li&gt;libXDiff&lt;/li&gt;
 &lt;li&gt;ENet&lt;/li&gt;
-&lt;li&gt;DUMB*&lt;/li&gt;
+&lt;li&gt;SDL&lt;/li&gt;
+&lt;li&gt;SDL_image
+
+&lt;ul&gt;
+&lt;li&gt;libpng*&lt;/li&gt;
+&lt;li&gt;libjpeg*&lt;/li&gt;
+&lt;li&gt;libtiff*&lt;/li&gt;
+&lt;li&gt;WebP*&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;SDL_mixer
+
+&lt;ul&gt;
+&lt;li&gt;MikMod*&lt;/li&gt;
+&lt;li&gt;libmad*&lt;/li&gt;
+&lt;li&gt;libogg*&lt;/li&gt;
+&lt;li&gt;libvorbis*&lt;/li&gt;
+&lt;li&gt;libFLAC*&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;PortMidi*&lt;/li&gt;
 &lt;li&gt;FluidSynth*&lt;/li&gt;
-&lt;li&gt;Lua&lt;/li&gt;
-&lt;li&gt;GObject Introspection&lt;/li&gt;
-&lt;li&gt;Lua GObject Introspection&lt;/li&gt;
 &lt;li&gt;gperf*&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -313,6 +358,32 @@ binaries are built.  To do so:&lt;/p&gt;
 &lt;p&gt;MP3 support is on tenuous legal ground due to patents covering MP3 technology.
 Use at your own risk. We strongly encourage mappers and modders to use the
 superior and free OGG format.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download</title>
+      <link>http://totaltrash.org/d2k/download/</link>
+      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
+      
+      <guid>http://totaltrash.org/d2k/download/</guid>
+      <description>
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Source&lt;/h3&gt;
+
+&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;on GitHub&lt;/a&gt; and
+can be cloned (downloaded) with Git like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Users are encouraged to &lt;a href=&#34;../building&#34;&gt;build their own binaries&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -437,32 +508,6 @@ to attempt to avoid C++&amp;rsquo;s complexity and lengthy compilation times. Fi
 D2K will always weigh new feature ideas on the merits, not on politics or
 personal preference. A &amp;ldquo;vanilla&amp;rdquo; game will always be possible, and advanced
 features will always be optional.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Download</title>
-      <link>http://totaltrash.org/d2k/download/</link>
-      <pubDate>Tue, 11 Nov 2014 17:06:01 UTC</pubDate>
-      
-      <guid>http://totaltrash.org/d2k/download/</guid>
-      <description>
-
-&lt;h3 id=&#34;toc_0&#34;&gt;Windows&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://static.totaltrash.org/d2k.zip&#34;&gt;ZIP Package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Source&lt;/h3&gt;
-
-&lt;p&gt;D2K&amp;rsquo;s source code is located &lt;a href=&#34;https://github.com/camgunz/d2k&#34;&gt;on GitHub&lt;/a&gt; and
-can be cloned (downloaded) with Git like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/camgunz/d2k
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Users are encouraged to &lt;a href=&#34;../building&#34;&gt;build their own binaries&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

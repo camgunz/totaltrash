@@ -52,8 +52,8 @@ and insane Python3 redesign (for essentially no good reason, because the
 Unicode redesign is broken) rule it out for almost anything I will ever do.
 I'd rather build a GUI in C++ with wxWidgets or QT, or C and GTK than I would
 with Python and respective bindings.  I'd sooner build a website in Go or Java
-than I would with Python and its frameworks.  It's CPU and RAM usage rule it
-out for systems programming, where C/C++/Go/Java shine.
+than I would with Python and its frameworks.  Its CPU and RAM usage rule it out
+for systems programming, where C/C++/Go/Java shine.
 
 These days, all I use Python for are when I need better scripting than what
 Bash will provide, and to be honest, I'm thinking about improving my Bash
